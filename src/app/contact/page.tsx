@@ -1,5 +1,12 @@
-export default function ContactPage() {
+import Navbar from "@/components/navbar";
+
+export default function Portfolio() {
   return (
-    <div> ContactPage</div>
-  )
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <div> Contact Page</div>
+    </>
+  );
 }

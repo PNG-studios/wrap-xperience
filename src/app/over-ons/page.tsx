@@ -1,5 +1,12 @@
-export default function OverOns() {
+import Navbar from "@/components/navbar";
+
+export default function Portfolio() {
   return (
-    <div> OverOns</div>
-  )
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <div> OverOns</div>
+    </>
+  );
 }

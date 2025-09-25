@@ -1,5 +1,10 @@
+import Navbar from "@/components/navbar";
+
 export default function Tarieven() {
   return (
-    <div> Tarieven</div>
-  )
+    <div>
+      <Navbar />
+      Tarieven
+    </div>
+  );
 }

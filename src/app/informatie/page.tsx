@@ -1,5 +1,12 @@
-export default function InformatiePage() {
+import Navbar from "@/components/navbar";
+
+export default function Portfolio() {
   return (
-    <div> InformatiePage</div>
-  )
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <div> InformatiePagina</div>
+    </>
+  );
 }
