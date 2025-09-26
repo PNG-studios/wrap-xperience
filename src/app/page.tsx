@@ -1,7 +1,10 @@
 import Navbar from "@/components/navbar";
 import ContentCard from "@/components/contentCard";
-import {  Star } from 'lucide-react';
 import StarContent from "@/components/starContent";
+import Image from "next/image";
+import GoogleReviews from "@/components/googleReviews";
+
+const placeId = process.env.NEXT_PUBLIC_PLACE_ID || "ChIJN1t_tDeuEmsRUsoyG83frY4";
 
 export default function Home() {
   return (
@@ -22,19 +25,27 @@ export default function Home() {
       </header>
 
       <ContentCard
-        imageSrc="/images/hero.png"
-        imageAlt="Modern kitchen renovation"
+        imageSection={
+          <Image
+            src="/images/hero.png"
+            alt="Kitchen renovation"
+            width={500}
+            height={400}
+            className="w-full h-auto rounded-lg"
+          />
+        }
         title="GEEF JOUW KEUKEN EEN NIEUWE LOOK"
-        description="Wil je jouw keuken een nieuwe look geven zonder dure renovatie? Laat hem wrappen! Met duurzame folie krijgt je keuken in één dag een frisse uitstraling. WRAP-XPERIENCE biedt hoogwaardige kwaliteit en een perfecte afwerking. Kies uit diverse stijlen en geniet van een stijlvolle, betaalbare make-over. Vraag nu een vrijblijvende offerte aan!"
+        description="Your description here..."
         buttonText="MEER INFO"
         buttonHref="/services"
+        position="left"
       />
-      
+
       <section className="bg-black ">
         <div className="flex gap-[7rem] text-white p-10 max-w-[1440px] mx-auto w-screen">
-          <StarContent  
-          sectionTitle="ADVIES OP MAAT"
-          description="Je keuken wrappen is maatwerk, want iedereen heeft een unieke stijl en voorkeur. Weet je nog niet welke kleur het beste bij jouw keuken past? Geen zorgen, we helpen je graag met persoonlijk advies!"
+          <StarContent
+            sectionTitle="ADVIES OP MAAT"
+            description="Je keuken wrappen is maatwerk, want iedereen heeft een unieke stijl en voorkeur. Weet je nog niet welke kleur het beste bij jouw keuken past? Geen zorgen, we helpen je graag met persoonlijk advies!"
           />
           <StarContent
             sectionTitle="DUURZAAM"
@@ -46,8 +57,141 @@ export default function Home() {
           />
         </div>
       </section>
-     
-      
+
+      <ContentCard
+        imageSection={
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-gray-800">VOOR</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <Image
+                  src="/images/hero.png"
+                  alt="Kitchen before 1"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+                <Image
+                  src="/images/hero.png"
+                  alt="Kitchen before 2"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-lg font-semibold text-gray-800">NA</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <Image
+                  src="/images/hero.png"
+                  alt="Kitchen after 1"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+                <Image
+                  src="/images/hero.png"
+                  alt="Kitchen after 2"
+                  width={400}
+                  height={300}
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        }
+        title="Kitchen Transformation"
+        description="Keuken wrappen is een techniek waarbij een dunne folie wordt aangebracht op keukenkasten, lades en andere oppervlakken. Dit zorgt voor een volledig nieuwe uitstraling zonder dat de kasten vervangen hoeven te worden. 
+        Door je keuken te laten wrappen, geef je deze op een betaalbare manier een frisse look. Je hergebruikt de bestaande kasten en verandert alleen het uiterlijk met hoogwaardige folie in diverse kleuren en patronen. Zo geniet je van een vernieuwde keuken, zonder de hoge kosten en het gedoe van een complete renovatie."
+        buttonText="VOORBEELDEN"
+        buttonHref="/gallery"
+        position="right"
+      />
+
+      <section className="justify-self-center bg-secondary p-8 gap-8 w-full ">
+        <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
+          <h1 className="text-3xl text-primary font-bold text-dark text-left">
+            EEN OVERZICHT VAN DE KEUKENS
+          </h1>
+          <div className="flex flex-row gap-4  justify-center">
+            <div className="bg-white ">
+              <Image
+                width={400}
+                height={300}
+                src="/images/hero.png"
+                alt="Kitchen overview 1"
+              />
+              <p className="p-4">1</p>
+            </div>
+            <div className="bg-white ">
+              <Image
+                width={400}
+                height={300}
+                src="/images/hero.png"
+                alt="Kitchen overview 2"
+              />
+              <p className="p-4">2</p>
+            </div>
+            <div className="bg-white ">
+              <Image
+                width={400}
+                height={300}
+                src="/images/hero.png"
+                alt="Kitchen overview 3"
+              />
+              <p className="p-4">3</p>
+            </div>
+            <div className="bg-white ">
+              <Image
+                width={400}
+                height={300}
+                src="/images/hero.png"
+                alt="Kitchen overview 4"
+              />
+              <p className="p-4">4</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
+          <h1 className="text-3xl text-primary font-bold text-dark text-left">
+            EEN OVERZICHT VAN DE KEUKENS
+          </h1>
+          <ol className="items-center align-middle">
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              1
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              2
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              3
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              4
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              5
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              6
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      {/* google review intergration */}
+      <section className="max-w-[1440px] mt-7 w-full justify-self-center ">
+        <GoogleReviews
+                placeId={placeId}
+                maxReviews={3}
+                className="" 
+              />
+      </section>
     </main>
   );
 }
