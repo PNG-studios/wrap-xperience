@@ -5,6 +5,7 @@
 @theme {
     --color-black: #0A0A0A ;
     --color-primary: #CCB559 ;
+    --color-primary-light: #FFF5C6 ;
     --color-secondary: #E8EDED ;
     --color-white: #FFF ;
     --font-inter: "Inter", sans-serif;
