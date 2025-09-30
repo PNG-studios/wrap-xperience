@@ -3,7 +3,8 @@ import ContentCard from "@/components/contentCard";
 import StarContent from "@/components/starContent";
 import Image from "next/image";
 import GoogleReviews from "@/components/googleReviews";
-import Kitchens from "@/components/Kitchens";
+import Carousel from "@/components/carousel";
+// import Kitchens from "@/components/Kitchens";
 
 const placeId = process.env.NEXT_PUBLIC_PLACE_ID || "ChIJN1t_tDeuEmsRUsoyG83frY4";
 
@@ -111,39 +112,63 @@ export default function Home() {
         position="right"
       />
 
-      <Kitchens
+      <Carousel>
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 1"
+        />
+        <Image
+          width={2000}
+          height={400}
+          src="/images/hero.png"
+          alt="Kitchen example 2"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 3"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 4"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 5"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 6"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 7"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 8"
+        />
+        <Image
+          width={2000}
+          height={300}
+          src="/images/hero.png"
+          alt="Kitchen example 9"
+        />
+      </Carousel>
 
-      />
-
-      <section className="mt-8">
-        <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
-          <h1 className="text-3xl text-primary font-bold text-dark text-left">
-            EEN OVERZICHT VAN DE KEUKENS
-          </h1>
-          <ol className="items-center align-middle">
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              1
-            </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              2
-            </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              3
-            </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              4
-            </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              5
-            </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
-              6
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      {/* google review intergration */}
       <section className="max-w-[1440px] mt-7 w-full justify-self-center ">
         <GoogleReviews
                 placeId={placeId}
