@@ -3,6 +3,7 @@ import ContentCard from "@/components/contentCard";
 import StarContent from "@/components/starContent";
 import Image from "next/image";
 import GoogleReviews from "@/components/googleReviews";
+import Kitchens from "@/components/Kitchens";
 
 const placeId = process.env.NEXT_PUBLIC_PLACE_ID || "ChIJN1t_tDeuEmsRUsoyG83frY4";
 
@@ -110,51 +111,9 @@ export default function Home() {
         position="right"
       />
 
-      <section className="justify-self-center bg-secondary p-8 gap-8 w-full ">
-        <div className="max-w-[1440px] mx-auto flex flex-col gap-8">
-          <h1 className="text-3xl text-primary font-bold text-dark text-left">
-            EEN OVERZICHT VAN DE KEUKENS
-          </h1>
-          <div className="flex flex-row gap-4  justify-center">
-            <div className="bg-white ">
-              <Image
-                width={400}
-                height={300}
-                src="/images/hero.png"
-                alt="Kitchen overview 1"
-              />
-              <p className="p-4">1</p>
-            </div>
-            <div className="bg-white ">
-              <Image
-                width={400}
-                height={300}
-                src="/images/hero.png"
-                alt="Kitchen overview 2"
-              />
-              <p className="p-4">2</p>
-            </div>
-            <div className="bg-white ">
-              <Image
-                width={400}
-                height={300}
-                src="/images/hero.png"
-                alt="Kitchen overview 3"
-              />
-              <p className="p-4">3</p>
-            </div>
-            <div className="bg-white ">
-              <Image
-                width={400}
-                height={300}
-                src="/images/hero.png"
-                alt="Kitchen overview 4"
-              />
-              <p className="p-4">4</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Kitchens
+
+      />
 
       <section className="mt-8">
         <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
