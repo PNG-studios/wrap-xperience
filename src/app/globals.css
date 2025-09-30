@@ -19,12 +19,6 @@ body {
   font-family: var(--font-inter);
 }
 
-.carousel {
-  width: 100%;
-  overflow-x: hidden;
-  
-}
-
 .carousel-item {
   flex: 0 0 auto;
   background-color: var(--color-primary);
