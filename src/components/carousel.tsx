@@ -17,7 +17,14 @@ export default function Carousel({ itemsPerPage = 3, gapPercentage = 1, arrowSiz
   const scrollLeft = () => {
     const carousel = document.getElementById("carousel");
     if (carousel) {
-      carousel.scrollBy({ left: -300, behavior: "smooth" });
+      const item = carousel.querySelector(".carousel-item") as HTMLElement;
+      if (item) {
+        const itemWidth = item.offsetWidth;
+        const style = window.getComputedStyle(item);
+        const gap = parseFloat(style.marginRight) || (carousel.offsetWidth * (gapPercentage / 100));
+        carousel.scrollBy({ left: -(itemWidth + gap), behavior: "smooth" });
+        console.log({ itemWidth, gap });
+      }
     } 
   };
 
