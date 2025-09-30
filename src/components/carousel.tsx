@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Children, useState } from "react";
@@ -15,6 +14,8 @@ type CarouselProps = {
 export default function Carousel({ itemsPerPage = 3, itemsPerScroll = 1, gapPercentage = 2, arrowSizePercentage = 3, children }: CarouselProps) {
 
   const [currentScroll, setCurrentScroll] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, scrollLeft: 0 });
   const carouselTotalscrolls = (Children.count(children) - itemsPerPage) / itemsPerScroll;
   const leftButtonEnabled = currentScroll > 0;
   const rightButtonEnabled = currentScroll < carouselTotalscrolls;
@@ -48,14 +49,82 @@ export default function Carousel({ itemsPerPage = 3, itemsPerScroll = 1, gapPerc
     });
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const carousel = document.getElementById("carousel");
+    if (carousel) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.pageX - carousel.offsetLeft,
+        scrollLeft: carousel.scrollLeft
+      });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    
+    const carousel = document.getElementById("carousel");
+    if (carousel) {
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - dragStart.x) * 1; // Scroll snelheid (hogere waarde = sneller)
+      carousel.scrollLeft = dragStart.scrollLeft - walk;
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    
+    // Snap naar de dichtstbijzijnde geldige positie
+    const carousel = document.getElementById("carousel");
+    if (carousel) {
+      const item = carousel.querySelector(".carousel-item") as HTMLElement;
+      if (item) {
+        const itemWidth = item.offsetWidth;
+        const gap = (carousel.offsetWidth * (gapPercentage / 100));
+        const itemWithGap = itemWidth + gap;
+        
+        // Bereken welke scroll positie het dichtst bij is
+        const nearestScroll = Math.round(carousel.scrollLeft / (itemsPerScroll * itemWithGap));
+        const clampedScroll = Math.max(0, Math.min(nearestScroll, carouselTotalscrolls));
+        
+        // Snap naar de juiste positie
+        const scrollAmount = clampedScroll * itemsPerScroll * itemWithGap;
+        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+        setCurrentScroll(clampedScroll);
+      }
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      handleMouseUp();
+    }
+  };
+
   const carouselItemWidth = ((100 - (gapPercentage * itemsPerPage - 1)) / itemsPerPage);
 
   return (
       <div className="flex max-w-[1440px] mx-auto ">
         <button style={{ opacity: leftButtonEnabled ? 1 : 0.2, fontSize: `${100 * arrowSizePercentage}%` }} onClick={() => scrollCarousel(-1)} disabled={!leftButtonEnabled}>&lt;</button>
-        <div className="overflow-hidden w-full flex text-3%" id="carousel" style={{ gap: `${gapPercentage}%` }}>
+        <div 
+          className="overflow-hidden w-full flex text-3% cursor-grab select-none" 
+          id="carousel" 
+          style={{ 
+            gap: `${gapPercentage}%`,
+            cursor: isDragging ? 'grabbing' : 'grab'
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+        >
           {Children.map(children, (child, idx) => (
-            <div className="carousel-item hover:scale-105 hover:brightness-70 transition duration-300" style={{ width: `${carouselItemWidth}%` }} key={idx}>
+            <div 
+              className="carousel-item hover:scale-105 hover:brightness-70 transition duration-300 pointer-events-none" 
+              style={{ width: `${carouselItemWidth}%` }} 
+              key={idx}
+            >
               {child}
             </div>
           ))}
