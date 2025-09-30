@@ -1,18 +1,18 @@
-import GoogleReviews from "@/components/googleReviews";
-
-
-const placeId = process.env.NEXT_PUBLIC_PLACE_ID || "ChIJN1t_tDeuEmsRUsoyG83frY4";
+import Carousel from "@/components/carousel";
 
 export default function TestPage() {
   return (
     <main>
-      <header className="bg-[url(/images/hero3.png)] bg-cover "></header>
-
-      <GoogleReviews
-        placeId={placeId}
-        maxReviews={8}
-        className=""
-      />
+      <Carousel itemsPerPage={2} gapPercentage={1} arrowSizePercentage={2}>
+        <h3>Item 1</h3>
+        <h3>Item 2</h3>
+        <h3>Item 3</h3>
+        <h3>Item 4</h3>
+        <h3>Item 5</h3>
+        <h3>Item 6</h3>
+        <h3>Item 7</h3>
+        <h3>Item 8</h3>
+      </Carousel>
     </main>
   );
 }
