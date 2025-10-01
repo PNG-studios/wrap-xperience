@@ -43,6 +43,7 @@ export default function GoogleReviews({
   useEffect(() => {
     async function fetchReviews() {
       try {
+        console.log("Fetching reviews for placeId:", placeId);
         const res = await fetch(`/api/google-reviews?placeId=${encodeURIComponent(placeId)}`);
         if (!res.ok) throw new Error("Failed to fetch reviews");
         const data = await res.json();

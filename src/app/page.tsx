@@ -6,7 +6,7 @@ import GoogleReviews from "@/components/googleReviews";
 import Carousel from "@/components/carousel";
 // import Kitchens from "@/components/Kitchens";
 
-const placeId = process.env.NEXT_PUBLIC_PLACE_ID || "ChIJN1t_tDeuEmsRUsoyG83frY4";
+const placeId = process.env.PLACE_ID ?? "";
 
 export default function Home() {
   return (
