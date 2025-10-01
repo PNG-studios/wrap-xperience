@@ -4,7 +4,7 @@ import StarContent from "@/components/starContent";
 import Image from "next/image";
 import GoogleReviews from "@/components/googleReviews";
 import Carousel from "@/components/carousel";
-// import Kitchens from "@/components/Kitchens";
+import CheckmarkSvg from "@/components/checkmarkSvg";
 
 const placeId = process.env.PLACE_ID ?? "";
 
@@ -169,12 +169,51 @@ export default function Home() {
         />
       </Carousel>
 
+      <section className="mt-8">
+        <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
+          <h1 className="text-3xl text-primary font-bold text-dark text-left">
+            DE VOORDELEN VAN JE KEUKEN WRAPPEN
+          </h1>
+          <ol className="items-center align-middle">
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              NIEUWE LOOK ZONDER VERBOUWING
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              ONEINDIG VEEL STIJLEN
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              MODERNE EN TRENDY UITSTRALING
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              VERBERGEN VAN BESCHADIGINGEN
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              EENVOUDIG AAN TE PASSEN
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              UNIFORME UITSTRALING
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              MATTE OF GLANZENDE AFWERKING
+            </li>
+            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+              <CheckmarkSvg />
+              LUXE UITSTRALING VOOR EEN LAGE PRIJS
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      {/* google review intergration */}
       <section className="max-w-[1440px] mt-7 w-full justify-self-center ">
-        <GoogleReviews
-                placeId={placeId}
-                maxReviews={3}
-                className="" 
-              />
+        <GoogleReviews placeId={placeId} maxReviews={3} className="" />
       </section>
     </main>
   );
