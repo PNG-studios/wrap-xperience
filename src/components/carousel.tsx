@@ -105,7 +105,7 @@ export default function Carousel({ itemsPerPage = 3, itemsPerScroll = 1, gapPerc
   const carouselItemWidth = ((100 - (gapPercentage * itemsPerPage - 1)) / itemsPerPage);
 
   return (
-      <div className="flex max-w-[1440px] mx-auto ">
+      <div className="flex max-w-[1440px] mx-auto">
         <button style={{ opacity: leftButtonEnabled ? 1 : 0.2, fontSize: `${100 * arrowSizePercentage}%` }} onClick={() => scrollCarousel(-1)} disabled={!leftButtonEnabled}>&lt;</button>
         <div 
           className="overflow-hidden w-full flex text-3% cursor-grab select-none" 

@@ -112,62 +112,65 @@ export default function Home() {
         position="right"
       />
 
-      <Carousel>
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 1"
-        />
-        <Image
-          width={2000}
-          height={400}
-          src="/images/hero.png"
-          alt="Kitchen example 2"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 3"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 4"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 5"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 6"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 7"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 8"
-        />
-        <Image
-          width={2000}
-          height={300}
-          src="/images/hero.png"
-          alt="Kitchen example 9"
-        />
-      </Carousel>
+      <section className="bg-secondary p-20">
+        <Carousel>  
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 1"
+          />
+          <Image
+            width={2000}
+            height={400}
+            src="/images/hero.png"
+            alt="Kitchen example 2"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 3"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 4"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 5"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 6"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 7"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 8"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 9"
+          />
+        </Carousel>
+      </section>
+      
 
       <section className="mt-8">
         <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
