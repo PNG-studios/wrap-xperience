@@ -38,6 +38,7 @@ export default function Home() {
         buttonText="MEER INFO"
         buttonHref="/services"
         position="left"
+        backgroundColor=""
       />
 
       <section className="bg-black mb-32">
@@ -107,6 +108,7 @@ export default function Home() {
         buttonText="VOORBEELDEN"
         buttonHref="/gallery"
         position="right"
+        backgroundColor=""
       />
 
       <section className="bg-secondary p-20 mb-32">

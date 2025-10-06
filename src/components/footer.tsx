@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[url(/images/hero.png)] bg-[] bg-blend-darken bg-cover w-full h-[60vh] bg-black/70  text-[#ffffff] justify-center flex ">
       <div className="max-w-[1440px] w-full h-full text-[1.5rem] flex flex-row flex-wrap justify-between content-center py-[1.5rem]">
-        <div className="w-1/2">
+        <div className="w-[40%]">
           <img src="/images/" alt="Logo" />
           <p>
             Wrap-Xperience is dé specialist in keukenwrapping – een snelle en
@@ -12,7 +12,7 @@ export default function Footer() {
             geven, zonder ingrijpende verbouwing.
           </p>
         </div>
-        <div>
+        <div className="w-[46%]">
           <h2 className="text-4xl font-bold text-dark">Contact</h2>
           <div className="flex flex-row gap-10 py-8">
             <a href="">
@@ -41,8 +41,8 @@ export default function Footer() {
                 className="size-16"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                 />
               </svg>
