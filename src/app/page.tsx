@@ -5,23 +5,20 @@ import Image from "next/image";
 import GoogleReviews from "@/components/googleReviews";
 import Carousel from "@/components/carousel";
 import CheckmarkSvg from "@/components/checkmarkSvg";
+import Footer from "@/components/footer";
 
 const placeId = process.env.PLACE_ID ?? "";
 
 export default function Home() {
   return (
     <main>
-      <header className="bg-[url(/images/hero.png)] bg-cover h-screen bg-center bg-no-repeat flex flex-col">
+      <header className="bg-[url(/images/hero.png)] bg-cover h-screen bg-center bg-no-repeat flex flex-col mb-32">
         <Navbar />
         <div className="h-full text-white flex flex-col text-center justify-center items-center">
           <h1 className=" text-[6rem] font-bold">WRAP JOUW KEUKEN IN 1 DAG</h1>
           <div className="flex flex-row gap-[1.1rem] justify-center text-[1.5rem]">
-            <button className="bg-primary/90 p-5 rounded-xl  ">
-              <a href="">MAAK AFSPRAAK</a>
-            </button>
-            <button className="bg-primary/90 p-5 rounded-xl ">
-              <a href="">VOORBEELDEN</a>
-            </button>
+            <a className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors" href="">MAAK AFSPRAAK</a>
+            <a className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors" href="">VOORBEELDEN</a>
           </div>
         </div>
       </header>
@@ -43,7 +40,7 @@ export default function Home() {
         position="left"
       />
 
-      <section className="bg-black ">
+      <section className="bg-black mb-32">
         <div className="flex gap-[7rem] text-white p-10 max-w-[1440px] mx-auto w-screen">
           <StarContent
             sectionTitle="ADVIES OP MAAT"
@@ -112,7 +109,8 @@ export default function Home() {
         position="right"
       />
 
-      <section className="bg-secondary p-20">
+      <section className="bg-secondary p-20 mb-32">
+        <h2 className="text-3xl text-primary font-bold text-dark max-w-[1440px] mx-auto w-screen pb-16">EEN OVERZICHT VAN DE KEUKENS</h2>
         <Carousel>  
           <Image
             width={2000}
@@ -172,7 +170,7 @@ export default function Home() {
       </section>
       
 
-      <section className="mt-8">
+      <section className="mt-8 mb-32">
         <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
           <h1 className="text-3xl text-primary font-bold text-dark text-left">
             DE VOORDELEN VAN JE KEUKEN WRAPPEN
@@ -215,9 +213,11 @@ export default function Home() {
       </section>
 
       {/* google review intergration */}
-      <section className="max-w-[1440px] mt-7 w-full justify-self-center ">
+      <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
       </section>
+
+      <Footer />
     </main>
   );
 }

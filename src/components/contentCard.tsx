@@ -28,9 +28,7 @@ export default function ContentCard({
          <div className="w-1/2 space-y-4">
           <h2 className="text-3xl text-primary font-bold text-dark">{title}</h2>
           <p className=" text-gray-600 leading-relaxed">{description}</p>
-          <button className="bg-primary hover:bg-primary/80 text-white px-6 py-3 rounded-xl transition-colors">
-            <a href={buttonHref}>{buttonText}</a>
-          </button>
+          <a className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors" href={buttonHref}>{buttonText}</a>
         </div>
       </div>
     </section>
