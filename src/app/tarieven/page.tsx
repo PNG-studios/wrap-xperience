@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 export default function Tarieven() {
   return (
     <main>
-      <Header backgroundImage1="/images/hero.png" title="INFORMATIE" />
+      <Header backgroundImage1="/images/hero.png" title="TARIEVEN" />
 
       <ContentCard
         imageSection={
