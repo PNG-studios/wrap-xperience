@@ -1,12 +1,11 @@
-import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 export default function Portfolio() {
   return (
     <>
-      <header>
-        <Navbar/>
-      </header>
-      <div> Portfolio</div>
+      <main>
+        <Header backgroundImage1="/images/hero.png" title="PORTFOLIO" />
+      </main>
     </>
   );
 }
