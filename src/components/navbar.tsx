@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/dist/client/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -17,7 +18,7 @@ export default function Navbar() {
     <nav className="w-full bg-black/70  text-[#ffffff] justify-center flex ">
       <div className="max-w-[1440px] w-full text-[1.5rem] flex flex-row justify-between py-[1.5rem]">
         <div>
-          <a href="/">WRAP-XPERIENCE</a>
+          <Link href="/">WRAP-XPERIENCE</Link>
         </div>
         <div>
           <ul className="flex gap-[2.1rem]"> 
