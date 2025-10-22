@@ -16,11 +16,10 @@ export default function ApiCard({ title, imageUrl, description, date }: ApiCardP
       <div className="flex flex-col flex-grow justify-between">
         <div>
           <h2 className="text-xl font-bold mt-2">{title}</h2>
-          <p className="text-gray-700 mt-1 line-clamp-5"> a{description}</p>
+          <p className="text-gray-700 mt-1 line-clamp-5">{description}</p>
         </div>
         <p className="text-sm text-gray-500 mt-2">Aangemaakt op: {date}</p>
       </div>
-      
     </div>
   );
 }
