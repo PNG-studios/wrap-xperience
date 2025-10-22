@@ -41,7 +41,7 @@ export default function ApiCard({ id, title, imageUrl, description, date, priori
      {isOpen && (
         <div
           className="fixed inset-0 bg-gray-800/70 flex justify-center items-center z-50"
-          onMouseDown={() => { setIsOpen(false); setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(enabled); }}
+          onMouseDown={() => { setIsOpen(false); setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); }}
         >
           <div
             className="bg-white rounded-lg p-4 max-w-xl shadow-lg relative"
@@ -49,7 +49,7 @@ export default function ApiCard({ id, title, imageUrl, description, date, priori
           >
             <h1 className="text-3xl font-bold mb-4 text-center">Keuken Bewerken</h1>
             <button className="absolute top-2 right-3 text-gray-500 font-extrabold hover:text-gray-800 text-2xl" 
-              onClick={() => { setIsOpen(false); setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(enabled); }}>
+              onClick={() => { setIsOpen(false); setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); }}>
               ✕
             </button>
             {/*Url*/}
