@@ -8,9 +8,9 @@ type ApiCardProps = {
 export default function ApiCard({ title, imageUrl, description, date }: ApiCardProps) {
   return (
     <div className="border rounded-lg p-4 w-64 max-w-64 shadow-md flex  flex-col ">
-      <div className="w-full h-40 overflow-hidden flex justify-center items-center mb-4 bg-rose-600">
+      <div className="w-full h-40 overflow-hidden flex justify-center items-center mb-4">
         {imageUrl && (
-          <img src={imageUrl} alt={title} width={1000}/>
+          <img src={imageUrl} alt={imageUrl} width={1000}/>
         )}
       </div>
       <div className="flex flex-col flex-grow justify-between">
