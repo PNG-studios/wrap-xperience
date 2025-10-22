@@ -16,7 +16,7 @@ export async function GET() {
 // POST: nieuwe keuken toevoegen
 export async function POST(request: Request) {
   try {
-    const { naam, beschrijving, fotoUrl } = await request.json();
+    const { naam, beschrijving, fotoUrl, prioriteit, status } = await request.json();
 
     const pool = await getPool();
     await pool
@@ -24,9 +24,11 @@ export async function POST(request: Request) {
       .input("naam", naam)
       .input("beschrijving", beschrijving)
       .input("fotoUrl", fotoUrl)
+      .input("prioriteit", prioriteit)
+      .input("status", status)
       .query(`
-        INSERT INTO Keukens (Naam, Beschrijving, FotoUrl)
-        VALUES (@naam, @beschrijving, @fotoUrl)
+        INSERT INTO Keukens (Naam, Beschrijving, FotoUrl, Priority, Enabled)
+        VALUES (@naam, @beschrijving, @fotoUrl, @prioriteit, @status)
       `);
 
     return NextResponse.json({ message: "Keuken toegevoegd!" });
@@ -39,7 +41,7 @@ export async function POST(request: Request) {
 // PUT: bestaande keuken updaten
 export async function PUT(request: Request) {
   try {
-    const { id, naam, beschrijving, fotoUrl } = await request.json();
+    const { id, naam, beschrijving, fotoUrl, prioriteit, status } = await request.json();
 
     const pool = await getPool();
     await pool
@@ -48,11 +50,15 @@ export async function PUT(request: Request) {
       .input("naam", naam)
       .input("beschrijving", beschrijving)
       .input("fotoUrl", fotoUrl)
+      .input("prioriteit", prioriteit)
+      .input("status", status)
       .query(`
         UPDATE Keukens
         SET Naam = @naam,
             Beschrijving = @beschrijving,
-            FotoUrl = @fotoUrl
+            FotoUrl = @fotoUrl,
+            Prioriteit = @prioriteit,
+            Status = @status
         WHERE Id = @id
       `);
 

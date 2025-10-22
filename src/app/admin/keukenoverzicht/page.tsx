@@ -9,8 +9,8 @@ type Keuken = {
   Beschrijving: string;
   FotoUrl: string;
   Datum: string;
-  Enabled?: number;
-  Priority?: number;
+  Status?: number;
+  Prioriteit?: number;
 };
 
 const KeukenOverzicht: React.FC = () => {
@@ -40,14 +40,17 @@ const KeukenOverzicht: React.FC = () => {
       <div className="flex border rounded-xl p-4 flex-wrap gap-4 max-w-[1440px] w-screen">
         <h1 className="w-full text-[1.7rem] font-bold text-green-500">Actief</h1>
         {keukens
-          .filter((k) => k.Enabled == 1)  
+          .filter((k) => k.Status == 1)
           .map((keuken) => (
             <ApiCard
+              id={keuken.Id}
               key={keuken.Id}
               title={keuken.Naam}
               imageUrl={keuken.FotoUrl}
               description={keuken.Beschrijving}
               date={new Date(keuken.Datum).toLocaleDateString()}
+              priority={keuken.Prioriteit}
+              enabled={keuken.Status}
             />
           ))}
       </div>
@@ -55,14 +58,17 @@ const KeukenOverzicht: React.FC = () => {
         <div className="flex border rounded-xl p-4 flex-wrap gap-4 max-w-[1440px] w-screen">
           <h1 className="w-full text-[1.7rem] font-bold text-red-500">Inactief</h1>
         {keukens
-          .filter((k) => k.Enabled == 0)
+          .filter((k) => k.Status == 0)
           .map((keuken) => (
             <ApiCard
+              id={keuken.Id}
               key={keuken.Id}
               title={keuken.Naam}
               imageUrl={keuken.FotoUrl}
               description={keuken.Beschrijving}
               date={new Date(keuken.Datum).toLocaleDateString()}
+              priority={keuken.Prioriteit}
+              enabled={keuken.Status}
             />
           ))}
       </div>
