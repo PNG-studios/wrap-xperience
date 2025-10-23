@@ -37,8 +37,5 @@ export default function KeukenKaart({ id, title, imageUrl, description, date, pr
       </div>
       {isOpen && <KeukenEditWindow id={id} title={title} imageUrl={imageUrl} description={description} date={date} priority={priority} enabled={enabled}  onClose={() => setIsOpen(false)}/>}
     </>
-
-
-
   );
 }

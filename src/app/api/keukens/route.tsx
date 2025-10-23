@@ -19,16 +19,17 @@ export async function POST(request: Request) {
     const { naam, beschrijving, fotoUrl, prioriteit, status } = await request.json();
 
     const pool = await getPool();
+    const res = await pool.request().query("SELECT MAX(Id) AS MaxId FROM Keukens");
     await pool
       .request()
-      .input("naam", naam)
+      .input("naam", naam + " #" + res.recordset[0].MaxId)
       .input("beschrijving", beschrijving)
       .input("fotoUrl", fotoUrl)
       .input("prioriteit", prioriteit)
       .input("status", status)
       .query(`
-        INSERT INTO Keukens (Naam, Beschrijving, FotoUrl, Priority, Enabled)
-        VALUES (@naam, @beschrijving, @fotoUrl, @prioriteit, @status)
+        INSERT INTO Keukens (Naam, Beschrijving, FotoUrl, Prioriteit, Status)
+        VALUES (@naam, @beschrijving + @naam, @fotoUrl, @prioriteit, @status)
       `);
 
     return NextResponse.json({ message: "Keuken toegevoegd!" });
