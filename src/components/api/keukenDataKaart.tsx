@@ -19,7 +19,7 @@ export default function KeukenKaart({ id, title, imageUrl, description, date, pr
   return (
     <>
       <div
-        className="border rounded-lg p-4 w-64 max-w-64 shadow-md flex  flex-col hover:cursor-pointer hover:scale-105 transition-transform hover:bg-gray-100"
+        className="border rounded-lg p-4 w-66 max-w-66 shadow-md flex  flex-col hover:cursor-pointer hover:scale-105 transition-transform hover:bg-gray-100"
         onClick={() => { setIsOpen(true); }}
       >
         <div className="w-full h-40 overflow-hidden flex justify-center items-center mb-4">
