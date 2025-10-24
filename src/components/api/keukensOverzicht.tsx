@@ -70,7 +70,8 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
       </div>
 
       <div className="flex flex-wrap gap-4 max-w-[1440px] w-100%">
-        {keukens
+        {keukens.length > 0 ? (
+          keukens
           .filter((k) => k.Status == filterStatus)
           .map((keuken) => (
             <KeukenKaart
@@ -83,7 +84,10 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
               priority={keuken.Prioriteit}
               enabled={keuken.Status}
             />
-          ))}
+          ))
+        ) : (
+          !loading && <h1 className="text-center w-full">Geen keukens gevonden.</h1>
+        )}
       </div>
     </div>
   )
