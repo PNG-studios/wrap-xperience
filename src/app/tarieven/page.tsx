@@ -4,6 +4,8 @@ import ContentCard from "@/components/contentCard";
 import Image from "next/image";
 import Footer from "@/components/footer";
 
+import TextAnimation from "@/components/textAnimation";
+
 export default function Tarieven() {
   return (
     <main>
@@ -126,6 +128,8 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
       </section>
 
       <Footer />
+
+      <TextAnimation />
     </main>
   );
 }

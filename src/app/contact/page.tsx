@@ -3,6 +3,7 @@ import react, { useRef } from "react";
 import Header from "@/components/header";
 import emailjs from "emailjs-com";
 import Footer from "@/components/footer";
+import TextAnimation from "@/components/textAnimation";
 
 export default function Portfolio() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -164,6 +165,8 @@ export default function Portfolio() {
         </section>
 
         <Footer />
+
+        <TextAnimation />
       </main>
     </>
   );

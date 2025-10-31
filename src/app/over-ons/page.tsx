@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import TextAnimation from "@/components/textAnimation";
 
 export default function Portfolio() {
   return (
@@ -47,6 +48,8 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
+
+        <TextAnimation />
       </main>
     </>
   );

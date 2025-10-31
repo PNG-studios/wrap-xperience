@@ -3,6 +3,7 @@ import ContentCardSimple from "@/components/contentCardSimple";
 import ContentCard from "@/components/contentCard";
 import Image from "next/image";
 import Footer from "@/components/footer";
+import TextAnimation from "@/components/textAnimation";
 
 export default function Portfolio() {
   return (
@@ -193,6 +194,8 @@ Onze vakmensen zorgen voor een grondige reiniging en voorbereiding van het opper
         />
 
         <Footer />
+
+        <TextAnimation />
       </main>
     </>
   );
