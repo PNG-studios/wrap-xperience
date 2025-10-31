@@ -18,3 +18,15 @@ html {
 body {
   font-family: var(--font-inter);
 }
+
+.carousel-item {
+  flex: 0 0 auto;
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+  text-align: center;
+  align-content: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
