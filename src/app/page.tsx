@@ -7,6 +7,7 @@ import Carousel from "@/components/carousel";
 import CheckmarkSvg from "@/components/checkmarkSvg";
 import Footer from "@/components/footer";
 import ImageSlider from "@/components/imageSlider";
+import TextAnimation from "@/components/textAnimation";
 
 const placeId = process.env.PLACE_ID ?? "";
 
@@ -181,6 +182,8 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      <TextAnimation />
     </main>
   );
 }
