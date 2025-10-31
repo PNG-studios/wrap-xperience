@@ -6,6 +6,7 @@ import GoogleReviews from "@/components/googleReviews";
 import Carousel from "@/components/carousel";
 import CheckmarkSvg from "@/components/checkmarkSvg";
 import Footer from "@/components/footer";
+import ImageSlider from "@/components/imageSlider";
 
 const placeId = process.env.PLACE_ID ?? "";
 
@@ -218,6 +219,8 @@ export default function Home() {
       <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
       </section>
+
+      <ImageSlider beforeImage="/images/hero.png" beforeAlt="test" afterImage="/images/hero.png" afterAlt="hoi" />
 
       <Footer />
     </main>
