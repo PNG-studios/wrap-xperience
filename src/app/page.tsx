@@ -61,47 +61,7 @@ export default function Home() {
 
       <ContentCard
         imageSection={
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-gray-800">VOOR</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <Image
-                  src="/images/hero.png"
-                  alt="Kitchen before 1"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto rounded-lg object-cover"
-                />
-                <Image
-                  src="/images/hero.png"
-                  alt="Kitchen before 2"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto rounded-lg object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-gray-800">NA</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <Image
-                  src="/images/hero.png"
-                  alt="Kitchen after 1"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto rounded-lg object-cover"
-                />
-                <Image
-                  src="/images/hero.png"
-                  alt="Kitchen after 2"
-                  width={400}
-                  height={300}
-                  className="w-full h-auto rounded-lg object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          <ImageSlider beforeImage="/images/hero.png" beforeAlt="test" afterImage="/images/hero.png" afterAlt="hoi" />
         }
         title="Kitchen Transformation"
         description="Keuken wrappen is een techniek waarbij een dunne folie wordt aangebracht op keukenkasten, lades en andere oppervlakken. Dit zorgt voor een volledig nieuwe uitstraling zonder dat de kasten vervangen hoeven te worden. 
@@ -219,8 +179,6 @@ export default function Home() {
       <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
       </section>
-
-      <ImageSlider beforeImage="/images/hero.png" beforeAlt="test" afterImage="/images/hero.png" afterAlt="hoi" />
 
       <Footer />
     </main>

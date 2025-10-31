@@ -17,6 +17,7 @@ export default function ImageSlider({
   useEffect(() => {
     const container = document.querySelector(".container");
     const slider = document.querySelector(".slider");
+    (container as HTMLElement)?.style.setProperty("--position",`50%`)
 
     slider?.addEventListener("input", (e) => {
       (container as HTMLElement)?.style.setProperty(
