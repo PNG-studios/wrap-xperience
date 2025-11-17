@@ -9,10 +9,10 @@ export default function Portfolio() {
 
         <PortfolioExample
           title="Test Title"
-          imageBefore={["/images/hero.png", "/images/hero.png"]}
-          altBefore={["image 1", "image 2"]}
-          imageAfter={["/images/hero.png", "/images/hero.png"]}
-          altAfter={["image 1", "image 2"]}
+          imageBefore={["/images/hero.png", "/images/hero.png", "/images/hero.png", "/images/hero.png", "/images/hero.png"]}
+          altBefore={["image 1", "image 2", "image 3", "image 4", "image 5"]}
+          imageAfter={["/images/hero.png","/images/hero.png", "/images/hero.png", "/images/hero.png",  "/images/hero.png"]}
+          altAfter={["image 1", "image 2", "image 3", "image 4", "image 5"]}
         />
       </main>
     </>

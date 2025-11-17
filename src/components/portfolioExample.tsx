@@ -29,9 +29,17 @@ export default function PortfolioExample({
       <div className="flex flex-col items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto`">
         <div className="flex flex-col gap-[2rem]">
           <h2 className="text-6xl text-dark font-bold text-dark">{title}</h2>
-          {beforeImages.map((src, index) => (
-            <ImageSlider key={index} beforeImage={beforeImages[index]} beforeAlt={beforeAlts[index]} afterImage={afterImages[index]} afterAlt={afterAlts[index]} />
-          ))}
+          <div className="grid grid-cols-2 auto-rows-min [&>*:nth-child(3n+1)]:col-span-2 gap-8">
+            {beforeImages.map((src, index) => (
+              <ImageSlider
+                key={index}
+                beforeImage={beforeImages[index]}
+                beforeAlt={beforeAlts[index]}
+                afterImage={afterImages[index]}
+                afterAlt={afterAlts[index]}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
