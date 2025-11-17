@@ -10,7 +10,7 @@ type CarouselProps = {
   children: ReactNode;
 };
 
-export default function Carousel({ itemsPerPage = 3, itemsPerScroll = 1, gapPercentage = 2, arrowSizePercentage = 3, children }: CarouselProps) {
+export default function Carousel({ itemsPerPage = window.innerWidth < 640 ? 1 : 3, itemsPerScroll = 1, gapPercentage = 2, arrowSizePercentage = 3, children }: CarouselProps) {
 
   const [currentScroll, setCurrentScroll] = useState(0);
   const [isDragging, setIsDragging] = useState(false);

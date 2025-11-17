@@ -11,12 +11,14 @@ export default function StarContent({
 }: starCardProps) {
     return (
         <>
-            <div className="flex flex-col w-1/3 gap-2 items-center  max-w-[1440px] justify-start">
+            <div className="flex sm:flex-col sm:w-1/3 w-full gap-2 items-center  max-w-[1440px] justify-start">
                 <div className="text-primary p-4 m-2">
-                    <Star size={58} fill="currentColor" />
+                    <Star className="sm:w-[58px] sm:h-[58px] w-16 h-16" fill="currentColor" />
                 </div>
-                <h2 className="text-[1.5rem] text-center font-bold">{sectionTitle}</h2>
-                <p className="text-center text-[1rem]">{description}</p>
+                <div>
+                    <h2 className="sm:text-[1.5rem] text-[2rem] text-center font-bold">{sectionTitle}</h2>
+                <p className="sm:text-center text-left sm:text-[1rem] text-[1.5rem]">{description}</p>
+                </div>
             </div>
         </>
     );

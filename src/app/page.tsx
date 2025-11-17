@@ -17,10 +17,10 @@ export default function Home() {
       <header className="bg-[url(/images/hero.png)] bg-cover h-screen bg-center bg-no-repeat flex flex-col mb-32">
         <Navbar />
         <div className="h-full text-white flex flex-col text-center justify-center items-center">
-          <h1 className=" text-[6rem] font-bold">WRAP JOUW KEUKEN IN 1 DAG</h1>
-          <div className="flex flex-row gap-[1.1rem] justify-center text-[1.5rem]">
-            <a className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors" href="">MAAK AFSPRAAK</a>
-            <a className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors" href="">VOORBEELDEN</a>
+          <h1 className=" sm:text-[6rem] text-[8rem] font-bold">WRAP JOUW KEUKEN IN 1 DAG</h1>
+          <div className="flex sm:flex-row flex-col gap-[1.1rem] justify-center sm:text-[1.5rem] text-[2.5rem] sm:mt-[1rem] mt-[4rem]">
+            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[16rem] py-3 p-5 rounded-xl transition-colors" href="">MAAK AFSPRAAK</a>
+            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[16rem] py-3 p-5 rounded-xl transition-colors" href="">VOORBEELDEN</a>
           </div>
         </div>
       </header>
@@ -44,7 +44,7 @@ export default function Home() {
       />
 
       <section className="bg-black mb-32">
-        <div className="flex gap-[7rem] text-white p-10 max-w-[1440px] mx-auto w-screen">
+        <div className="flex sm:flex-row flex-col gap-[7rem] text-white p-10 max-w-[1440px] mx-auto w-screen">
           <StarContent
             sectionTitle="ADVIES OP MAAT"
             description="Je keuken wrappen is maatwerk, want iedereen heeft een unieke stijl en voorkeur. Weet je nog niet welke kleur het beste bij jouw keuken past? Geen zorgen, we helpen je graag met persoonlijk advies!"

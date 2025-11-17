@@ -121,7 +121,7 @@ export default function GoogleReviews({
       </div>
 
       {/* Reviews */}
-      <div className="flex flex-row gap-6">
+      <div className="flex sm:flex-row flex-col gap-6">
         {reviewsToShow.map((review, index) => (
           <div
             key={index}
