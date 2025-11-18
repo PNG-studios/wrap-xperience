@@ -23,27 +23,27 @@ export default function Portfolio() {
                 zónder de hoge kosten, lange wachttijden of de rommel van een
                 volledige renovatie.
               </p>
-              <h2 className="sm:text-xl text-[4rem] font-bold">Informatie over:</h2>
+              <h2 className="sm:text-xl text-[6vw] font-bold">Informatie over:</h2>
               <ol className="items-center align-middle">
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Aanrechtbladen
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Keukenkastjes
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Wat kan wel of niet
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Onderhoud
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Kleuren en patronen
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Afkitten
                 </li>
-                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[4vw] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Extra informatie
                 </li>
               </ol>

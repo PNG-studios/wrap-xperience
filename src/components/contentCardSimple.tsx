@@ -22,7 +22,7 @@ export default function ContentCardSimple({
           {imageSection}
         </div>       
          <div className="sm:w-1/2 w-full space-y-4">
-          <h2 className="sm:text-3xl text-[5rem] text-primary font-bold text-dark">{title}</h2>
+          <h2 className="sm:text-3xl text-[8vw] text-primary font-bold text-dark">{title}</h2>
           <p className="sm:text-xl text-[2.5rem] text-gray-600 leading-relaxed">{description}</p>
         </div>
       </div>

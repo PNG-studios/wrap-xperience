@@ -30,7 +30,7 @@ export default function ContentCard({
         <div className="relative sm:w-1/2 w-full h-full">{imageSection}</div>
         <div className="sm:w-1/2 w-full sm:space-y-4">
           <div>
-            <h2 className="sm:text-3xl text-[5rem] text-primary font-bold text-dark">
+            <h2 className="sm:text-3xl text-[8vw] text-primary font-bold text-dark">
               {title}
             </h2>
             <p className="sm:text-xl text-[2.5rem] sm:mb-0 mb-[2rem] text-gray-600 leading-relaxed">
