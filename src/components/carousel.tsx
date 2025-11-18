@@ -1,6 +1,6 @@
 "use client";
 
-import { Children, useState, ReactNode, useRef } from "react";
+import { Children, useState, useEffect, ReactNode, useRef } from "react";
 
 type CarouselProps = {
   itemsPerPage?: number
@@ -10,7 +10,7 @@ type CarouselProps = {
   children: ReactNode;
 };
 
-export default function Carousel({ itemsPerPage = window.innerWidth < 640 ? 1 : 3, itemsPerScroll = 1, gapPercentage = 2, arrowSizePercentage = 3, children }: CarouselProps) {
+export default function Carousel({itemsPerPage = 3, itemsPerScroll = 1, gapPercentage = 2, arrowSizePercentage = 3, children }: CarouselProps) {
 
   const [currentScroll, setCurrentScroll] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -18,6 +18,13 @@ export default function Carousel({ itemsPerPage = window.innerWidth < 640 ? 1 : 
   const carouselTotalscrolls = (Children.count(children) - itemsPerPage) / itemsPerScroll;
   const leftButtonEnabled = currentScroll > 0;
   const rightButtonEnabled = currentScroll < carouselTotalscrolls;
+  useEffect(() => {
+    if (window.innerWidth < 640) {
+      itemsPerPage = 1;
+    } else {
+      itemsPerPage = 3;
+    }
+  }, []);
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
