@@ -65,12 +65,13 @@ export default function GoogleReviews({
       return (
         <Star
           key={index}
-          size={20}
+          size={window.innerWidth < 640 ? 16 : 20}
           strokeWidth={2}
           className={isActive ? "text-yellow-400" : "text-gray-300"}
           fill={isActive ? "currentColor" : "none"}
           // ensure stroke uses currentColor so it matches the text color
           style={{ stroke: "currentColor" }}
+          
         />
       );
     });
@@ -99,21 +100,21 @@ export default function GoogleReviews({
   const reviewsToShow = businessInfo.reviews.slice(0, maxReviews);
 
   return (
-    <div className={`space-y-6  flex-col ${className}`}>
+    <div className={`space-y-6 flex-col ${className}`}>
       {/* Business Header */}
       <div className="flex flex-col items-center justify-self-center  ">
         
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="sm:text-2xl text-[2.5rem] font-bold text-gray-900">
             {businessInfo.displayName.text}
           </h2>
           <div className="flex items-center mt-1">
             <div className="flex mr-2">
               {renderStars(businessInfo.rating)}
             </div>
-            <span className="text-lg font-semibold text-gray-700">
+            <span className="sm:text-lg text-[1.8rem] font-semibold text-gray-700">
               {businessInfo.rating.toFixed(1)}
             </span>
-            <span className="text-gray-500 ml-2">
+            <span className="sm:text-lg text-[1.8rem] text-gray-500 ml-2">
               ({businessInfo.userRatingCount} reviews)
             </span>
           </div>
@@ -121,11 +122,11 @@ export default function GoogleReviews({
       </div>
 
       {/* Reviews */}
-      <div className="flex sm:flex-row flex-col gap-6">
+      <div className="flex sm:flex-row sm:text-xl text-[2.5rem] flex-col gap-6">
         {reviewsToShow.map((review, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex-1"
+            className="bg-white border border-gray-200 sm:rounded-lg rounded-[1.75rem] p-6 shadow-sm hover:shadow-md transition-shadow flex-1"
           >
             <div className="flex items-start space-x-4">
               {/* Avatar */}
@@ -136,7 +137,7 @@ export default function GoogleReviews({
                     alt={review.authorAttribution.displayName || "User"}
                     width={48}
                     height={48}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-16 h-16 sm:w-12 sm:h-12 rounded-full object-cover"
                   />
                 ) : (
                   <div className="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">
@@ -152,7 +153,7 @@ export default function GoogleReviews({
                     <h3 className="font-semibold text-gray-900 truncate">
                       {review.authorAttribution?.displayName || "Anonymous"}
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-[1.4rem] sm:text-sm text-gray-500">
                       {review.relativePublishTimeDescription}
                     </p>
                   </div>
@@ -162,7 +163,7 @@ export default function GoogleReviews({
                 </div>
 
                 {review.originalText?.text && (
-                  <p className="text-gray-700 leading-relaxed text-sm">
+                  <p className="text-gray-700 leading-relaxed sm:text-sm text-[1.8rem]">
                     {review.originalText.text}
                   </p>
                 )}

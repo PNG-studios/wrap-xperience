@@ -140,35 +140,35 @@ export default function Home() {
             DE VOORDELEN VAN JE KEUKEN WRAPPEN
           </h1>
           <ol className="items-center align-middle">
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               NIEUWE LOOK ZONDER VERBOUWING
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               ONEINDIG VEEL STIJLEN
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               MODERNE EN TRENDY UITSTRALING
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               VERBERGEN VAN BESCHADIGINGEN
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               EENVOUDIG AAN TE PASSEN
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               UNIFORME UITSTRALING
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               MATTE OF GLANZENDE AFWERKING
             </li>
-            <li className="h-15 flex items-center text-2xl font-bold border-t border-b border-gray-300">
+            <li className="py-[1vh] flex items-center sm:text-2xl text-[2.5rem] font-bold border-t border-b border-gray-300">
               <CheckmarkSvg />
               LUXE UITSTRALING VOOR EEN LAGE PRIJS
             </li>
