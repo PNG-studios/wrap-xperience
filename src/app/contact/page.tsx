@@ -109,7 +109,7 @@ export default function Portfolio() {
             </div>
 
             <form className="sm:w-1/2 w-full px-[4rem]" ref={formRef} onSubmit={sendEmail}>
-              <div className="flex flex-row justify-between sm:gap-4 gap-[3rem] sm:py-0 py-[1.5rem]">
+              <div className="flex sm:flex-row flex-col justify-between sm:gap-4 gap-[3rem] sm:py-0 py-[1.5rem]">
                 <div className="w-full">
                   <input
                     className="flex flex-row w-full sm:text-xl text-[4rem] bg-secondary rounded-lg p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
