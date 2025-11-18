@@ -37,16 +37,16 @@ export default function Portfolio() {
         <Header backgroundImage1="/images/hero.png" title="CONTACT" />
 
         <section className="my-15 justify-center gap-8 p-8 my-32">
-          <div className="flex flex-row items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto">
-            <div className="w-1/2">
-              <p className="leading-relaxed">
+          <div className="flex sm:flex-row flex-col items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto">
+            <div className="sm:w-1/2 w-full px-[4rem]">
+              <p className="sm:text-xl text-[2.5rem] leading-relaxed">
                 Heb je vragen of wil je weten wat we voor jouw keuken kunnen
                 betekenen? Neem gerust contact met ons op! We denken graag met
                 je mee en geven persoonlijk advies, helemaal afgestemd op jouw
                 wensen. Je kunt ons bellen, mailen of een bericht sturen via het
                 contactformulier op onze website. We helpen je graag verder!
               </p>
-              <ul className="mt-8 text-4xl">
+              <ul className="mt-8 sm:text-4xl text-[3rem]">
                 <li className="flex flex-row gap-4 mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -108,11 +108,11 @@ export default function Portfolio() {
               <img src="" alt="Logo" />
             </div>
 
-            <form className="w-1/2" ref={formRef} onSubmit={sendEmail}>
-              <div className="flex flex-row justify-between gap-4">
+            <form className="sm:w-1/2 w-full px-[4rem]" ref={formRef} onSubmit={sendEmail}>
+              <div className="flex flex-row justify-between sm:gap-4 gap-[3rem] sm:py-0 py-[1.5rem]">
                 <div className="w-full">
                   <input
-                    className="flex flex-row w-full bg-secondary rounded-lg p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
+                    className="flex flex-row w-full sm:text-xl text-[4rem] bg-secondary rounded-lg p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
                     type="text"
                     id="firstName"
                     name="firstName"
@@ -123,7 +123,7 @@ export default function Portfolio() {
 
                 <div className="w-full">
                   <input
-                    className="bg-secondary rounded-lg w-full p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
+                    className="bg-secondary rounded-lg w-full sm:text-xl text-[4rem] p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
                     type="text"
                     id="lastName"
                     name="lastName"
@@ -133,9 +133,9 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div>
+              <div className="sm:py-0 py-[1.5rem]">
                 <input
-                  className="bg-secondary rounded-lg w-full p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
+                  className="bg-secondary rounded-lg w-full sm:text-xl text-[4rem] p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
                   type="email"
                   id="email"
                   name="email"
@@ -144,9 +144,9 @@ export default function Portfolio() {
                 />
               </div>
 
-              <div>
+              <div className="sm:py-0 py-[1.5rem]">
                 <textarea
-                  className="bg-secondary rounded-lg w-full h-[25vh] p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
+                  className="bg-secondary rounded-lg w-full sm:text-xl text-[4rem] h-[25vh] p-4 mb-4 focus:outline-[#747676] focus:outline-[.15rem]"
                   id="message"
                   name="message"
                   required
@@ -156,7 +156,7 @@ export default function Portfolio() {
 
               <button
                 type="submit"
-                className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors"
+                className="bg-primary hover:bg-primary/80 sm:text-xl text-[2.5rem] text-white px-6 py-3 p-5 rounded-xl transition-colors"
               >
                 VERZENDEN
               </button>

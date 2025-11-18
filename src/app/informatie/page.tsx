@@ -12,38 +12,38 @@ export default function Portfolio() {
         <Header backgroundImage1="/images/hero.png" title="INFORMATIE" />
 
         <section className="flex my-15 justify-center gap-8 p-8">
-          <div className="flex flex-row items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto`">
-            <div className="relative w-1/2 h-full">
+          <div className="flex sm:flex-row flex-col flex-col-reverse items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto`">
+            <div className="relative sm:w-1/2 w-full h-full">
               <img src="/images/hero.png" alt="" />
             </div>
-            <div className="w-1/2 space-y-4">
-              <p className=" text-gray-600 leading-relaxed">
+            <div className="sm:w-1/2 w-full space-y-4">
+              <p className="sm:text-xl text-[2.5rem] text-gray-600 leading-relaxed">
                 Bij wrap-xperience helpen we je graag om van jouw droomkeuken
                 realiteit te maken. Geniet van een compleet nieuwe uitstraling,
                 zónder de hoge kosten, lange wachttijden of de rommel van een
                 volledige renovatie.
               </p>
-              <h2 className="text-xl font-bold">Informatie over:</h2>
+              <h2 className="sm:text-xl text-[4rem] font-bold">Informatie over:</h2>
               <ol className="items-center align-middle">
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Aanrechtbladen
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Keukenkastjes
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Wat kan wel of niet
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Onderhoud
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Kleuren en patronen
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Afkitten
                 </li>
-                <li className="h-12 text-xl text-gray-500 flex items-center border-t border-b border-gray-300 hover:bg-gray-100">
+                <li className="h-12 sm:text-xl text-[2.5rem] text-gray-500 flex items-center sm:py-0 py-[2rem] border-t border-b border-gray-300 hover:bg-gray-100">
                   Extra informatie
                 </li>
               </ol>

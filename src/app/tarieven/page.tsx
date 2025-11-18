@@ -33,54 +33,54 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
       <section className="flex my-15 justify-center p-8 py-16">
         <div className="flex sm:flex-row flex-col flex-wrap justify-between gap-[2rem] w-full max-w-[1440px] mx-auto`">
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Kleine keuken</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Kleine keuken</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               tot en met 9 fronten en/of lades
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 699,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 699,-</h2>
           </div>
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Middelgrote keuken</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Middelgrote keuken</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               Vanaf 10 fronten en/of lades
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 999,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 999,-</h2>
           </div>
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Grote keuken</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Grote keuken</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               Vanaf 20 fronten en/of lades
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 1599,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 1599,-</h2>
           </div>
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Custom made</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Custom made</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               Een eigen ontwerp met extra’s op basis van een bestaande keuken
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 1599,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 1599,-</h2>
           </div>
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Keukenblad</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Keukenblad</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               Keukenblad inclusief nieuwe kitranden, keuze uit dikkere folie met
               hogere krasbestendigheid.
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 325,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 325,-</h2>
           </div>
           <div className="sm:w-[30%] w-full mb-8">
-            <h2 className="text-3xl">Keuken met veel profiel</h2>
+            <h2 className="sm:text-3xl text-[5rem]">Keuken met veel profiel</h2>
             <img src="/images/hero.png" alt="" />
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[4rem] text-gray-600 leading-relaxed">
               Deze keuken wordt gecoat in plaats van gewrapt omdat deurtjes te
               veel profiel hebben
             </p>
-            <h2 className="text-primary text-4xl font-bold">Vanaf € 1749,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold">Vanaf € 1749,-</h2>
           </div>
         </div>
       </section>
@@ -91,10 +91,10 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             <img src="/images/hero.png" alt="" />
           </div>
           <div className="sm:w-1/2 w-full space-y-4">
-            <h2 className="text-3xl text-primary font-bold text-dark">
+            <h2 className="sm:text-3xl text-[5rem] text-primary font-bold text-dark">
               ACHTERWAND
             </h2>
-            <p className=" text-gray-600 leading-relaxed">
+            <p className="sm:text-xl text-[3rem] text-gray-600 leading-relaxed">
               Een spatscherm van 3 mm dik aluminium en kunststof is de ideale
               oplossing voor de achterwand van je keuken. Het materiaal is
               licht, sterk en roestvrij, en bovendien hittebestendig bij normaal
@@ -116,9 +116,9 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
               beschadiging te voorkomen en jarenlang van je stijlvolle keuken te
               genieten
             </p>
-            <h2 className="text-primary text-4xl font-bold mb-8">Vanaf € 1749,-</h2>
+            <h2 className="text-primary sm:text-4xl text-[5rem] font-bold mb-8">Vanaf € 1749,-</h2>
             <a
-              className="bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors"
+              className="bg-primary sm:text-xl text-[3rem] hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors"
               href=""
             >
               Maak afspraak

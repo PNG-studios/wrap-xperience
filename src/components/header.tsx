@@ -19,7 +19,7 @@ export default function Header({ backgroundImage1, title }: HeaderProps) {
 
       <header
         style={style}
-        className="w-full h-[50vh] items-center mx-auto bg-cover flex flex-col sm:justify-between justify-end"
+        className="w-full sm:h-[50vh] h-[20vh] items-center mx-auto bg-cover flex flex-col justify-end"
       >
         <div className="max-w-[1440px] w-full ">
           <h2 className="text-white sm:text-8xl text-[10rem] font-bold pb-8 sm:ml-0 ml-6">
