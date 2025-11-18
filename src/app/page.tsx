@@ -44,7 +44,7 @@ export default function Home() {
       />
 
       <section className="bg-black mb-32">
-        <div className="flex sm:flex-row flex-col gap-[7rem] text-white p-10 max-w-[1440px] mx-auto w-screen">
+        <div className="flex sm:flex-row flex-col gap-[7rem] text-white sm:p-10 py-10 max-w-[1440px] mx-auto w-screen">
           <StarContent
             sectionTitle="ADVIES OP MAAT"
             description="Je keuken wrappen is maatwerk, want iedereen heeft een unieke stijl en voorkeur. Weet je nog niet welke kleur het beste bij jouw keuken past? Geen zorgen, we helpen je graag met persoonlijk advies!"
