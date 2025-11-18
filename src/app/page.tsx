@@ -43,7 +43,7 @@ export default function Home() {
         backgroundColor=""
       />
 
-      <section className="bg-black mb-32">
+      <section className="bg-black">
         <div className="flex sm:flex-row flex-col gap-[7rem] text-white sm:p-10 py-10 max-w-[1440px] mx-auto w-screen">
           <StarContent
             sectionTitle="ADVIES OP MAAT"
@@ -73,7 +73,7 @@ export default function Home() {
         backgroundColor=""
       />
 
-      <section className="bg-secondary p-20 mb-32">
+      <section className="bg-secondary p-20">
         <h2 className="text-3xl text-primary font-bold text-dark max-w-[1440px] mx-auto w-auto pb-16">EEN OVERZICHT VAN DE KEUKENS</h2>
         <Carousel>  
           <Image
@@ -177,9 +177,9 @@ export default function Home() {
       </section>
 
       {/* google review intergration */}
-      {/* <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32 sm:px-0 px-[4rem]">
+      <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32 sm:px-0 px-[4rem]">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
-      </section> */}
+      </section>
 
       <Footer />
 
