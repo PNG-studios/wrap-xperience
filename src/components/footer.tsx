@@ -65,7 +65,7 @@ export default function Footer() {
             </a>
           </div>
           <a
-            className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[29%] py-3 p-5 rounded-xl transition-colors sm:text-[1.5rem] text-[3rem]"
+            className="bg-primary hover:bg-primary/80 text-white sm:px-6 py-3 p-5 rounded-xl transition-colors sm:text-[1.5rem] text-[3rem]"
             href=""
           >
             MAAK AFSPRAAK
