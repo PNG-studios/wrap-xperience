@@ -5,13 +5,7 @@ interface HeaderProps {
   title: string;
 }
 
-
-
-export default function Header({
-  backgroundImage1,
-  title,
-}: HeaderProps) {
-
+export default function Header({ backgroundImage1, title }: HeaderProps) {
   const style: React.CSSProperties = {
     backgroundImage: `url(${backgroundImage1})`,
     backgroundSize: "cover",
@@ -20,12 +14,19 @@ export default function Header({
     backgroundBlendMode: "darken",
   };
   return (
-    <header style={style} className="w-full h-[50vh] items-center mx-auto bg-cover flex flex-col justify-between">
-        <Navbar />
+    <>
+      <Navbar />
 
+      <header
+        style={style}
+        className="w-full h-[50vh] items-center mx-auto bg-cover flex flex-col sm:justify-between justify-end"
+      >
         <div className="max-w-[1440px] w-full ">
-          <h2 className="text-white text-8xl font-bold pb-8">{title}</h2>
+          <h2 className="text-white sm:text-8xl text-[10rem] font-bold pb-8 sm:ml-0 ml-6">
+            {title}
+          </h2>
         </div>
-    </header>
+      </header>
+    </>
   );
 }

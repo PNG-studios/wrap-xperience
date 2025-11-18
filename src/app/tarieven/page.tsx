@@ -31,8 +31,8 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
       />
 
       <section className="flex my-15 justify-center p-8 py-16">
-        <div className="flex flex-row flex-wrap justify-between gap-[2rem] w-full max-w-[1440px] mx-auto`">
-          <div className="w-[30%] mb-8">
+        <div className="flex sm:flex-row flex-col flex-wrap justify-between gap-[2rem] w-full max-w-[1440px] mx-auto`">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Kleine keuken</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -40,7 +40,7 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             </p>
             <h2 className="text-primary text-4xl font-bold">Vanaf € 699,-</h2>
           </div>
-          <div className="w-[30%] mb-8">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Middelgrote keuken</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -48,7 +48,7 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             </p>
             <h2 className="text-primary text-4xl font-bold">Vanaf € 999,-</h2>
           </div>
-          <div className="w-[30%] mb-8">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Grote keuken</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -56,7 +56,7 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             </p>
             <h2 className="text-primary text-4xl font-bold">Vanaf € 1599,-</h2>
           </div>
-          <div className="w-[30%] mb-8">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Custom made</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -64,7 +64,7 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             </p>
             <h2 className="text-primary text-4xl font-bold">Vanaf € 1599,-</h2>
           </div>
-          <div className="w-[30%] mb-8">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Keukenblad</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -73,7 +73,7 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
             </p>
             <h2 className="text-primary text-4xl font-bold">Vanaf € 325,-</h2>
           </div>
-          <div className="w-[30%] mb-8">
+          <div className="sm:w-[30%] w-full mb-8">
             <h2 className="text-3xl">Keuken met veel profiel</h2>
             <img src="/images/hero.png" alt="" />
             <p className=" text-gray-600 leading-relaxed">
@@ -86,11 +86,11 @@ Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit d
       </section>
 
       <section className="my-15 justify-center gap-8 p-8 py-16">
-        <div className="flex flex-row items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto">
+        <div className="flex sm:flex-row flex-col flex-col-reverse items-center justify-between gap-[7.5rem] w-full max-w-[1440px] mx-auto">
           <div className="relative w-1/2 h-full">
             <img src="/images/hero.png" alt="" />
           </div>
-          <div className="w-1/2 space-y-4">
+          <div className="sm:w-1/2 w-full space-y-4">
             <h2 className="text-3xl text-primary font-bold text-dark">
               ACHTERWAND
             </h2>

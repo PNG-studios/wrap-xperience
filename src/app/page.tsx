@@ -135,7 +135,7 @@ export default function Home() {
       
 
       <section className="mt-8 mb-32">
-        <div className="max-w-[1440px] w-full flex flex-col justify-self-center  gap-8">
+        <div className="max-w-[1440px] w-full flex flex-col justify-self-center gap-8 sm:px-0 px-[4rem]">
           <h1 className="text-3xl text-primary font-bold text-dark text-left">
             DE VOORDELEN VAN JE KEUKEN WRAPPEN
           </h1>
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* google review intergration */}
-      <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32">
+      <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32 sm:px-0 px-[4rem]">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
       </section>
 
