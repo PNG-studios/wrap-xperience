@@ -25,18 +25,21 @@ export default function Carousel({
   const leftButtonEnabled = currentScroll > 0;
   const rightButtonEnabled = currentScroll < carouselTotalscrolls;
   const [itemsPerPageState, setItemsPerPageState] = useState(itemsPerPage);
+  const [arrowSizePercentageState, setArrowSizePercentageState] =
+    useState(arrowSizePercentage);
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) {
         setItemsPerPageState(1);
-      }
-      else if (width < 1024) {
+        setArrowSizePercentageState(5);
+      } else if (width < 1024) {
         setItemsPerPageState(2);
-      }
-      else {
+        setArrowSizePercentageState(4);
+      } else {
         setItemsPerPageState(itemsPerPage);
+        setArrowSizePercentageState(arrowSizePercentage);
       }
     };
 
@@ -150,7 +153,7 @@ export default function Carousel({
       <button
         style={{
           opacity: leftButtonEnabled ? 1 : 0.2,
-          fontSize: `${100 * arrowSizePercentage}%`,
+          fontSize: `${100 * arrowSizePercentageState}%`,
         }}
         onClick={() => scrollCarousel(-1)}
         disabled={!leftButtonEnabled}
@@ -183,7 +186,7 @@ export default function Carousel({
       <button
         style={{
           opacity: rightButtonEnabled ? 1 : 0.2,
-          fontSize: `${100 * arrowSizePercentage}%`,
+          fontSize: `${100 * arrowSizePercentageState}%`,
         }}
         onClick={() => scrollCarousel(1)}
         disabled={!rightButtonEnabled}
