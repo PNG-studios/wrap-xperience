@@ -14,7 +14,7 @@ const placeId = process.env.PLACE_ID ?? "";
 export default function Home() {
   return (
     <main>
-      <header className="bg-[url(/images/hero.png)] bg-cover h-screen bg-center bg-no-repeat flex flex-col mb-32">
+      <header className="bg-[url(/images/hero.png)] bg-cover h-screen bg-center bg-no-repeat flex flex-col">
         <Navbar />
         <div className="h-full text-white flex flex-col text-center justify-center items-center">
           <h1 className=" sm:text-[6rem] text-[8rem] font-bold">WRAP JOUW KEUKEN IN 1 DAG</h1>
