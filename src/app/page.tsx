@@ -18,9 +18,9 @@ export default function Home() {
         <Navbar />
         <div className="h-full text-white flex flex-col text-center justify-center items-center">
           <h1 className=" sm:text-[6rem] text-[8rem] font-bold">WRAP JOUW KEUKEN IN 1 DAG</h1>
-          <div className="flex sm:flex-row flex-col gap-[1.1rem] justify-center sm:text-[1.5rem] text-[2.5rem] sm:mt-[1rem] mt-[4rem]">
-            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[16rem] py-3 p-5 rounded-xl transition-colors" href="">MAAK AFSPRAAK</a>
-            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[16rem] py-3 p-5 rounded-xl transition-colors" href="">VOORBEELDEN</a>
+          <div className="max-w-[80vw] flex sm:flex-row flex-col gap-[1.1rem] justify-center sm:text-[1.5rem] text-[2.5rem] sm:mt-[1rem] mt-[4rem]">
+            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[20vw] py-3 p-5 rounded-xl transition-colors" href="">MAAK AFSPRAAK</a>
+            <a className="bg-primary hover:bg-primary/80 text-white sm:px-6 px-[20vw] py-3 p-5 rounded-xl transition-colors" href="">VOORBEELDEN</a>
           </div>
         </div>
       </header>
@@ -74,7 +74,7 @@ export default function Home() {
       />
 
       <section className="bg-secondary p-20 mb-32">
-        <h2 className="text-3xl text-primary font-bold text-dark max-w-[1440px] mx-auto w-screen pb-16">EEN OVERZICHT VAN DE KEUKENS</h2>
+        <h2 className="text-3xl text-primary font-bold text-dark max-w-[1440px] mx-auto w-auto pb-16">EEN OVERZICHT VAN DE KEUKENS</h2>
         <Carousel>  
           <Image
             width={2000}
@@ -177,9 +177,9 @@ export default function Home() {
       </section>
 
       {/* google review intergration */}
-      <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32 sm:px-0 px-[4rem]">
+      {/* <section className="max-w-[1440px] mt-7 w-full justify-self-center mb-32 sm:px-0 px-[4rem]">
         <GoogleReviews placeId={placeId} maxReviews={3} className="" />
-      </section>
+      </section> */}
 
       <Footer />
 
