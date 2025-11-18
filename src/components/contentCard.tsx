@@ -29,12 +29,14 @@ export default function ContentCard({
       >
         <div className="relative sm:w-1/2 w-full h-full">{imageSection}</div>
         <div className="sm:w-1/2 w-full sm:space-y-4">
-          <h2 className="sm:text-3xl text-[5rem] text-primary font-bold text-dark">
-            {title}
-          </h2>
-          <p className="sm:text-xl text-[2.5rem] text-gray-600 leading-relaxed">
-            {description}
-          </p>
+          <div>
+            <h2 className="sm:text-3xl text-[5rem] text-primary font-bold text-dark">
+              {title}
+            </h2>
+            <p className="sm:text-xl text-[2.5rem] sm:mb-0 mb-[2rem] text-gray-600 leading-relaxed">
+              {description}
+            </p>
+          </div>
           <a
             className="sm:text-xl text-[2.5rem] bg-primary hover:bg-primary/80 text-white px-6 py-3 p-5 rounded-xl transition-colors"
             href={buttonHref}
