@@ -64,7 +64,7 @@ export default function Home() {
         imageSection={
           <ImageSlider beforeImage="/images/hero.png" beforeAlt="test" afterImage="/images/hero.png" afterAlt="hoi" />
         }
-        title="Kitchen Transformation"
+        title="KITCHEN TRANSFORMATION"
         description="Keuken wrappen is een techniek waarbij een dunne folie wordt aangebracht op keukenkasten, lades en andere oppervlakken. Dit zorgt voor een volledig nieuwe uitstraling zonder dat de kasten vervangen hoeven te worden. 
         Door je keuken te laten wrappen, geef je deze op een betaalbare manier een frisse look. Je hergebruikt de bestaande kasten en verandert alleen het uiterlijk met hoogwaardige folie in diverse kleuren en patronen. Zo geniet je van een vernieuwde keuken, zonder de hoge kosten en het gedoe van een complete renovatie."
         buttonText="VOORBEELDEN"
