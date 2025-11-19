@@ -12,6 +12,12 @@
   h1 {
     --scale: clamp(8px, 4vw, 4vw);
   }
+  h2 {
+    --scale: clamp(1.5rem, 5vw, 2rem);
+  }
+  h3 {
+    --scale: clamp(1.25rem, 4vw, 1.5rem);
+  }
   p {
     --scale: clamp(2rem, 6vw, 2.5rem);
   }
@@ -51,9 +57,27 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: calc(1.5 * var(--scale));
+  font-weight: 700;
+  line-height: calc(1.5 * var(--scale));
+  color: var(--primary);
+  text-transform: uppercase;
+}
+h3 {
+  font-size: calc(1.25 * var(--scale));
+  font-weight: 600;
+  line-height: calc(1.3 * var(--scale));
+  color: white;
+  text-transform: uppercase;
+}
+
 p {
-  font-size: calc(1 * var(--scale));
-  line-height: calc(1 * var(--scale));
+  font-size: calc(0.75 * var(--scale));
+  line-height: calc(1.1 * var(--scale));
+  color: var(--dark);
+}
+.whiteText {
   color: white;
 }
 
@@ -69,4 +93,36 @@ a {
   text-align: center;
   white-space: nowrap;
   border-radius: var(--border-radius);
+}
+
+.container {
+  padding: 8vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Specific styling */
+.contentCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contentCardItem {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2rem;
+}
+
+.starIcon {
+  width: clamp(1rem, 4vw, 4rem);
+  height: clamp(1rem, 4vw, 4rem);
+  color: var(--primary);
 }

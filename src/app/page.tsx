@@ -1,17 +1,42 @@
 import translations from "../translations/nl.json";
 import Image from "next/image";
+import { StarIcon } from "@/components/starIcon";
 import styles from "./page.module.css";
+import ContentCard from "@/components/contentCard";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <header className={styles.header}>
-        <div className={styles.container}>
-          <h1>{translations.heroTitle}</h1>
-          <p>{translations.heroSubtitle}</p>
-          <a href="">{translations.heroCta}</a>
+        <div className="container">
+          <h1>{translations.hero.title}</h1>
+          <p className="whiteText">{translations.hero.subtitle}</p>
+          <a href="">{translations.hero.cta}</a>
         </div>
       </header>
+
+      <ContentCard
+        imageSrc="/images/hero.png"
+        imageAlt="Sample Image"
+        title={translations.general.title}
+        description={translations.general.description}
+        buttonText={translations.general.cta}
+        buttonHref="#"
+        position="left"
+        backgroundColor="#F9F9F9"
+      />
+
+      <section className={`container ${styles.backgroundBlack}`}>
+        <div className={styles.qualityContainer}>
+          {Object.values(translations.qualities).map((quality, index) => (
+            <div key={index} className={styles.qualityItem}>
+              <StarIcon />
+              <h3 className="whiteText">{quality.title}</h3>
+              <p className="whiteText">{quality.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

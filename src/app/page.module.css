@@ -7,12 +7,17 @@
   align-items: end;
 }
 
-.container {
-  max-width: 1440px;
-  padding: 8vh 8vw;
+.backgroundBlack {
+  background-color: var(--dark);
+}
+
+.qualityContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.qualityItem {
+  flex: 1;
 }
 
 /* Enable hover only on non-touch devices */

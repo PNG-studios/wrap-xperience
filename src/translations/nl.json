@@ -1,5 +1,26 @@
 {
-    "heroTitle": "keuken wrappen",
-    "heroSubtitle": "Wrap jouw keuken in 1 dag zonder problemen met wrap-xperience",
-    "heroCta": "Maak afspraak"
+  "hero": {
+    "title": "keuken wrappen",
+    "subtitle": "Wrap jouw keuken in 1 dag zonder problemen met wrap-xperience",
+    "cta": "Maak afspraak"
+  },
+  "general": {
+    "title": "Geef jouw keuken een nieuwe look",
+    "description": "Wil je jouw keuken een nieuwe look geven zonder dure renovatie? Laat hem wrappen! Met duurzame folie krijgt je keuken in één dag een frisse uitstraling. WRAP-XPERIENCE biedt hoogwaardige kwaliteit en een perfecte afwerking. Kies uit diverse stijlen en geniet van een stijlvolle, betaalbare make-over. Vraag nu een vrijblijvende offerte aan!",
+    "cta": "Maak afspraak"
+  },
+  "qualities": {
+    "quality1": {
+      "title": "Advies op maat",
+      "description": "Je keuken wrappen is maatwerk, want iedereen heeft een unieke stijl en voorkeur. Weet je nog niet welke kleur het beste bij jouw keuken past? Geen zorgen, we helpen je graag met persoonlijk advies!"
+    },
+    "quality2": {
+      "title": "Duurzaam",
+      "description": "De hoogwaardige folies zijn hitte-, vocht- en krasbestendig, waardoor je keuken er jarenlang als nieuw uitziet."
+    },
+    "quality3": {
+      "title": "Geen gedoe",
+      "description": "Binnen één dag krijgt jouw keuken een compleet nieuwe uitstraling, zonder ingrijpende verbouwingen, sloopwerk of lange wachttijden. Je kunt direct genieten van een frisse, moderne look zonder gedoe!"
+    }
+  }
 }
