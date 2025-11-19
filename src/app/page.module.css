@@ -1,25 +1,18 @@
-.main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-
 .header {
   height: 100vh;
   background-image: url('/images/hero.png');
   background-size: cover;
+
+  display: flex;
+  align-items: end;
 }
 
-.a {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.container {
+  max-width: 1440px;
+  padding: 8vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Enable hover only on non-touch devices */
@@ -31,7 +24,5 @@
 }
 
 @media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
+
 }

@@ -4,10 +4,13 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
       <header className={styles.header}>
-        <h1>{translations.heroTitle}</h1>
-        <p>{translations.heroSubtitle}</p>
+        <div className={styles.container}>
+          <h1>{translations.heroTitle}</h1>
+          <p>{translations.heroSubtitle}</p>
+          <a href="">{translations.heroCta}</a>
+        </div>
       </header>
     </main>
   );
