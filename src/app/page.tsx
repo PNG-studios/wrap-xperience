@@ -37,6 +37,16 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="container">
+        <div>
+          <h2>{translations.explanation.title}</h2>
+          <p>{translations.explanation.description}</p>
+        </div>
+        <div>
+
+        </div>
+      </section>
     </main>
   );
 }
