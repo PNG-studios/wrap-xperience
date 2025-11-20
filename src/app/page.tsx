@@ -39,14 +39,15 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <div>
-          <h2>{translations.explanation.title}</h2>
-          <p>{translations.explanation.description}</p>
+      <div className="contentCard content-card__left">
+        <img src="images/hero.png" alt="" className="contentCardItem" />
+        <div className="contentCardItem">
+            <h2>{translations.explanation.title}</h2>
+            <p>{translations.explanation.description}</p>
+            <a href="">{translations.explanation.cta}</a>
         </div>
-        <div>
-
-        </div>
-      </section>
+      </div>
+    </section>
     </main>
   );
 }
