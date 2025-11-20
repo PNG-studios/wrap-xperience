@@ -105,10 +105,8 @@ a {
 
 /* Specific styling */
 .contentCard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 7.5rem;
   width: 100%;
   margin: 0 auto;
@@ -120,7 +118,7 @@ a {
 .contentCardItem {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 2rem;
 }
 

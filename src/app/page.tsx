@@ -3,6 +3,7 @@ import Image from "next/image";
 import { StarIcon } from "@/components/starIcon";
 import styles from "./page.module.css";
 import ContentCard from "@/components/contentCard";
+import ImageSlider from "@/components/imageSlider/imageSlider";
 
 export default function Home() {
   return (
@@ -40,7 +41,12 @@ export default function Home() {
 
       <section className="container">
       <div className="contentCard content-card__left">
-        <img src="images/hero.png" alt="" className="contentCardItem" />
+        <ImageSlider
+          beforeImageSrc="images/hero.png"
+          afterImageSrc="images/hero.png"
+          beforeImageAlt="Before Image"
+          afterImageAlt="After Image"
+        />
         <div className="contentCardItem">
             <h2>{translations.explanation.title}</h2>
             <p>{translations.explanation.description}</p>
