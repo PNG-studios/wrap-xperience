@@ -1,9 +1,10 @@
 import translations from "../translations/nl.json";
 import Image from "next/image";
-import { StarIcon } from "@/components/starIcon";
+import { StarIcon } from "@/components/starIcon/starIcon";
 import styles from "./page.module.css";
-import ContentCard from "@/components/contentCard";
+import ContentCard from "@/components/contentCard/contentCard";
 import ImageSlider from "@/components/imageSlider/imageSlider";
+import Carousel from "@/components/carousel/carousel";
 
 export default function Home() {
   return (
@@ -53,6 +54,65 @@ export default function Home() {
             <a href="">{translations.explanation.cta}</a>
         </div>
       </div>
+    </section>
+
+    <section className="container">
+      <Carousel>  
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 1"
+          />
+          <Image
+            width={2000}
+            height={400}
+            src="/images/hero.png"
+            alt="Kitchen example 2"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 3"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 4"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 5"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 6"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 7"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 8"
+          />
+          <Image
+            width={2000}
+            height={300}
+            src="/images/hero.png"
+            alt="Kitchen example 9"
+          />
+        </Carousel>
     </section>
     </main>
   );
