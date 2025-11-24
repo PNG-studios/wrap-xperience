@@ -103,6 +103,14 @@ a {
   gap: 2rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.background-light {
+  background-color: var(--light)
+}
+
 /* Specific styling */
 .contentCard {
   display: grid;

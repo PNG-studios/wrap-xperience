@@ -20,6 +20,30 @@
   flex: 1;
 }
 
+.advantage_container {
+  display: flex;
+}
+.advantage_container > * {
+  width: 50%;
+}
+
+.advantage_list {
+  gap: 1rem;
+}
+
+.advantage_item {
+  display: flex;
+  gap: 1rem;
+}
+
+.advantageText {
+  color: #474747;
+  font-weight: 700;
+
+  font-size: calc(1 * var(--scale));
+  line-height: calc(1.1 * var(--scale));
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .a.primary:hover {

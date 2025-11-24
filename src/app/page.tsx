@@ -1,10 +1,11 @@
 import translations from "../translations/nl.json";
 import Image from "next/image";
-import { StarIcon } from "@/components/starIcon/starIcon";
+import { Icons } from "@/components/Icons/icons";
 import styles from "./page.module.css";
 import ContentCard from "@/components/contentCard/contentCard";
 import ImageSlider from "@/components/imageSlider/imageSlider";
 import Carousel from "@/components/carousel/carousel";
+import GoogleReviews from "@/components/googleReviews/googleReviews";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
         <div className={styles.qualityContainer}>
           {Object.values(translations.qualities).map((quality, index) => (
             <div key={index} className={styles.qualityItem}>
-              <StarIcon />
+              <Icons name="star" />
               <h3 className="whiteText">{quality.title}</h3>
               <p className="whiteText">{quality.description}</p>
             </div>
@@ -41,35 +42,61 @@ export default function Home() {
       </section>
 
       <section className="container">
-      <div className="contentCard content-card__left">
-        <ImageSlider
-          beforeImageSrc="images/hero.png"
-          afterImageSrc="images/hero.png"
-          beforeImageAlt="Before Image"
-          afterImageAlt="After Image"
-        />
-        <div className="contentCardItem">
+        <div className="contentCard content-card__left">
+          <ImageSlider
+            beforeImageSrc="images/hero.png"
+            afterImageSrc="images/hero.png"
+            beforeImageAlt="Before Image"
+            afterImageAlt="After Image"
+          />
+          <div className="contentCardItem">
             <h2>{translations.explanation.title}</h2>
             <p>{translations.explanation.description}</p>
             <a href="">{translations.explanation.cta}</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="container">
-      <Carousel>
-        <img src="/images/hero.png" alt="Kitchen example 1" />
-        <img src="/images/hero.png" alt="Kitchen example 2" />
-        <img src="/images/hero.png" alt="Kitchen example 3" />
-        <img src="/images/hero.png" alt="Kitchen example 4" />
-        <img src="/images/hero.png" alt="Kitchen example 5" />
-        <img src="/images/hero.png" alt="Kitchen example 6" />
-        <img src="/images/hero.png" alt="Kitchen example 7" />
-        <img src="/images/hero.png" alt="Kitchen example 8" />
-        <img src="/images/hero.png" alt="Kitchen example 9" />
-        <img src="/images/hero.png" alt="Kitchen example 10" />
+      <section className="container background-light">
+        <h2>{translations.kitchens.title}</h2>
+        <Carousel>
+          <img src="/images/hero.png" alt="Kitchen example 1" />
+          <img src="/images/hero.png" alt="Kitchen example 2" />
+          <img src="/images/hero.png" alt="Kitchen example 3" />
+          <img src="/images/hero.png" alt="Kitchen example 4" />
+          <img src="/images/hero.png" alt="Kitchen example 5" />
+          <img src="/images/hero.png" alt="Kitchen example 6" />
+          <img src="/images/hero.png" alt="Kitchen example 7" />
+          <img src="/images/hero.png" alt="Kitchen example 8" />
+          <img src="/images/hero.png" alt="Kitchen example 9" />
+          <img src="/images/hero.png" alt="Kitchen example 10" />
         </Carousel>
-    </section>
+      </section>
+
+      <section className="container">
+        <div className={styles.advantage_container}>
+          <div>
+            <h2>{translations.advantageSection.title}</h2>
+            <div className={styles.advantage_list}>
+              {Object.values(translations.advantageSection.advantages).map(
+                (advantage, index) => (
+                  <div key={index} className={styles.advantage_item}>
+                    <Icons name="checkmark" />
+                    <p className={styles.advantageText}>
+                      {advantage.description}
+                    </p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+          <img src="/images/hero.png" alt="" />
+        </div>
+      </section>
+
+      <section className="container">
+        <GoogleReviews className="" maxReviews={3} placeId="your-place-id-here" />
+      </section>
     </main>
   );
 }
