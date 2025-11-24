@@ -149,6 +149,8 @@ export default function Carousel({
   const carouselItemWidth =
     (100 - (gapPercentage * itemsPerPageState - 1)) / itemsPerPageState;
 
+    console.log(itemsPerPage, carouselItemWidth)
+
   return (
     <div className={styles.container}>
       <button
@@ -177,7 +179,7 @@ export default function Carousel({
         {Children.map(children, (child, idx) => (
           <div
             className={styles.carousel__item}
-            style={{ width: `${carouselItemWidth}%` }}
+            style={{ width: `${carouselItemWidth}%`, backgroundColor: "black" }}
             key={idx}
           >
             {child}

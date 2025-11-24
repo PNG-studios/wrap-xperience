@@ -57,61 +57,17 @@ export default function Home() {
     </section>
 
     <section className="container">
-      <Carousel>  
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 1"
-          />
-          <Image
-            width={2000}
-            height={400}
-            src="/images/hero.png"
-            alt="Kitchen example 2"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 3"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 4"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 5"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 6"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 7"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 8"
-          />
-          <Image
-            width={2000}
-            height={300}
-            src="/images/hero.png"
-            alt="Kitchen example 9"
-          />
+      <Carousel>
+        <img src="/images/hero.png" alt="Kitchen example 1" />
+        <img src="/images/hero.png" alt="Kitchen example 2" />
+        <img src="/images/hero.png" alt="Kitchen example 3" />
+        <img src="/images/hero.png" alt="Kitchen example 4" />
+        <img src="/images/hero.png" alt="Kitchen example 5" />
+        <img src="/images/hero.png" alt="Kitchen example 6" />
+        <img src="/images/hero.png" alt="Kitchen example 7" />
+        <img src="/images/hero.png" alt="Kitchen example 8" />
+        <img src="/images/hero.png" alt="Kitchen example 9" />
+        <img src="/images/hero.png" alt="Kitchen example 10" />
         </Carousel>
     </section>
     </main>

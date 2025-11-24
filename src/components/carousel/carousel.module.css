@@ -5,15 +5,22 @@
 
 .carousel {
     overflow: hidden;
-    width: 100%;
     display: flex;
     cursor: grab;
     user-select: none;
 }
 
-.carousel__item :hover {
+.carousel__item {
+    transition: 300ms;
+    flex: 0 0 auto;
+}
+
+.carousel__item:hover {
     transform: scale(1.05);
     filter: brightness(0.7);
-    transition: 300ms;
-    pointer-events: none;
+}
+
+.carousel__item img {
+    width: 100%;
+    height: auto;
 }
