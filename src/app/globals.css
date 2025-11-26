@@ -5,7 +5,7 @@
   --primary: #CCB559;
   --secondary: #474747;
   --scale: 16px; /* Fallback for older browsers */
-  --scale: clamp(1.5rem, 1.65vw, 2.5rem);
+  --scale: clamp(1.4rem, 1.5vw, 2.4rem);
   --border-radius: 0.5rem;
 }
 
@@ -106,8 +106,8 @@ img {
 }
 
 svg {
-  width: clamp(1rem, 4vw, 4rem);
-  height: clamp(1rem, 4vw, 4rem);
+  width: calc(var(--scale) * 1.2);
+  height: calc(var(--scale) * 1.2);
   max-width: 100%;
 }
 
