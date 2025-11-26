@@ -106,8 +106,8 @@ img {
 }
 
 svg {
-  width: calc(var(--scale) * 1.2);
-  height: calc(var(--scale) * 1.2);
+  width: calc(var(--scale) * 1.7);
+  height: calc(var(--scale) * 1.7);
   max-width: 100%;
 }
 
