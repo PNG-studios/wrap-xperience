@@ -7,7 +7,15 @@
     overflow: hidden;
     display: flex;
     cursor: grab;
-    user-select: none;
+}
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .carousel__item {
@@ -23,4 +31,5 @@
 .carousel__item img {
     width: 100%;
     height: auto;
+    pointer-events: none;  
 }

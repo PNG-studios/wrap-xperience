@@ -19,3 +19,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.contact__logos > * {
+  width: calc(var(--scale) * 2.2);
+  height: calc(var(--scale) * 2.2);
+}
