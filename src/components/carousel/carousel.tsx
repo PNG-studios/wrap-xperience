@@ -149,8 +149,6 @@ export default function Carousel({
   const carouselItemWidth =
     (100 - (gapPercentage * itemsPerPageState - 1)) / itemsPerPageState;
 
-    console.log(itemsPerPage, carouselItemWidth)
-
   return (
     <div className={styles.container}>
       <button

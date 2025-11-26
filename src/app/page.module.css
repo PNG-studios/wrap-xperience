@@ -37,7 +37,7 @@
 }
 
 .advantageText {
-  color: #474747;
+  color: var(--secondary);
   font-weight: 700;
 
   font-size: calc(1 * var(--scale));

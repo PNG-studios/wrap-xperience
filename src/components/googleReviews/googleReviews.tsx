@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Icons } from "../Icons/icons";
+import styles from "./googleReviews.module.css";
 
 interface Review {
   authorAttribution?: {
@@ -91,21 +92,21 @@ export default function GoogleReviews({
   const reviewsToShow = businessInfo.reviews.slice(0, maxReviews);
 
   return (
-    <div className={`space-y-6 flex-col ${className}`}>
+    <div className={styles.container}>
       {/* Business Header */}
-      <div className="flex flex-col items-center justify-self-center  ">
+      <div className={styles.header}>
         
-          <h2 className="sm:text-2xl text-[2.5rem] font-bold text-gray-900">
+          <h2>
             {businessInfo.displayName.text}
           </h2>
-          <div className="flex items-center mt-1">
-            <div className="flex mr-2">
+          <div>
+            <div className="flex">
               {renderStars(businessInfo.rating)}
             </div>
-            <span className="sm:text-lg text-[1.8rem] font-semibold text-gray-700">
+            <span className={styles.rating__text}>
               {businessInfo.rating.toFixed(1)}
             </span>
-            <span className="sm:text-lg text-[1.8rem] text-gray-500 ml-2">
+            <span className={styles.rating__amount}>
               ({businessInfo.userRatingCount} reviews)
             </span>
           </div>
@@ -113,48 +114,48 @@ export default function GoogleReviews({
       </div>
 
       {/* Reviews */}
-      <div className="flex sm:flex-row sm:text-xl text-[2.5rem] flex-col gap-6">
+      <div className={styles.reviews__container}>
         {reviewsToShow.map((review, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 sm:rounded-lg rounded-[1.75rem] p-6 shadow-sm hover:shadow-md transition-shadow flex-1"
+            className={styles.reviews}
           >
-            <div className="flex items-start space-x-4">
+            <div className={styles.review__card}>
               {/* Avatar */}
-              <div className="flex-shrink-0">
+              <div className={styles.review__author}>
                 {review.authorAttribution?.photoUri ? (
                   <Image
                     src={review.authorAttribution.photoUri}
                     alt={review.authorAttribution.displayName || "User"}
                     width={48}
                     height={48}
-                    className="w-16 h-16 sm:w-12 sm:h-12 rounded-full object-cover"
+                    className={styles.review__author__avatar}
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">
+                  <div className={styles.review__author__name}>
                     {review.authorAttribution?.displayName?.charAt(0).toUpperCase() || "?"}
                   </div>
                 )}
               </div>
 
               {/* Review Content */}
-              <div className="flex-1  min-w-0">
-                <div className="flex items-center justify-between mb-2">
+              <div className={styles.review}>
+                <div className={styles.review__header}>
                   <div>
-                    <h3 className="font-semibold text-gray-900 truncate">
+                    <h3 className={styles.review__title}>
                       {review.authorAttribution?.displayName || "Anonymous"}
                     </h3>
-                    <p className="text-[1.4rem] sm:text-sm text-gray-500">
+                    <p>
                       {review.relativePublishTimeDescription}
                     </p>
                   </div>
-                  <div className="flex ml-4">
+                  <div className={styles.stars}>
                     {renderStars(review.rating)} {/* FIX: use review.rating */}
                   </div>
                 </div>
 
                 {review.originalText?.text && (
-                  <p className="text-gray-700 leading-relaxed sm:text-sm text-[1.8rem]">
+                  <p>
                     {review.originalText.text}
                   </p>
                 )}

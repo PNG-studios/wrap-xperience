@@ -6,6 +6,9 @@ import ContentCard from "@/components/contentCard/contentCard";
 import ImageSlider from "@/components/imageSlider/imageSlider";
 import Carousel from "@/components/carousel/carousel";
 import GoogleReviews from "@/components/googleReviews/googleReviews";
+import Footer from "@/components/footer/footer";
+
+const placeId = process.env.PLACE_ID ?? "";
 
 export default function Home() {
   return (
@@ -95,8 +98,10 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <GoogleReviews className="" maxReviews={3} placeId="your-place-id-here" />
+        <GoogleReviews className="" maxReviews={3} placeId={placeId} />
       </section>
+
+      <Footer />
     </main>
   );
 }
