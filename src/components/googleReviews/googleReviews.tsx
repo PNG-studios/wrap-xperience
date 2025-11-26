@@ -136,23 +136,23 @@ export default function GoogleReviews({
                     {review.authorAttribution?.displayName?.charAt(0).toUpperCase() || "?"}
                   </div>
                 )}
-              </div>
-
-              {/* Review Content */}
-              <div className={styles.review}>
                 <div className={styles.review__header}>
                   <div>
                     <h3 className={styles.review__title}>
-                      {review.authorAttribution?.displayName || "Anonymous"}
+                      {review.authorAttribution?.displayName + "HALLONIELSASDDDDDDDDDDDDDD"|| "Anonymous"}
                     </h3>
                     <p>
                       {review.relativePublishTimeDescription}
                     </p>
                   </div>
-                  <div className={styles.stars}>
+                </div>
+              </div>
+
+              {/* Review Content */}
+              <div className={styles.review}>
+                <div className={styles.stars}>
                     {renderStars(review.rating)} {/* FIX: use review.rating */}
                   </div>
-                </div>
 
                 {review.originalText?.text && (
                   <p>

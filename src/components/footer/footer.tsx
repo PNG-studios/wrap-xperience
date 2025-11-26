@@ -12,10 +12,10 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3>Contact</h3>
-                    <div>
-                        <Icons name="star" />
-                        <Icons name="star" />
-                        <Icons name="star" />
+                    <div className={styles.contact__logos}>
+                        <Icons name="whatsapp" />
+                        <Icons name="mail" />
+                        <Icons name="facebook" />
                     </div>
                     <a href="">Maak afspraak</a>
                 </div>

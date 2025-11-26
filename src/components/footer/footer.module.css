@@ -13,3 +13,9 @@
   display: flex;
   gap: 10rem;
 }
+
+.contact__logos {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
