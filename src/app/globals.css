@@ -99,6 +99,11 @@ a {
   text-align: center;
   white-space: nowrap;
   border-radius: var(--border-radius);
+  transition: 300ms ease-in-out;
+}
+a:hover {
+  background-color: #a9902d;
+  transition: 300ms ease-in-out;
 }
 
 img {

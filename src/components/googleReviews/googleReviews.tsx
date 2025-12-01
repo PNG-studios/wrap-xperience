@@ -139,7 +139,7 @@ export default function GoogleReviews({
                 <div className={styles.review__header}>
                   <div>
                     <h3 className={styles.review__title}>
-                      {review.authorAttribution?.displayName + "HALLONIELSASDDDDDDDDDDDDDD"|| "Anonymous"}
+                      {review.authorAttribution?.displayName || "Anonymous"}
                     </h3>
                     <p className={styles.review__date}>
                       {review.relativePublishTimeDescription}

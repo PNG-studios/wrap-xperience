@@ -2,6 +2,7 @@ import translations from "../translations/nl.json";
 import Image from "next/image";
 import { Icons } from "@/components/Icons/icons";
 import styles from "./page.module.css";
+import Navbar from "@/components/navbar/navbar";
 import ContentCard from "@/components/contentCard/contentCard";
 import ImageSlider from "@/components/imageSlider/imageSlider";
 import Carousel from "@/components/carousel/carousel";
@@ -13,6 +14,8 @@ const placeId = process.env.PLACE_ID ?? "";
 export default function Home() {
   return (
     <main>
+      <Navbar />
+      
       <header className={styles.header}>
         <div className="container">
           <h1>{translations.hero.title}</h1>
