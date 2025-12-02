@@ -9,30 +9,6 @@
   --border-radius: 0.5rem;
 }
 
-@media (max-width: 480px) {
-  h1 {
-    --scale: clamp(8px, 4vw, 4vw);
-  }
-  h2 {
-    --scale: clamp(1.5rem, 5vw, 2rem);
-  }
-  h3 {
-    --scale: clamp(1.25rem, 4vw, 1.5rem);
-  }
-  p {
-    --scale: clamp(2rem, 6vw, 2.5rem);
-  }
-  a {
-    --scale: clamp(2rem, 6vw, 2.5rem);
-    padding: 45px 20px;
-  }
-
-  .flex {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 html,
 body {
   margin: 0;
@@ -161,4 +137,34 @@ svg {
 .starIcon {
   color: var(--primary);
   margin-bottom: 1rem;
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    --scale: clamp(8px, 4vw, 4vw);
+  }
+  h2 {
+    --scale: clamp(1.5rem, 5vw, 2rem);
+  }
+  h3 {
+    --scale: clamp(1.25rem, 4vw, 1.5rem);
+  }
+  p {
+    --scale: clamp(2rem, 6vw, 2.5rem);
+  }
+  a {
+    --scale: clamp(2rem, 6vw, 2.5rem);
+    padding: 45px 20px;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentCard {
+    display: flex;
+    flex-direction: column;
+  }
 }

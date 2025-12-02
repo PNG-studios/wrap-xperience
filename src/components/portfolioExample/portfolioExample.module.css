@@ -18,3 +18,9 @@
 .kitchen__items >:nth-child(3n+1) {
     grid-column: span 2;
 }
+
+@media (max-width: 480px) {
+    .kitchen__items > * {
+        grid-column: span 2;
+    }
+}

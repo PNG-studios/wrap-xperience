@@ -100,7 +100,7 @@ export default function GoogleReviews({
             {businessInfo.displayName.text}
           </h2>
           <div>
-            <div className="flex">
+            <div className={styles.stars__container}>
               {renderStars(businessInfo.rating)}
             </div>
             <span className={styles.rating__text}>

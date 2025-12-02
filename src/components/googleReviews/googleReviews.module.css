@@ -12,6 +12,10 @@
     margin-bottom: 2rem;
 }
 
+.stars__container {
+    display: flex;
+}
+
 .stars {
     display: flex;
     width: 50%;
@@ -109,6 +113,6 @@
 
 @media (max-width: 480px) {
     .reviews__container {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
     }
 }

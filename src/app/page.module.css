@@ -55,6 +55,14 @@
   }
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 480px) {
+  .qualityContainer {
+    flex-direction: column;
+  }
+  .advantage_container {
+    flex-direction: column;
+  }
+  .advantage_container > * {
+    width: 100%;
+  }
 }

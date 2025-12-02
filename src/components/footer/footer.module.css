@@ -25,3 +25,15 @@
   width: calc(var(--scale) * 2.2);
   height: calc(var(--scale) * 2.2);
 }
+
+@media (max-width: 480px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact__logos {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

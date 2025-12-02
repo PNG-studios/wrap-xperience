@@ -24,3 +24,15 @@
   font-size: calc(1 * var(--scale));
   line-height: calc(1.1 * var(--scale));
 }
+
+@media (max-width: 480px) {
+  .qualityContainer {
+    flex-direction: column;
+  }
+  .advantage_container {
+    flex-direction: column;
+  }
+  .advantage_container > * {
+    width: 100%;
+  }
+}

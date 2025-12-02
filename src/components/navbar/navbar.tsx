@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__container}>
-        <a className={styles.navbar__item} href="">WRAP-XPERIENCE</a>
+        <a className={styles.navbar__item} href="/">WRAP-XPERIENCE</a>
         <div>
           {!isMobile ? (
             <ul className={styles.navbar__desktop}>

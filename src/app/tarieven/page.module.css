@@ -32,3 +32,13 @@
     width: 100%;
     justify-content: space-between;
 }
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .achterwandCta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

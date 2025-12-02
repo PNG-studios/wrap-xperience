@@ -38,3 +38,12 @@
     margin-top: 1rem;
     color: #505050;
 }
+
+@media (max-width: 480px) {
+    .mogelijkheden__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .mogelijkheden__items {
+        margin-top: 2rem;
+    }
+}

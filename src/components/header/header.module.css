@@ -19,3 +19,9 @@
     padding-bottom: 2rem;
     margin-left: 8vw;
 }
+
+@media (max-width: 600px) {
+    .title {
+        font-size: clamp(2rem, 12vw, 4rem);
+    }
+}
