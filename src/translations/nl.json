@@ -62,5 +62,35 @@
   },
   "footer": {
     "description": "Wrap-Xperience is dé specialist in keukenwrapping – een snelle en betaalbare manier om je keuken een compleet nieuwe uitstraling te geven, zonder ingrijpende verbouwing."
+  },
+
+  
+  "informatie": {
+    "description": "Bij wrap-xperience helpen we je graag om van jouw droomkeuken realiteit te maken. Geniet van een compleet nieuwe uitstraling, zónder de hoge kosten, lange wachttijden of de rommel van een volledige renovatie.",
+    "aanrechtbladen": {
+      "title": "Aanrechtbladen wrappen",
+      "description": "Een aanrechtblad wrappen is een slimme manier om het uiterlijk van je keukenblad te vernieuwen. Hierbij brengen we een dunne laag hoogwaardige folie of vinyl aan over het bestaande blad, zonder dat er iets vervangen hoeft te worden. Ja, een keukenblad kan zeker geplakt worden! Wij gebruiken speciaal ontwikkeld materiaal dat stootvast, krasbestendig, waterafstotend en hittebestendig is tot wel 110 graden. De randen worden zorgvuldig afgekit, zodat er geen vuil of vocht onder het materiaal kan komen. Ook je tegelwand kunnen we strak afwerken. Met behulp van 3 mm dun plaatmateriaal verlijmen we een nieuwe, egale ondergrond over de bestaande tegels. Deze werken we af met folie naar keuze en kitten we netjes af voor een strak en naadloos resultaat – zonder dat er gestuct hoeft te worden."
+    },
+    "keukenkastjes": {
+      "title": "Keukenkastjes wrappen",
+      "description": "Keukenkastjes wrappen is een slimme en betaalbare manier om je keuken een nieuwe uitstraling te geven, zonder de hoge kosten van vervanging. De prijs ligt gemiddeld tussen de €50 en €80 per kastje. Onze vakmensen zorgen voor een grondige reiniging en voorbereiding van het oppervlak, waarna de interieurfolie strak en netjes wordt aangebracht. Kleine beschadigingen zoals krasjes of vlekjes verdwijnen onder de folie. Zijn er grotere beschadigingen, dan worden deze eerst zorgvuldig geplamuurd en geschuurd voor een strak en duurzaam eindresultaat."
+    },
+    "mogelijkheden": {
+      "title": "Wat kan wel of niet",
+      "description": "Veel keukens gingen je al voor, maar helaas kunnen we niet elke keuken wrappen – dit hangt af van het materiaal en de staat van de keuken. Bekijk hieronder wat wél en niet mogelijk is bij wrap-xperience:"
+    },
+    "onderhoud": {
+      "title": "Onderhoud",
+      "description": "Gewrapt aanrechtblad kan worden gereinigd met milde zeep en water. Vermijd agressieve schoonmaakmiddelen en schuurmiddelen, omdat deze de wrap kunnen beschadigen."
+    },
+    "kleuren": {
+      "title": "Kleuren en patronen",
+      "description": "Er zijn verschillende soorten wraps beschikbaar, waaronder verschillende kleuren, patronen en texturen. Sommige wraps zijn ook speciaal ontworpen om bestand te zijn tegen warmte en vocht, wat ideaal kan zijn voor keuken omgevingen.",
+      "cta": "download"
+    },
+    "afkitten": {
+      "title": "Afkitten",
+      "description": "Wij kitten indien nodig het gehele keukenblad opnieuw af! Zo is de afwerking perfect en kan er geen water of vuil onderkomen."
+    }
   }
 }
