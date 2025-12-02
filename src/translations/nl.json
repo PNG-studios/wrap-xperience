@@ -92,5 +92,33 @@
       "title": "Afkitten",
       "description": "Wij kitten indien nodig het gehele keukenblad opnieuw af! Zo is de afwerking perfect en kan er geen water of vuil onderkomen."
     }
+  },
+
+  "overOns": {
+    "description": "Bij KeukenPlakken.com zijn we gespecialiseerd in het wrappen van keukens, aanrechtbladen en achterwanden. Wij geloven dat je geen fortuin hoeft uit te geven aan een volledig nieuwe keuken om een frisse, moderne uitstraling te creëren. Met onze hoogwaardige interieurfolies geven we bestaande keukens een tweede leven – snel, stijlvol en betaalbaar. Ons team bestaat uit ervaren vakmensen die oog hebben voor detail en kwaliteit. We werken met duurzame materialen die stootvast, krasbestendig, waterafstotend en hittebestendig zijn. Elke keuken is anders, daarom kijken we altijd naar de mogelijkheden op maat. We denken met je mee over kleuren, afwerkingen en de beste aanpak voor jouw keuken.",
+    "kwaliteit": {
+      "title": "Kwaliteit",
+      "description": "Onze materialen zijn van hoogwaardige kwaliteit:"
+    },
+    "kwaliteiten": {
+      "kwaliteit1": {
+        "description": "Krasbestendig"
+      },
+      "kwaliteit2": {
+        "description": "Vuilafstotend"
+      },
+      "kwaliteit3": {
+        "description": "Waterbestendig"
+      },
+      "kwaliteit4": {
+        "description": "UV bestendig"
+      },
+      "kwaliteit5": {
+        "description": "Hittebestendig tot 110°C"
+      },
+      "kwaliteit6": {
+        "description": "Anti bacterieel oppervlak"
+      }
+    }
   }
 }

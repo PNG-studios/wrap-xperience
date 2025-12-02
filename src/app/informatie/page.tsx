@@ -9,7 +9,7 @@ export default function Informatie() {
   return (
     <>
       <main>
-        <Header title="Informatie" backgroundImageSrc="/images/hero.png" />
+        <Header title="Informatie   " backgroundImageSrc="/images/hero.png" />
 
         <section className="container">
           <div className="contentCard">
