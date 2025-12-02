@@ -3,7 +3,6 @@ interface ContentCardProps {
   imageAlt: string;
   title: string;
   description: string;
-  buttonText: string;
   position?: "left" | "right";
   backgroundColor: string;
 }
@@ -17,13 +16,25 @@ export default function ContentCardSimple({
   backgroundColor,
 }: ContentCardProps) {
   return (
-    <section className="container">
+    <section className="container" style={{ backgroundColor }}>
       <div className="contentCard">
-        <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
-        <div className="contentCardItem">
-            <h2>{title}</h2>
-            <p>{description}</p>
-        </div>
+        {position === "left" ? (
+          <>
+            <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
+            <div className="contentCardItem">
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="contentCardItem">
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+            <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
+          </>
+        )}
       </div>
     </section>
   );

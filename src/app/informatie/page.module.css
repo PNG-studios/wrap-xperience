@@ -1,3 +1,7 @@
+.grayBackground {
+    background-color: var(--light);
+}
+
 .navigation li {
     text-decoration: none;
     background-color: none;
@@ -16,4 +20,21 @@
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: left;
+}
+
+.mogelijkheden__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mogelijkheden__items {
+    font-weight: 700;
+    font-size: calc(1.2 * var(--scale));
+}
+.mogelijkheden__items li {
+    font-weight: 400;
+    font-size: var(--scale);
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: #505050;
 }

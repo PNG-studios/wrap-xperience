@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      
+
       <header className={styles.header}>
         <div className="container">
           <h1>{translations.hero.title}</h1>
@@ -49,17 +49,17 @@ export default function Home() {
 
       <section className="container">
         <div className="contentCard content-card__left">
+          <div className="contentCardItem">
+            <h2>{translations.explanation.title}</h2>
+            <p>{translations.explanation.description}</p>
+            <a href="">{translations.explanation.cta}</a>
+          </div>
           <ImageSlider
             beforeImageSrc="images/hero.png"
             afterImageSrc="images/hero.png"
             beforeImageAlt="Before Image"
             afterImageAlt="After Image"
           />
-          <div className="contentCardItem">
-            <h2>{translations.explanation.title}</h2>
-            <p>{translations.explanation.description}</p>
-            <a href="">{translations.explanation.cta}</a>
-          </div>
         </div>
       </section>
 

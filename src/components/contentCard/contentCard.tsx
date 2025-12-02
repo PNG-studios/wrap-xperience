@@ -20,14 +20,27 @@ export default function ContentCard({
   backgroundColor,
 }: ContentCardProps) {
   return (
-    <section className="container">
+    <section className="container" style={{ backgroundColor }}>
       <div className="contentCard">
-        <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
-        <div className="contentCardItem">
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <a href={buttonHref}>{buttonText}</a>
-        </div>
+        {position === "left" ? (
+          <>
+            <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
+            <div className="contentCardItem">
+              <h2>{title}</h2>
+              <p>{description}</p>
+              <a href={buttonHref}>{buttonText}</a>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="contentCardItem">
+              <h2>{title}</h2>
+              <p>{description}</p>
+              <a href={buttonHref}>{buttonText}</a>
+            </div>
+            <img src={imageSrc} alt={imageAlt} className="contentCardItem" />
+          </>
+        )}
       </div>
     </section>
   );
