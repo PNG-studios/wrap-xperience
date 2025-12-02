@@ -32,9 +32,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__container}>
-        <div>
-          <Link href="/">WRAP-XPERIENCE</Link>
-        </div>
+        <a className={styles.navbar__item} href="">WRAP-XPERIENCE</a>
         <div>
           {!isMobile ? (
             <ul className={styles.navbar__desktop}>
@@ -42,9 +40,7 @@ export default function Navbar() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className={
-                      pathname === item.href ? styles.navbar__item : ""
-                    }
+                    className={styles.navbar__item}
                   >
                     {item.name}
                   </a>
