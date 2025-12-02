@@ -1,0 +1,54 @@
+.contact {
+  display: flex;
+  gap: 1rem;
+  height: 3rem;
+  align-items: center;
+}
+
+.contact p {
+  font-size: calc(1.1 * var(--scale));
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__item {
+  background-color: var(--light);
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-size: calc(0.8 * var(--scale));
+}
+
+.form__item:focus {
+  outline: none;
+  border: 0.1rem solid #6f6f6f;
+}
+
+.form__button {
+  text-decoration: none;
+  background-color: var(--primary);
+  font-size: calc(1 * var(--scale));
+  color: white;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--border-radius);
+  transition: 300ms ease-in-out;
+  border: none;
+}
+
+.form__button:hover {
+  background-color: #a9902d;
+  transition: 300ms ease-in-out;
+}

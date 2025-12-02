@@ -174,5 +174,12 @@
       "price": "Vanaf € 125,- per m2",
       "cta": "Maak afspraak"
     }
+  },
+
+  "contact": {
+    "description": "Heb je vragen of wil je weten wat we voor jouw keuken kunnen betekenen? Neem gerust contact met ons op! We denken graag met je mee en geven persoonlijk advies, helemaal afgestemd op jouw wensen. Je kunt ons bellen, mailen of een bericht sturen via het contactformulier op onze website. We helpen je graag verder!",
+    "number": "+31 6 57027311",
+    "email": "info@wrap-xperience.nl",
+    "location": "Veldhoven"
   }
 }
