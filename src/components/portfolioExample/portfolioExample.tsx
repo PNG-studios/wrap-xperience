@@ -1,0 +1,46 @@
+import ImageSlider from "../imageSlider/imageSlider";
+import styles from "./portfolioExample.module.css";
+
+interface PortfolioExampleProps {
+  title: string;
+  imageBeforeSrc: string | string[];
+  imageAfterSrc: string | string[];
+  imageBeforeAlt: string | string[];
+  imageAfterAlt: string | string[];
+}
+
+function toArray<T>(value: T | T[]): T[] {
+  return Array.isArray(value) ? value : [value];
+}
+
+export default function PortfolioExample({
+  title,
+  imageBeforeSrc,
+  imageAfterSrc,
+  imageBeforeAlt,
+  imageAfterAlt,
+}: PortfolioExampleProps) {
+  const beforeImages = toArray(imageBeforeSrc);
+  const afterImages = toArray(imageAfterSrc);
+  const beforeAlts = toArray(imageBeforeAlt);
+  const afterAlts = toArray(imageAfterAlt);
+
+  return (
+    <section className="container">
+        <div className={styles.kitchens}>
+          <h2 className={styles.title}>{title}</h2>
+          <div className={styles.kitchen__items}>
+            {beforeImages.map((src, index) => (
+              <ImageSlider
+                key={index}
+                beforeImageSrc={beforeImages[index]}
+                beforeImageAlt={beforeAlts[index]}
+                afterImageSrc={afterImages[index]}
+                afterImageAlt={afterAlts[index]}
+              />
+            ))}
+          </div>
+        </div>
+    </section>
+  );
+}
