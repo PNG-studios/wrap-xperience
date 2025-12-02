@@ -35,36 +35,35 @@
     "title": "De voordelen van je keuken wrappen",
     "advantages": {
       "advantage1": {
-      "description": "Nieuwe look zonder verbouwing"
-    },
-    "advantage2": {
-      "description": "Oneindig veel stijlen"
-    },
-    "advantage3": {
-      "description": "Moderne en trendy uitstraling"
-    },
-    "advantage4": {
-      "description": "Verbegen van beschadigingen"
-    },
-    "advantage5": {
-      "description": "Eenvoudig aan te passen"
-    },
-    "advantage6": {
-      "description": "Uniforme uitstraling"
-    },
-    "advantage7": {
-      "description": "Matte of glanzende afwerking"
-    },
-    "advantage8": {
-      "description": "Luxe uitstraling voor een lage prijs"
-    }
+        "description": "Nieuwe look zonder verbouwing"
+      },
+      "advantage2": {
+        "description": "Oneindig veel stijlen"
+      },
+      "advantage3": {
+        "description": "Moderne en trendy uitstraling"
+      },
+      "advantage4": {
+        "description": "Verbegen van beschadigingen"
+      },
+      "advantage5": {
+        "description": "Eenvoudig aan te passen"
+      },
+      "advantage6": {
+        "description": "Uniforme uitstraling"
+      },
+      "advantage7": {
+        "description": "Matte of glanzende afwerking"
+      },
+      "advantage8": {
+        "description": "Luxe uitstraling voor een lage prijs"
+      }
     }
   },
   "footer": {
     "description": "Wrap-Xperience is dé specialist in keukenwrapping – een snelle en betaalbare manier om je keuken een compleet nieuwe uitstraling te geven, zonder ingrijpende verbouwing."
   },
 
-  
   "informatie": {
     "description": "Bij wrap-xperience helpen we je graag om van jouw droomkeuken realiteit te maken. Geniet van een compleet nieuwe uitstraling, zónder de hoge kosten, lange wachttijden of de rommel van een volledige renovatie.",
     "aanrechtbladen": {
@@ -119,6 +118,61 @@
       "kwaliteit6": {
         "description": "Anti bacterieel oppervlak"
       }
+    }
+  },
+
+  "tarieven": {
+    "title": "De kosten van het keuken wrappen",
+    "description": "De kosten voor het wrappen van een keuken kunnen flink variëren en zijn afhankelijk van verschillende factoren, zoals de grootte van de keuken, het gekozen type wrapmateriaal en de complexiteit van het ontwerp. In de meeste gevallen liggen de kosten tussen enkele honderden en een paar duizend euro. Kies je voor hoogwaardige vinylfolie en professionele installatie, dan kan dit de prijs iets verhogen, maar het verlengt ook de levensduur van je wrap. Voor een standaard keuken met gemiddelde afmetingen en een eenvoudig ontwerp blijven de kosten doorgaans aan de lagere kant. Grotere keukens, complexe ontwerpen of benodigde reparaties vooraf zorgen uiteraard voor een hogere prijs.",
+    "tarievenlijst": {
+      "tarief1": {
+        "title": "Kleine keuken",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "vanaf 9 fronten en/of lades",
+        "price": "Vanaf € 699,-"
+      },
+      "tarief2": {
+        "title": "Middelgrote keuken",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "vanaf 10 fronten en/of lades",
+        "price": "Vanaf € 999,-"
+      },
+      "tarief3": {
+        "title": "Grote keuken",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "vanaf 20 fronten en/of lades",
+        "price": "Vanaf € 1.599,-"
+      },
+      "tarief4": {
+        "title": "Custom made",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "Een eigen ontwerp met extra's op basis van een bestaande keuken",
+        "price": "Vanaf € 1599,-"
+      },
+      "tarief5": {
+        "title": "Keukenblad",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "Keukenblad inclusief nieuwe kitranden, keuze uit dikkere folie met hogere krasbestendigheid.",
+        "price": "Vanaf € 325,-"
+      },
+      "tarief6": {
+        "title": "Keuken met veel profiel",
+        "imageSrc": "/images/hero.png",
+        "imageAlt": "Sample Image",
+        "description": "Deze keuken wordt gecoat in plaats van gewrapt omdat deurtjes te veel profiel hebben",
+        "price": "Vanaf € 1749,-"
+      }
+    },
+    "achterwand": {
+      "title": "Achterwand",
+      "description": "Een spatscherm van 3 mm dik aluminium en kunststof is de ideale oplossing voor de achterwand van je keuken. Het materiaal is licht, sterk en roestvrij, en bovendien hittebestendig bij normaal gebruik. Dankzij het gladde oppervlak veeg je vetspetters, vocht en vuil eenvoudig schoon, waardoor je keuken altijd netjes en fris blijft. Daarnaast zorgt aluminium voor een strakke, moderne uitstraling die perfect past bij vrijwel elke keukenstijl. Let wel op het juiste gebruik van deze achterwand: •Bij keramische kookplaten moet je minimaal 10 cm afstand houden tussen de kookplaat en het spatscherm om vervorming of verkleuring te voorkomen. •Bij inductiekookplaten vormt dit geen probleem, omdat daar minder directe warmte vrijkomt. •Bij gasfornuizen mag deze achterwand niet worden geplaatst, omdat de hitte van open vuur te hoog is voor dit materiaal. •De aluminium plaat heeft een kern van kunststof; dit betekent dat direct contact met stoom of hitte, bijvoorbeeld van een waterkoker, pan of kookplaat, schade kan veroorzaken. Deze tips zorgen ervoor dat je aluminium achterwand mooi blijft en langer meegaat. Volg deze adviezen op om beschadiging te voorkomen en jarenlang van je stijlvolle keuken te genieten",
+      "price": "Vanaf € 125,- per m2",
+      "cta": "Maak afspraak"
     }
   }
 }
