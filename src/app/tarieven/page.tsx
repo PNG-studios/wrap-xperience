@@ -15,7 +15,7 @@ export default function Tarieven() {
         title={translations.tarieven.title}
         description={translations.tarieven.description}
         buttonText="Maak afspraak"
-        buttonHref="#"
+        buttonHref="/contact"
         position="left"
         backgroundColor=""
       />
@@ -48,7 +48,7 @@ export default function Tarieven() {
               <p className={styles.price}>
                 {translations.tarieven.achterwand.price}
               </p>
-              <a href="">{translations.tarieven.achterwand.cta}</a>
+              <a href="/contact">{translations.tarieven.achterwand.cta}</a>
             </div>
           </div>
         </div>

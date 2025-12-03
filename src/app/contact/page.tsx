@@ -9,6 +9,7 @@ import Footer from "@/components/footer/footer";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,12 +25,17 @@ export default function Contact() {
       )
       .then(
         () => {
-          alert("Bericht succesvol verzonden!");
+          if (buttonRef.current) {
+             buttonRef.current.innerHTML = "VERZONDEN";
+             buttonRef.current.classList.add(styles.form__button_sent);
+          }
           formRef.current?.reset();
         },
         (error: any) => {
-          alert("Er is een fout opgetreden. Probeer het later opnieuw.");
-          console.error("EmailJS Error:", error);
+          if (buttonRef.current) { 
+            buttonRef.current.innerHTML = "Er is een fout opgetreden";
+            buttonRef.current.classList.add(styles.form__button_error);
+          }
         }
       );
   };
@@ -87,7 +93,7 @@ export default function Contact() {
               required
               placeholder="Bericht *"
             ></textarea>
-            <button className={styles.form__button} type="submit">
+            <button ref={buttonRef} className={styles.form__button} type="submit">
               VERZENDEN
             </button>
           </form>

@@ -47,6 +47,12 @@
   transition: 300ms ease-in-out;
   border: none;
 }
+.form__button_sent {
+  background-color: #4BB543;
+}
+.form__button_error {
+  background-color: #FF4C4C;
+}
 
 .form__button:hover {
   background-color: #a9902d;
