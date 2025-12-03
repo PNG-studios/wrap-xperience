@@ -13,9 +13,15 @@ export default function Footer() {
                 <div>
                     <h3>Contact</h3>
                     <div className={styles.contact__logos}>
-                        <Icons name="whatsapp" />
-                        <Icons name="mail" />
-                        <Icons name="facebook" />
+                        <a className={styles.logo} href="">
+                            <Icons name="whatsapp" />
+                        </a>
+                        <a className={styles.logo} href="">
+                            <Icons name="mail" />
+                        </a>
+                        <a className={styles.logo} href="">
+                            <Icons name="facebook" />
+                        </a>
                     </div>
                     <a className={styles.footerCta} href="">Maak afspraak</a>
                 </div>

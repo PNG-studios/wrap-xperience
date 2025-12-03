@@ -1,5 +1,6 @@
 import translations from "@/translations/nl.json";
 import styles from "./page.module.css";
+import ScrollUp from "@/components/scrollUp/scrollUp";
 import Header from "@/components/header/header";
 import ContentCard from "@/components/contentCard/contentCard";
 import ContentCardSimple from "@/components/contentCardSimple/contentCardSimple";
@@ -9,7 +10,8 @@ export default function Informatie() {
   return (
     <>
       <main>
-        <Header title="Informatie   " backgroundImageSrc="/images/hero.png" />
+        <ScrollUp />
+        <Header title="Informatie" backgroundImageSrc="/images/hero.png" />
 
         <section className="container">
           <div className="contentCard">
@@ -19,25 +21,25 @@ export default function Informatie() {
               <p>Informatie over:</p>
               <ul className={styles.navigation}>
                 <li>
-                  <a href="">Aanrechtbladen</a>
+                  <a href="#aanrechtbladen">Aanrechtbladen</a>
                 </li>
                 <li>
-                  <a href="">Keukenkastjes</a>
+                  <a href="#keukenkastjes">Keukenkastjes</a>
                 </li>
                 <li>
-                  <a href="">Wat wel of niet kan</a>
+                  <a href="#mogelijkheden">Wat wel of niet kan</a>
                 </li>
                 <li>
-                  <a href="">Onderhoud</a>
+                  <a href="#onderhoud">Onderhoud</a>
                 </li>
                 <li>
-                  <a href="">Kleuren en patronen</a>
+                  <a href="#kleuren">Kleuren en patronen</a>
                 </li>
                 <li>
-                  <a href="">Afkitten</a>
+                  <a href="#afkitten">Afkitten</a>
                 </li>
                 <li>
-                  <a href="">Extra informatie</a>
+                  <a href="#extra-informatie">Extra informatie</a>
                 </li>
               </ul>
             </div>
@@ -45,6 +47,7 @@ export default function Informatie() {
         </section>
 
         <ContentCardSimple
+          id="aanrechtbladen"
           imageSrc="/images/hero.png"
           imageAlt="Sample Image"
           title={translations.informatie.aanrechtbladen.title}
@@ -54,6 +57,7 @@ export default function Informatie() {
         />
 
         <ContentCardSimple
+          id="keukenkastjes"
           imageSrc="/images/hero.png"
           imageAlt="Sample Image"
           title={translations.informatie.keukenkastjes.title}
@@ -62,7 +66,7 @@ export default function Informatie() {
           position="left"
         />
 
-        <section className={`container ${styles.grayBackground}`}>
+        <section id="mogelijkheden" className={`container ${styles.grayBackground}`}>
           <div className="contentCardItem">
             <h2>Wat kan wel of niet</h2>
             <p>
@@ -92,6 +96,7 @@ export default function Informatie() {
         </section>
 
         <ContentCardSimple
+            id="onderhoud"
             imageSrc="/images/hero.png"
             imageAlt="Sample Image"
             title={translations.informatie.onderhoud.title}
@@ -101,6 +106,7 @@ export default function Informatie() {
         />
 
         <ContentCard
+            id="kleuren"
             imageSrc="/images/hero.png"
             imageAlt="Sample Image"
             title={translations.informatie.kleuren.title}
@@ -112,6 +118,7 @@ export default function Informatie() {
         />
 
         <ContentCardSimple
+            id="afkitten"
             imageSrc="/images/hero.png"
             imageAlt="Sample Image"
             title={translations.informatie.afkitten.title}

@@ -1,4 +1,5 @@
 interface ContentCardProps {
+  id?: string;
   imageSrc: string;
   imageAlt: string;
   title: string;
@@ -10,6 +11,7 @@ interface ContentCardProps {
 }
 
 export default function ContentCard({
+  id,
   imageSrc,
   imageAlt,
   title,
@@ -20,7 +22,7 @@ export default function ContentCard({
   backgroundColor,
 }: ContentCardProps) {
   return (
-    <section className="container" style={{ backgroundColor }}>
+    <section id={id} className="container" style={{ backgroundColor }}>
       <div className="contentCard">
         {position === "left" ? (
           <>

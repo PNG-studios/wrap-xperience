@@ -106,6 +106,7 @@ export default function GoogleReviews({
             <span className={styles.rating__text}>
               {businessInfo.rating.toFixed(1)}
             </span>
+            <a href="https://www.google.com/search?sca_esv=3fb0e2d94fbc189e&hl=nl-NL&sxsrf=AE3TifNKkNdDBofk2Mb8MVkW5irnFnDsaA:1764753262266&q=Wrap-Xperience+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLYwNTQ1NDexNDQzMTYwMzczsdzAyPiKUSy8KLFAN6IgtSgzNS85VSEotSwztbx4ESsOCQB3u2d7TQAAAA&rldimm=13851517491643067649&tbm=lcl&sa=X&ved=2ahUKEwiW7sCaiqGRAxVthv0HHZK8DbAQ9fQKegQIKBAF&biw=1494&bih=706&dpr=1.25#lkt=LocalPoiReviews">See google reviews</a>
             <span className={styles.rating__amount}>
               ({businessInfo.userRatingCount} reviews)
             </span>

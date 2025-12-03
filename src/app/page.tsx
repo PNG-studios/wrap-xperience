@@ -1,8 +1,14 @@
+"use client";
+
+import { use, useEffect } from "react";
+import { gsap } from "gsap";
+
 import translations from "../translations/nl.json";
 import Image from "next/image";
 import { Icons } from "@/components/Icons/icons";
 import styles from "./page.module.css";
 import Navbar from "@/components/navbar/navbar";
+import ScrollUp from "@/components/scrollUp/scrollUp";
 import ContentCard from "@/components/contentCard/contentCard";
 import ImageSlider from "@/components/imageSlider/imageSlider";
 import Carousel from "@/components/carousel/carousel";
@@ -12,17 +18,33 @@ import Footer from "@/components/footer/footer";
 const placeId = process.env.PLACE_ID ?? "";
 
 export default function Home() {
+  useEffect(() => {
+    gsap.fromTo(
+      ".h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    gsap.fromTo(
+      ".whiteText",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, delay: 0.3 }
+    );
+  }, []);
+
   return (
     <main>
       <Navbar />
 
       <header className={styles.header}>
         <div className="container">
-          <h1>{translations.hero.title}</h1>
+          <h1 className="h1">{translations.hero.title}</h1>
           <p className="whiteText">{translations.hero.subtitle}</p>
-          <a href="">{translations.hero.cta}</a>
+          <a className="headerButton" href="/contact">
+            {translations.hero.cta}
+          </a>
         </div>
       </header>
+      <ScrollUp />
 
       <ContentCard
         imageSrc="/images/hero.png"
@@ -30,7 +52,7 @@ export default function Home() {
         title={translations.general.title}
         description={translations.general.description}
         buttonText={translations.general.cta}
-        buttonHref="#"
+        buttonHref="/contact"
         position="left"
         backgroundColor="#F9F9F9"
       />
@@ -52,7 +74,7 @@ export default function Home() {
           <div className="contentCardItem">
             <h2>{translations.explanation.title}</h2>
             <p>{translations.explanation.description}</p>
-            <a href="">{translations.explanation.cta}</a>
+            <a href="/portfolio">{translations.explanation.cta}</a>
           </div>
           <ImageSlider
             beforeImageSrc="images/hero.png"
