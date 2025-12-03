@@ -1,7 +1,7 @@
 .footer {
   background-image: url("/images/hero.png");
   width: 100vw;
-  height: 50vh;
+  /* height: 50vh; */
   padding: 8vh 8vw;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,10 @@
 .contact__logos > * {
   width: calc(var(--scale) * 2.2);
   height: calc(var(--scale) * 2.2);
+}
+
+.footerCta {
+  width: 100%;
 }
 
 @media (max-width: 480px) {

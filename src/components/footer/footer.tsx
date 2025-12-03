@@ -17,7 +17,7 @@ export default function Footer() {
                         <Icons name="mail" />
                         <Icons name="facebook" />
                     </div>
-                    <a href="">Maak afspraak</a>
+                    <a className={styles.footerCta} href="">Maak afspraak</a>
                 </div>
             </div>
         </footer>
