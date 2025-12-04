@@ -33,7 +33,7 @@ export default function Contact() {
         },
         (error: any) => {
           if (buttonRef.current) { 
-            buttonRef.current.innerHTML = "Er is een fout opgetreden";
+            buttonRef.current.innerHTML = "Er is een fout opgetreden, probeer het later opnieuw";
             buttonRef.current.classList.add(styles.form__button_error);
           }
         }
