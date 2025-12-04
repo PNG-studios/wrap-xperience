@@ -73,30 +73,36 @@ export default function Contact() {
             <img src="images/logo.png" alt="Logo" />
           </div>
           <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
-            <input
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="text"
               id="firstName"
               name="firstName"
               required
-              placeholder="Naam *"
-            />
-            <input
+              />
+              <label className={styles.form__label}>Naam *</label>
+            </div>
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="text"
               id="lastName"
               name="lastName"
               required
-              placeholder="Achternaam *"
             />
-            <input
+            <label className={styles.form__label}>Achternaam *</label>
+            </div>
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="email"
               id="email"
               name="email"
               required
-              placeholder="E-mail adres *"
             />
+            <label className={styles.form__label}>E-mail *</label>
+            </div>
             <textarea
               className={styles.form__item}
               id="message"

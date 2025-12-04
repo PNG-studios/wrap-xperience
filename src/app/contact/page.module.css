@@ -22,17 +22,42 @@
   gap: 1rem;
 }
 
+.form__field {
+  position: relative;
+  width: 100%;
+}
+
 .form__item {
-  background-color: var(--light);
+  width: 100%;
   border: none;
   padding: 1rem;
+  background-color: var(--light);
   border-radius: var(--border-radius);
-  font-size: calc(0.8 * var(--scale));
 }
 
 .form__item:focus {
   outline: none;
   border: 0.1rem solid #6f6f6f;
+}
+
+.form__label {
+  left: 0.75rem;
+  transform: translateY(50%);
+  position: absolute;
+  font-size: calc(0.8 * var(--scale));
+  color: #6f6f6f;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+  padding: 0 0.25rem;
+}
+
+.form__field input:focus + .form__label,
+.form__field input:valid + .form__label {
+  transform: translateY(-40%);
+  left: 0.6rem;
+  font-size: calc(0.6 * var(--scale));
+  background-color: var(--light);
+  border-radius: 5px;
 }
 
 .form__button {
