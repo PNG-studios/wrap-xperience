@@ -58,6 +58,12 @@
   background-color: #a9902d;
   transition: 300ms ease-in-out;
 }
+.form__button_error:hover {
+  background-color: #dc3737;
+}
+.form__button_sent:hover {
+  background-color: #3ea436;
+}
 
 @media (max-width: 480px) {
   .grid {

@@ -1,12 +1,31 @@
 "use client";
 import Link from "next/dist/client/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
+  const navRef = useRef<HTMLElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    let lastScroll = 0;
+
+    const onscroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll) {
+        navRef.current?.classList.add(styles.navbar__hidden);
+      } else {
+        navRef.current?.classList.remove(styles.navbar__hidden);
+      }
+
+      lastScroll = currentScroll;
+    };
+    window.addEventListener("scroll", onscroll);
+    return () => window.removeEventListener("scroll", onscroll);
+  })
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +49,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={styles.navbar}>
+    <nav ref={navRef} className={styles.navbar}>
       <div className={styles.navbar__container}>
         <a className={styles.navbar__item} href="/">WRAP-XPERIENCE</a>
         <div>

@@ -16,9 +16,10 @@ export default function Contact() {
 
     if (!formRef.current) return;
 
+    const p = document.createElement("p");
     emailjs
       .sendForm(
-        process.env.fdafds || "",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         formRef.current!,
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ""
@@ -26,17 +27,24 @@ export default function Contact() {
       .then(
         () => {
           if (buttonRef.current) {
-             buttonRef.current.innerHTML = "VERZONDEN";
-             buttonRef.current.classList.add(styles.form__button_sent);
+            buttonRef.current.innerHTML = "VERZONDEN";
+            buttonRef.current.classList.remove(styles.form__button_error);
+            buttonRef.current.classList.add(styles.form__button_sent);
           }
           formRef.current?.reset();
         },
         (error: any) => {
-          if (buttonRef.current) { 
-            buttonRef.current.innerHTML = "Er is een fout opgetreden, probeer het later opnieuw";
+          if (buttonRef.current) {
+            buttonRef.current.innerHTML =
+              "Er is een fout opgetreden, probeer het later opnieuw";
+            buttonRef.current.classList.remove(styles.form__button_sent);
             buttonRef.current.classList.add(styles.form__button_error);
+          }
+          if (!document.getElementById("form-error-message")) {
             const p = document.createElement("p");
-            p.innerText = "Of stuur direct een mail naar: " + translations.contact.email;
+            p.id = "form-error-message";
+            p.innerText =
+              "Of stuur direct een mail naar: " + translations.contact.email;
             formRef.current?.appendChild(p);
           }
         }
@@ -96,7 +104,11 @@ export default function Contact() {
               required
               placeholder="Bericht *"
             ></textarea>
-            <button ref={buttonRef} className={styles.form__button} type="submit">
+            <button
+              ref={buttonRef}
+              className={styles.form__button}
+              type="submit"
+            >
               VERZENDEN
             </button>
           </form>
