@@ -18,7 +18,7 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.fdafds || "",
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         formRef.current!,
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ""
@@ -35,6 +35,9 @@ export default function Contact() {
           if (buttonRef.current) { 
             buttonRef.current.innerHTML = "Er is een fout opgetreden, probeer het later opnieuw";
             buttonRef.current.classList.add(styles.form__button_error);
+            const p = document.createElement("p");
+            p.innerText = "Of stuur direct een mail naar: " + translations.contact.email;
+            formRef.current?.appendChild(p);
           }
         }
       );
