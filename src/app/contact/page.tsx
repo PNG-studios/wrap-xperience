@@ -16,6 +16,9 @@ export default function Contact() {
 
     if (!formRef.current) return;
 
+    buttonRef.current!.innerHTML = "VERZENDEN...";
+    buttonRef.current!.classList.add(styles.form__button_sending);
+
     const p = document.createElement("p");
     emailjs
       .sendForm(
@@ -27,6 +30,7 @@ export default function Contact() {
       .then(
         () => {
           if (buttonRef.current) {
+            buttonRef.current.classList.remove(styles.form__button_sending);
             buttonRef.current.innerHTML = "VERZONDEN";
             buttonRef.current.classList.remove(styles.form__button_error);
             buttonRef.current.classList.add(styles.form__button_sent);
@@ -35,6 +39,7 @@ export default function Contact() {
         },
         (error: any) => {
           if (buttonRef.current) {
+            buttonRef.current.classList.remove(styles.form__button_sending);
             buttonRef.current.innerHTML =
               "Er is een fout opgetreden, probeer het later opnieuw";
             buttonRef.current.classList.remove(styles.form__button_sent);
