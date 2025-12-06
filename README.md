@@ -11,7 +11,7 @@ The purpose of this project was to:
 - Implement modern tools and frameworks
 - Make a google ready website with good SEO
 
-## Tools I used
+## Tools that were used
 
 Main technologies:
 - React
