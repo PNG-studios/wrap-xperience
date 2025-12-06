@@ -25,6 +25,7 @@ Libraries and services:
 
 ## Folder structure
 
+```bash
 /public        - Static assets  
 /src
    /components - Reusable UI components  
@@ -34,9 +35,10 @@ Libraries and services:
      layout.tsx    - Entry point
      /portfolio    - Example
        page.tsx      - Portfolio page
+```
 
 
-## Installation
+## Installation ( for demostration purposes only )
 You can import the project in any code editor, it is originally made in Visual Studio Code.
 
 ### If you are using a command prompt like cmd use the following steps:
@@ -103,6 +105,22 @@ npm install gsap
 
 ```bash
 npm install @emailjs/broswer
+```
+
+## Features
+
+- Fully responsive for Mobile, Tablet and desktop
+- Smooth CSS animations
+- Contact form with emailJS
+- Clean, client approved design
+- Organized react components with module.css
+
+## Deployement
+
+The final website will be deliverd to the client as a production ready build:
+
+```bash
+npm run build
 ```
 
 ## Authors and acknowledgement
