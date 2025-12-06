@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wrap-xperience
 
-## Getting Started
+This is the GIT for the website for wrap-xperience. The website shows all the information about wrapping kitchens, cabinets and lots of other stuff. You can also find the portfolio from wrap-xperience here and contact them.
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/6dd930d7-2734-4eed-ba02-8daa9da34e3d" />
 
-First, run the development server:
+
+## Installation
+You can import the project in any code editor, it is originally made in Visual Studio Code.
+
+### If you are using a command prompt like cmd use the following steps:
+
+Make sure you have GIT installed.
+
+First select the folder you want to clone the repository in, for example:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd C:\Users\YourName\Documents
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then clone the reposity:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/PNG-studios/wrap-xperience.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then open go into the folder and open the project
 
-## Learn More
+```bash
+cd /wrap-xperience
+```
 
-To learn more about Next.js, take a look at the following resources:
+If you have VScode installed you can then run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+code .
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### If you are in the Visual studio code terminal, use the following steps instead:
 
-## Deploy on Vercel
+Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git clone https://github.com/PNG-studios/wrap-xperience.git
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd /wrap-xperience
+```
+
+### installing dependecies
+
+For running the project you need to install the following dependecies:
+
+```bash
+npm install
+```
+
+This will automaticly install:
+- React
+- GSAP
+- EmailJS
+- Other project specific packages listed in package.json
+
+### Additional installing if needed
+
+If for some reason packages were not installed correctly you can use the following commands:
+
+```bash
+npm install gsap
+```
+
+```bash
+npm install @emailjs/broswer
+```
+
+## Authors and acknowledgement
+
+This project was made by Niels Dresselaerts with the help of Guus Nohlmans and Pepijn Latour
+
+## Project status
+
+The project is close to being completed. I expect it to be done in two weeks time.
