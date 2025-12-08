@@ -77,7 +77,7 @@ export default function Home() {
             <a href="/portfolio">{translations.explanation.cta}</a>
           </div>
           <ImageSlider
-            beforeImageSrc="images/hero.png"
+            beforeImageSrc="images/randomKitchen.png"
             afterImageSrc="images/hero.png"
             beforeImageAlt="Before Image"
             afterImageAlt="After Image"
