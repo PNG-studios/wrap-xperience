@@ -16,6 +16,10 @@ export default function Contact() {
 
     if (!formRef.current) return;
 
+    buttonRef.current!.innerHTML = "VERZENDEN...";
+    buttonRef.current!.classList.add(styles.form__button_sending);
+
+    const p = document.createElement("p");
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
@@ -26,15 +30,27 @@ export default function Contact() {
       .then(
         () => {
           if (buttonRef.current) {
-             buttonRef.current.innerHTML = "VERZONDEN";
-             buttonRef.current.classList.add(styles.form__button_sent);
+            buttonRef.current.classList.remove(styles.form__button_sending);
+            buttonRef.current.innerHTML = "VERZONDEN";
+            buttonRef.current.classList.remove(styles.form__button_error);
+            buttonRef.current.classList.add(styles.form__button_sent);
           }
           formRef.current?.reset();
         },
         (error: any) => {
-          if (buttonRef.current) { 
-            buttonRef.current.innerHTML = "Er is een fout opgetreden";
+          if (buttonRef.current) {
+            buttonRef.current.classList.remove(styles.form__button_sending);
+            buttonRef.current.innerHTML =
+              "Er is een fout opgetreden, probeer het later opnieuw";
+            buttonRef.current.classList.remove(styles.form__button_sent);
             buttonRef.current.classList.add(styles.form__button_error);
+          }
+          if (!document.getElementById("form-error-message")) {
+            const p = document.createElement("p");
+            p.id = "form-error-message";
+            p.innerText =
+              "Of stuur direct een mail naar: " + translations.contact.email;
+            formRef.current?.appendChild(p);
           }
         }
       );
@@ -62,30 +78,36 @@ export default function Contact() {
             <img src="images/logo.png" alt="Logo" />
           </div>
           <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
-            <input
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="text"
               id="firstName"
               name="firstName"
               required
-              placeholder="Naam *"
-            />
-            <input
+              />
+              <label className={styles.form__label}>Naam *</label>
+            </div>
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="text"
               id="lastName"
               name="lastName"
               required
-              placeholder="Achternaam *"
             />
-            <input
+            <label className={styles.form__label}>Achternaam *</label>
+            </div>
+            <div className={styles.form__field}>
+              <input
               className={styles.form__item}
               type="email"
               id="email"
               name="email"
               required
-              placeholder="E-mail adres *"
             />
+            <label className={styles.form__label}>E-mail *</label>
+            </div>
             <textarea
               className={styles.form__item}
               id="message"
@@ -93,7 +115,11 @@ export default function Contact() {
               required
               placeholder="Bericht *"
             ></textarea>
-            <button ref={buttonRef} className={styles.form__button} type="submit">
+            <button
+              ref={buttonRef}
+              className={styles.form__button}
+              type="submit"
+            >
               VERZENDEN
             </button>
           </form>
