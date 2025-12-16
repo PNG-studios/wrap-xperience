@@ -2,19 +2,33 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { create } from 'domain'
 
 export default function LoginPage() {
   const [password, setPassword] = useState('')
   const router = useRouter()
 
   const handleLogin = async () => {
-    if (password === 'admin') {
-      await fetch('/api/login', { method: 'POST' })
-      router.push('/admin')
-    } else {
-      alert('Verkeerd wachtwoord')
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: 'admin', password }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        console.log('Login successful');
+        router.push('/admin');
+      } else {
+        alert('Verkeerd wachtwoord of gebruiker');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Er is iets misgegaan');
     }
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center">
