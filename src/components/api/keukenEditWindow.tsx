@@ -1,6 +1,7 @@
 "use client";
 import { on } from "events";
 import { useState } from "react";
+import styles from "./keukenEditWindow.module.css"
 
 
 type Keuken = {
@@ -57,36 +58,36 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
     
     isOpen && (
       <div
-        className="fixed inset-0 bg-gray-800/70 flex justify-center items-center z-50"
+        className={styles.container}
         onMouseDown={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}
       >
         <div
-          className="bg-white rounded-lg p-4 max-w-xl shadow-lg relative"
+          className={styles.edit_window}
           onMouseDown={(e) => e.stopPropagation()} // voorkomt dat klik op modal de overlay sluit
         >
           <h1 className="text-3xl font-bold mb-4 text-center">Keuken Bewerken</h1>
-          <button className="absolute top-2 right-3 text-gray-500 font-extrabold hover:text-gray-800 text-2xl"
+          <button className={styles.button}
             onClick={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}>
             ✕
           </button>
           {/*Url*/}
-          {imageUrl && <img src={newImageUrl} alt={title} className="w-full h-64 object-cover  rounded" />}
-          <input className="w-full placeholder-black hover:text-gray-500 hover:cursor-pointer hover:outline-solid rounded outline-1 mb-4 outline-none h-5 overflow-hidden resize-none"
+          {imageUrl && <img src={newImageUrl} alt={title} className={styles.image} />}
+          <input className={styles.input}
             value={newImageUrl}
             onChange={(e) => setNewImageUrl(e.target.value)}
           />
           {/*Title*/}
-          <input className="w-full placeholder-black  hover:text-gray-500 hover:cursor-pointer text-2xl font-bold mb-4 outline-none"
+          <input className={styles.input}
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)} />
           {/*Description*/}
           <textarea
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
-            className="w-full placeholder-black hover:text-gray-500 hover:cursor-pointer hover:outline-solid rounded mb-4 outline-none h-25"
+            className={styles.input}
           />
           {/*status*/}
-          <div className="flex gap-4 mb-4">
+          <div className={styles.flex}>
             <label className="font-semibold">
               Status:
               <select
@@ -101,7 +102,7 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
           </div>
           <div className="flex flex-col ">
             <p className="text-sm text-gray-500">Laatst bijgewerkt op: {date}</p>
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+            <button className={styles.button}
               onClick={async () => { HandleSave(); }}>
               Opslaan
             </button>

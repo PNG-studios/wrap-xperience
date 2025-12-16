@@ -2,6 +2,7 @@
 
 import KeukenKaart from "./keukenDataKaart"
 import React, { useEffect, useState } from "react";
+import styles from "./keukensOverzicht.module.css"
 
 type Keuken = {
   Id: number;
@@ -60,8 +61,8 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
   };
 
   return (
-    <div className="flex border rounded-xl p-4 flex-col  gap-4 max-w-[1440px] w-screen">
-      <div className="flex-row flex justify-between mb-4">
+    <div className={styles.container}>
+      <div className={styles.item}>
         <h1 className={`text-[1.7rem] font-bold ${filterStatus === 1 ? "text-green-500" : "text-red-500"}`}>{filterStatus === 1 ? "Actief" : "Inactief"}</h1>
         {loading && <h1 className="text-center">Aan het laden...</h1>}
         <div>
@@ -69,7 +70,7 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 max-w-[1440px] w-100%">
+      <div className={styles.error_container}>
         {keukens.length > 0 ? (
           keukens
           .filter((k) => k.Status == filterStatus)
