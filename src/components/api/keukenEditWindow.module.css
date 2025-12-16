@@ -2,7 +2,6 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0.3, 0.3, 0.3, 0.7);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +13,8 @@
     border-radius: var(--border-radius);
     opacity: 1;
     width: 40%;
-    padding: 0.5rem;
+    height: fit-content;
+    padding: 1rem;
     box-shadow: inset;
     position: relative;
 }
@@ -59,11 +59,12 @@
     margin-bottom: 0.5rem;
     text-align: center;
     color: black;
+    line-height: 4rem;
 }
 
 .image {
     width: 100%;
-    height: auto;
+    height: 26rem;
     object-fit: cover;
     border-radius: var(--border-radius);
 }

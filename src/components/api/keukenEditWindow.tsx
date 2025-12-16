@@ -75,15 +75,18 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
           {imageUrl && <img src={newImageUrl} alt={title} className={styles.image} />}
           <input className={`${styles.input} ${styles.url}`}
             value={newImageUrl}
+            placeholder="Url"
             onChange={(e) => setNewImageUrl(e.target.value)}
           />
           {/*Title*/}
           <input className={`${styles.input} ${styles.title}`}
             value={newTitle}
+            placeholder="Titel"
             onChange={(e) => setNewTitle(e.target.value)} />
           {/*Description*/}
           <textarea
             value={newDescription}
+            placeholder="Beschrijving"
             onChange={(e) => setNewDescription(e.target.value)}
             className={`${styles.input} ${styles.description}`}
           />
