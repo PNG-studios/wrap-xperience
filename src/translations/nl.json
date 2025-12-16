@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "keuken wrappen",
-    "subtitle": "Wrap jouw keuken in 1 dag zonder problemen met wrap-xperience",
+    "subtitle": "Wrap jouw keuken in 1 dag zonder problemen met WRAP-XPERIENCE",
     "cta": "Maak afspraak"
   },
   "general": {
@@ -61,11 +61,11 @@
     }
   },
   "footer": {
-    "description": "Wrap-Xperience is dé specialist in keukenwrapping – een snelle en betaalbare manier om je keuken een compleet nieuwe uitstraling te geven, zonder ingrijpende verbouwing."
+    "description": "WRAP-XPERIENCE is dé specialist in keukenwrapping – een snelle en betaalbare manier om je keuken een compleet nieuwe uitstraling te geven, zonder ingrijpende verbouwing."
   },
 
   "informatie": {
-    "description": "Bij wrap-xperience helpen we je graag om van jouw droomkeuken realiteit te maken. Geniet van een compleet nieuwe uitstraling, zónder de hoge kosten, lange wachttijden of de rommel van een volledige renovatie.",
+    "description": "Bij WRAP-XPERIENCE helpen we je graag om van jouw droomkeuken realiteit te maken. Geniet van een compleet nieuwe uitstraling, zónder de hoge kosten, lange wachttijden of de rommel van een volledige renovatie.",
     "aanrechtbladen": {
       "title": "Aanrechtbladen wrappen",
       "description": "Een aanrechtblad wrappen is een slimme manier om het uiterlijk van je keukenblad te vernieuwen. Hierbij brengen we een dunne laag hoogwaardige folie of vinyl aan over het bestaande blad, zonder dat er iets vervangen hoeft te worden. Ja, een keukenblad kan zeker geplakt worden! Wij gebruiken speciaal ontwikkeld materiaal dat stootvast, krasbestendig, waterafstotend en hittebestendig is tot wel 110 graden. De randen worden zorgvuldig afgekit, zodat er geen vuil of vocht onder het materiaal kan komen. Ook je tegelwand kunnen we strak afwerken. Met behulp van 3 mm dun plaatmateriaal verlijmen we een nieuwe, egale ondergrond over de bestaande tegels. Deze werken we af met folie naar keuze en kitten we netjes af voor een strak en naadloos resultaat – zonder dat er gestuct hoeft te worden."
@@ -76,7 +76,7 @@
     },
     "mogelijkheden": {
       "title": "Wat kan wel of niet",
-      "description": "Veel keukens gingen je al voor, maar helaas kunnen we niet elke keuken wrappen – dit hangt af van het materiaal en de staat van de keuken. Bekijk hieronder wat wél en niet mogelijk is bij wrap-xperience:"
+      "description": "Veel keukens gingen je al voor, maar helaas kunnen we niet elke keuken wrappen – dit hangt af van het materiaal en de staat van de keuken. Bekijk hieronder wat wél en niet mogelijk is bij WRAP-XPERIENCE:"
     },
     "onderhoud": {
       "title": "Onderhoud",
@@ -90,11 +90,15 @@
     "afkitten": {
       "title": "Afkitten",
       "description": "Wij kitten indien nodig het gehele keukenblad opnieuw af! Zo is de afwerking perfect en kan er geen water of vuil onderkomen."
+    },
+    "meerWrappen": {
+      "title": "Meer wrappen dan alleen keukens?",
+      "description": "Naast het wrappen van keukens, bieden wij ook wrapping diensten aan voor allerlij andere objecten. Denk hierbij aan het wrappen van auto's, meubels, deuren en zelfs muren. Wrappen is een veelzijdige techniek die gebruikt kan worden om verschillende oppervlakken te transformeren en te beschermen. Of je nu je auto een nieuwe look wilt geven, je meubels wilt opfrissen of je interieur een unieke uitstraling wilt geven, wij staan klaar om je te helpen met professionele wrapping diensten op maat. Contacteer ons en vraag of het mogelijk is!"
     }
   },
 
   "overOns": {
-    "description": "Bij KeukenPlakken.com zijn we gespecialiseerd in het wrappen van keukens, aanrechtbladen en achterwanden. Wij geloven dat je geen fortuin hoeft uit te geven aan een volledig nieuwe keuken om een frisse, moderne uitstraling te creëren. Met onze hoogwaardige interieurfolies geven we bestaande keukens een tweede leven – snel, stijlvol en betaalbaar. Ons team bestaat uit ervaren vakmensen die oog hebben voor detail en kwaliteit. We werken met duurzame materialen die stootvast, krasbestendig, waterafstotend en hittebestendig zijn. Elke keuken is anders, daarom kijken we altijd naar de mogelijkheden op maat. We denken met je mee over kleuren, afwerkingen en de beste aanpak voor jouw keuken.",
+    "description": "Bij WRAP-XPERIENCE zijn we gespecialiseerd in het wrappen van keukens, aanrechtbladen en achterwanden. Wij geloven dat je geen fortuin hoeft uit te geven aan een volledig nieuwe keuken om een frisse, moderne uitstraling te creëren. Met onze hoogwaardige interieurfolies geven we bestaande keukens een tweede leven – snel, stijlvol en betaalbaar. Ons team bestaat uit ervaren vakmensen die oog hebben voor detail en kwaliteit. We werken met duurzame materialen die stootvast, krasbestendig, waterafstotend en hittebestendig zijn. Elke keuken is anders, daarom kijken we altijd naar de mogelijkheden op maat. We denken met je mee over kleuren, afwerkingen en de beste aanpak voor jouw keuken.",
     "kwaliteit": {
       "title": "Kwaliteit",
       "description": "Onze materialen zijn van hoogwaardige kwaliteit:"
@@ -179,7 +183,7 @@
   "contact": {
     "description": "Heb je vragen of wil je weten wat we voor jouw keuken kunnen betekenen? Neem gerust contact met ons op! We denken graag met je mee en geven persoonlijk advies, helemaal afgestemd op jouw wensen. Je kunt ons bellen, mailen of een bericht sturen via het contactformulier op onze website. We helpen je graag verder!",
     "number": "+31 6 57027311",
-    "email": "info@wrap-xperience.nl",
+    "email": "info@WRAP-XPERIENCE.nl",
     "location": "Veldhoven"
   }
 }

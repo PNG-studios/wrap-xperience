@@ -11,11 +11,11 @@ export default function Informatie() {
     <>
       <main>
         <ScrollUp />
-        <Header title="Informatie" backgroundImageSrc="/images/hero.png" />
+        <Header title="Informatie" backgroundImageSrc="/images/footer_kitchen.jpg" />
 
         <section className="container">
           <div className="contentCard">
-            <img src="images/hero.png" alt="" className="contentCardItem" />
+            <img src="images/keuken_4_after_3.webp" alt="Alles over keuken wrappen" className="contentCardItem" />
             <div className="contentCardItem">
               <p>{translations.informatie.description}</p>
               <p>Informatie over:</p>
@@ -39,7 +39,7 @@ export default function Informatie() {
                   <a href="#afkitten">Afkitten</a>
                 </li>
                 <li>
-                  <a href="#extra-informatie">Extra informatie</a>
+                  <a href="#meer-wrappen">Anders wrappen zoals een Auto</a>
                 </li>
               </ul>
             </div>
@@ -48,8 +48,8 @@ export default function Informatie() {
 
         <ContentCardSimple
           id="aanrechtbladen"
-          imageSrc="/images/hero.png"
-          imageAlt="Sample Image"
+          imageSrc="/images/keuken_6_after.webp"
+          imageAlt="Aanrechtblad wrappen"
           title={translations.informatie.aanrechtbladen.title}
           description={translations.informatie.aanrechtbladen.description}
           backgroundColor="var(--light)"
@@ -58,8 +58,8 @@ export default function Informatie() {
 
         <ContentCardSimple
           id="keukenkastjes"
-          imageSrc="/images/hero.png"
-          imageAlt="Sample Image"
+          imageSrc="/images/keuken_5_after.webp"
+          imageAlt="Keukenkastjes wrappen"
           title={translations.informatie.keukenkastjes.title}
           description={translations.informatie.keukenkastjes.description}
           backgroundColor=""
@@ -97,8 +97,8 @@ export default function Informatie() {
 
         <ContentCardSimple
             id="onderhoud"
-            imageSrc="/images/hero.png"
-            imageAlt="Sample Image"
+            imageSrc="/images/keuken_2_after.webp"
+            imageAlt="Onderhoud van keuken wrappen"
             title={translations.informatie.onderhoud.title}
             description={translations.informatie.onderhoud.description}
             backgroundColor=""
@@ -107,8 +107,8 @@ export default function Informatie() {
 
         <ContentCard
             id="kleuren"
-            imageSrc="/images/hero.png"
-            imageAlt="Sample Image"
+            imageSrc="/images/keuken-klein-1.webp"
+            imageAlt="Kleuren en patronen voor keuken wrappen"
             title={translations.informatie.kleuren.title}
             description={translations.informatie.kleuren.description}
             buttonText={translations.informatie.kleuren.cta}
@@ -119,12 +119,22 @@ export default function Informatie() {
 
         <ContentCardSimple
             id="afkitten"
-            imageSrc="/images/hero.png"
-            imageAlt="Sample Image"
+            imageSrc="/images/keuken_3_after.webp"
+            imageAlt="Keuken afwerken"
             title={translations.informatie.afkitten.title}
             description={translations.informatie.afkitten.description}
             backgroundColor=""
             position="right"
+        />
+
+        <ContentCardSimple
+            id="meer-wrappen"
+            imageSrc="/images/voertuig_1_after.webp"
+            imageAlt="Auto wrappen"
+            title={translations.informatie.meerWrappen.title}
+            description={translations.informatie.meerWrappen.description}
+            backgroundColor="var(--light)"
+            position="left"
         />
 
         <Footer />

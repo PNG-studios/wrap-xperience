@@ -8,11 +8,11 @@ import Footer from "@/components/footer/footer";
 export default function OverOns() {
   return (
       <main>
-        <Header title="Over ons" backgroundImageSrc="/images/hero.png" />
+        <Header title="Over ons" backgroundImageSrc="/images/over-ons_hero.jpg" />
 
         <ContentCardSimple
-          imageSrc="/images/hero.png"
-          imageAlt="Sample Image"
+          imageSrc="/images/keuken_4_after_3.webp"
+          imageAlt="Keuken na wrapping"
           title=""
           description={translations.overOns.description}
           backgroundColor=""
@@ -37,7 +37,7 @@ export default function OverOns() {
               )}
             </div>
           </div>
-          <img src="/images/hero.png" alt="" />
+          <img src="/images/keuken_6_after.webp" alt="Keuken na wrapping" />
         </div>
       </section>
 

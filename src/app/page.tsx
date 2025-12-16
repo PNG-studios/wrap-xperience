@@ -47,8 +47,8 @@ export default function Home() {
       <ScrollUp />
 
       <ContentCard
-        imageSrc="/images/hero.png"
-        imageAlt="Sample Image"
+        imageSrc="/images/keuken_1_after.webp"
+        imageAlt="Keuken wrappen voorbeeld"
         title={translations.general.title}
         description={translations.general.description}
         buttonText={translations.general.cta}
@@ -77,10 +77,10 @@ export default function Home() {
             <a href="/portfolio">{translations.explanation.cta}</a>
           </div>
           <ImageSlider
-            beforeImageSrc="images/randomKitchen.png"
-            afterImageSrc="images/hero.png"
-            beforeImageAlt="Before Image"
-            afterImageAlt="After Image"
+            beforeImageSrc="images/keuken_1_before.webp"
+            afterImageSrc="images/keuken_1_after.webp"
+            beforeImageAlt="Keuken renoveren"
+            afterImageAlt="keuken renovatie eindhoven"
           />
         </div>
       </section>
@@ -88,16 +88,12 @@ export default function Home() {
       <section className="container background-light">
         <h2>{translations.kitchens.title}</h2>
         <Carousel>
-          <img src="/images/hero.png" alt="Kitchen example 1" />
-          <img src="/images/hero.png" alt="Kitchen example 2" />
-          <img src="/images/hero.png" alt="Kitchen example 3" />
-          <img src="/images/hero.png" alt="Kitchen example 4" />
-          <img src="/images/hero.png" alt="Kitchen example 5" />
-          <img src="/images/hero.png" alt="Kitchen example 6" />
-          <img src="/images/hero.png" alt="Kitchen example 7" />
-          <img src="/images/hero.png" alt="Kitchen example 8" />
-          <img src="/images/hero.png" alt="Kitchen example 9" />
-          <img src="/images/hero.png" alt="Kitchen example 10" />
+          <img src="/images/keuken_1_after.webp" alt="Keuken voorbeeld 1" />
+          <img src="/images/keuken_2_after.webp" alt="Keuken voorbeeld 2" />
+          <img src="/images/keuken_3_after.webp" alt="Keuken voorbeeld 3" />
+          <img src="/images/keuken_4_after_3.webp" alt="Keuken voorbeeld 4" />
+          <img src="/images/keuken_5_after.webp" alt="Keuken voorbeeld 5" />
+          <img src="/images/keuken_6_after.webp" alt="Keuken voorbeeld 6" />
         </Carousel>
       </section>
 
@@ -118,7 +114,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          <img src="/images/hero.png" alt="" />
+          <img src="/images/keuken_2_after.webp" alt="Voordelen van keuken wrappen" />
         </div>
       </section>
 

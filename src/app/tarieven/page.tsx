@@ -7,11 +7,11 @@ import Footer from "@/components/footer/footer";
 export default function Tarieven() {
   return (
     <main>
-      <Header title="Tarieven" backgroundImageSrc="/images/hero.png" />
+      <Header title="Tarieven" backgroundImageSrc="/images/tarieven_hero.jpg" />
 
       <ContentCard
-        imageSrc="/images/hero.png"
-        imageAlt="Sample Image"
+        imageSrc="/images/keuken_1_after.webp"
+        imageAlt="Hoeveel kost keuken wrappen"
         title={translations.tarieven.title}
         description={translations.tarieven.description}
         buttonText="Maak afspraak"
@@ -40,7 +40,7 @@ export default function Tarieven() {
 
       <section className="container">
         <div className="contentCard">
-          <img className="contentCardItem" src="images/hero.png" alt="" />
+          <img className="contentCardItem" src="images/alupanel-achterwand.webp" alt="Achterwand laten zetten" />
           <div className="contentCardItem">
             <h2>{translations.tarieven.achterwand.title}</h2>
             <p>{translations.tarieven.achterwand.description}</p>
