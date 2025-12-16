@@ -5,7 +5,7 @@ import PortfolioExample from "@/components/portfolioExample/portfolioExample"
 export default function Portfolio() {
     return (
         <main>
-        <Header title="Portfolio" backgroundImageSrc="/images/hero.png" />
+        <Header title="Portfolio" backgroundImageSrc="/images/tarieven_hero.jpg" />
 
         <PortfolioExample
           title="Keuken 1"

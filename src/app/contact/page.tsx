@@ -57,7 +57,7 @@ export default function Contact() {
   };
   return (
     <main>
-      <Header title="Contact" backgroundImageSrc="/images/hero.png" />
+      <Header title="Contact" backgroundImageSrc="/images/hero_kitchen.jpg" />
 
       <section className="container">
         <div className={styles.grid}>
@@ -75,7 +75,7 @@ export default function Contact() {
               <Icons name="pin" />
               <p>{translations.contact.location}</p>
             </div>
-            <img src="images/logo.png" alt="Logo" />
+            <img className="logo" src="images/logo-Wrap-Xperience-Black.jpg" alt="Logo" />
           </div>
           <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
             <div className={styles.form__field}>

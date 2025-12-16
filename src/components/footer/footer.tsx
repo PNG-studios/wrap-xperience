@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.footer__container}>
                 <div>
-                    <img src="images/logo.png" alt="Logo" />
+                    <img className="logo" src="images/logo.png" alt="Logo" />
                     <p className="text-light">{translations.footer.description}</p>
                 </div>
                 <div>

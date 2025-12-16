@@ -88,6 +88,10 @@ img {
   object-fit: cover;
 }
 
+.logo {
+  width: calc(var(--scale) * 15);
+}
+
 svg {
   width: calc(var(--scale) * 1.7);
   height: calc(var(--scale) * 1.7);

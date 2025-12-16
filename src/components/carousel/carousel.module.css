@@ -30,6 +30,6 @@
 
 .carousel__item img {
     width: 100%;
-    height: auto;
+    height: 300px;
     pointer-events: none;  
 }
