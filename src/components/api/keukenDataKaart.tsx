@@ -24,7 +24,7 @@ export default function KeukenKaart({ id, title, imageUrl, description, date, pr
       >
         <div className={Styles.image_container}>
           {imageUrl && (
-            <img src={imageUrl} alt={imageUrl} width={400} height={400} />
+            <img src={imageUrl} alt={title} width={400} height={400} />
           )}
         </div>
         <div className={Styles.content}>
