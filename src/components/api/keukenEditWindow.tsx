@@ -22,6 +22,7 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
   const [newDescription, setNewDescription] = useState(description);
   const [newState, setNewState] = useState(Number(enabled));
   const [newPriority, setNewPriority] = useState(priority);
+  const color = "";
 
   const HandleSave = async () => {
     if (newDescription != description || newTitle != title || newImageUrl != imageUrl || newPriority != priority || newState != enabled) {
@@ -65,7 +66,7 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
           className={styles.edit_window}
           onMouseDown={(e) => e.stopPropagation()} // voorkomt dat klik op modal de overlay sluit
         >
-          <h1 className="text-3xl font-bold mb-4 text-center">Keuken Bewerken</h1>
+          <h1 className={styles.title}>Keuken Bewerken</h1>
           <button className={styles.button}
             onClick={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}>
             ✕
@@ -92,16 +93,16 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
               Status:
               <select
                 onChange={(e) => setNewState(Number(e.target.value))}
-                className={`ml-2 cursor-pointer font-light border rounded  px-2 py-1 ${newState == 1 ? 'text-green-500' : 'text-red-500'}`}
+                className={`${styles.select} ${newState === 1 ? styles.green : styles.red}`}
                 value={newState}
               >
-                <option className="text-green-500" value={1}>Actief</option>
-                <option className="text-red-500" value={0}>Inactief</option>
+                <option className={styles.green} value={1}>Actief</option>
+                <option className={styles.red} value={0}>Inactief</option>
               </select>
             </label>
           </div>
-          <div className="flex flex-col ">
-            <p className="text-sm text-gray-500">Laatst bijgewerkt op: {date}</p>
+          <div className={styles.flex}>
+            <p className={styles.date}>Laatst bijgewerkt op: {date}</p>
             <button className={styles.button}
               onClick={async () => { HandleSave(); }}>
               Opslaan

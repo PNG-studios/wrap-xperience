@@ -2,10 +2,11 @@
   border: 1px solid black;
   border-radius: var(--border-radius);
   padding: 1rem;
-  width: 16.5rem;
+  width: 18rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 27rem;
   transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -47,7 +48,14 @@
   color: #4a4a4a;
   margin-top: 0.25rem;
   display: -webkit-box;
+  -webkit-line-clamp: 4;
   line-clamp: 5;
-  /* -webkit-box-orient: vertical;
-  overflow: hidden; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b6b6b;
+  margin-top: 0.5rem;
 }

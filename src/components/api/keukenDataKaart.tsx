@@ -32,7 +32,7 @@ export default function KeukenKaart({ id, title, imageUrl, description, date, pr
             <h2 className={Styles.title}>{title}</h2>
             <p className={Styles.description}>{description}</p>
           </div>
-          <p className="text-sm text-gray-500 mt-2">Bijgewerkt op: {date}</p>
+          <p className={Styles.date}>Bijgewerkt op: {date}</p>
         </div>
       </div>
       {isOpen && <KeukenEditWindow id={id} title={title} imageUrl={imageUrl} description={description} date={date} priority={priority} enabled={enabled}  onClose={() => setIsOpen(false)}/>}

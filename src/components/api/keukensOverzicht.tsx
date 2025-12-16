@@ -63,14 +63,14 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <h1 className={`text-[1.7rem] font-bold ${filterStatus === 1 ? "text-green-500" : "text-red-500"}`}>{filterStatus === 1 ? "Actief" : "Inactief"}</h1>
+        <h1 className={`${styles.title} ${filterStatus === 1 ? styles.title_active : styles.title_inactive}`}>{filterStatus === 1 ? "Actief" : "Inactief"}</h1>
         {loading && <h1 className="text-center">Aan het laden...</h1>}
         <div>
-          {filterStatus === 0 && !loading && <button className="bg-green-500 text-white px-4 py-2 rounded w-[7rem]" onClick={PostKeuken()}>Voeg toe</button>}
+          {filterStatus === 0 && !loading && <button className={styles.button} onClick={PostKeuken()}>Voeg toe</button>}
         </div>
       </div>
 
-      <div className={styles.error_container}>
+      <div className={styles.container_items}>
         {keukens.length > 0 ? (
           keukens
           .filter((k) => k.Status == filterStatus)
