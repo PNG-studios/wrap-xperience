@@ -66,26 +66,26 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
           className={styles.edit_window}
           onMouseDown={(e) => e.stopPropagation()} // voorkomt dat klik op modal de overlay sluit
         >
-          <h1 className={styles.title}>Keuken Bewerken</h1>
-          <button className={styles.button}
+          <h1 className={styles.contatiner_title}>Keuken Bewerken</h1>
+          <button className={styles.close_button}
             onClick={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}>
             ✕
           </button>
           {/*Url*/}
           {imageUrl && <img src={newImageUrl} alt={title} className={styles.image} />}
-          <input className={styles.input}
+          <input className={`${styles.input} ${styles.url}`}
             value={newImageUrl}
             onChange={(e) => setNewImageUrl(e.target.value)}
           />
           {/*Title*/}
-          <input className={styles.input}
+          <input className={`${styles.input} ${styles.title}`}
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)} />
           {/*Description*/}
           <textarea
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
-            className={styles.input}
+            className={`${styles.input} ${styles.description}`}
           />
           {/*status*/}
           <div className={styles.flex}>
@@ -103,7 +103,7 @@ export default function KeukenEditWindow({ id, title, imageUrl, description, dat
           </div>
           <div className={styles.flex}>
             <p className={styles.date}>Laatst bijgewerkt op: {date}</p>
-            <button className={styles.button}
+            <button className={styles.save_button}
               onClick={async () => { HandleSave(); }}>
               Opslaan
             </button>

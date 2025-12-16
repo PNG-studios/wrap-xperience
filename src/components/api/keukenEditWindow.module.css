@@ -2,7 +2,7 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0.3, 0.3, 0.3, 0.7);
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,19 +19,41 @@
     position: relative;
 }
 
-.button {
+.save_button {
+    margin-top: 1rem;
+    background-color: #3b82f6;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    /* width: fit-content; */
+    transition: background-color 0.3s ease;
+}
+
+.save_button:hover {
+    background-color: #2563eb;
+    cursor: pointer;
+}
+
+.close_button {
     position: absolute;
-    top: 16px;
-    right: 24px;
-    color: gray;
-    font-weight: 700;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    color: rgb(61, 61, 61);
+.close_button:hover {
+    color: rgb(80, 80, 80);
 }
 
-.title {
+.contatiner_title {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -53,8 +75,42 @@
     height: 32px;
     overflow: hidden;
     resize: none;
-    outline: 1;
+    /* outline: 1; */
 }
+
+.url {
+    height: 2.5rem;
+    font-size: 0.875rem;
+}
+
+.title {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    outline: none;
+    cursor: text;
+}
+
+.title:hover {
+    color: gray;
+}
+/* "w-full hover:text-gray-500 hover:cursor-pointer text-2xl font-bold mb-4 outline-none" */
+
+.description {
+    cursor: text;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    height: 6rem;
+    resize: none;
+}
+
+.description:hover {
+    outline: solid;
+    outline-width: thin;
+    outline-color: gray;
+}
+
 .input:hover {
     color: gray;
     cursor: text;
@@ -73,6 +129,7 @@
 .green {
     color: green;
 }
+
 .red {
     color: red;
 }
@@ -81,6 +138,7 @@
     display: flex;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
+    flex-direction: column;
 }
 
 .date {
