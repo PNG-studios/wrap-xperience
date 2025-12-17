@@ -15,6 +15,7 @@ type Kitchen = {
   FotoAltBefore: string[];
   FotoAltAfter: string[];
   Datum: string;
+  Status: boolean;
 };
 
 export default function Portfolio() {
@@ -41,7 +42,9 @@ export default function Portfolio() {
         backgroundImageSrc="/images/tarieven_hero.jpg"
       />
 
-      {keukens.map((kitchen) => (
+      {keukens
+        .filter((kitchen) => kitchen.Status)
+        .map((kitchen) => (
         <PortfolioExample
           key={kitchen.Id}
           title={kitchen.Naam}

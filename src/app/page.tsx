@@ -21,6 +21,7 @@ type Kitchen = {
   Id: number;
   FotoUrlAfter: string[];
   FotoAltAfter: string[];
+  Status: boolean;
 };
 
 export default function Home() {
@@ -103,14 +104,16 @@ export default function Home() {
         <h2>{translations.kitchens.title}</h2>
 
         <Carousel>
-          {keukens.map((keuken) => {
-            const src = keuken.FotoUrlAfter?.[0];
-            const alt = keuken.FotoAltAfter?.[0] ?? "";
+          {keukens
+            .filter((keuken) => keuken.Status) // only kitchens with Status === true
+            .map((keuken) => {
+              const src = keuken.FotoUrlAfter?.[0];
+              const alt = keuken.FotoAltAfter?.[0] ?? "";
 
-            if (!src) return null;
+              if (!src) return null;
 
-            return <img key={keuken.Id} src={src} alt={alt} />;
-          })}
+              return <img key={keuken.Id} src={src} alt={alt} />;
+            })}
 
           {/* Static fallback images (optional) */}
           <img src="/images/keuken_1_after.webp" alt="Keuken voorbeeld 1" />

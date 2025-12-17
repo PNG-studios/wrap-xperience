@@ -12,7 +12,7 @@
     background-color: white;
     border-radius: var(--border-radius);
     opacity: 1;
-    width: 40%;
+    width: 75%;
     height: fit-content;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,6 +33,20 @@
 
 .save_button:hover {
     background-color: #2563eb;
+    cursor: pointer;
+}
+
+.add_image_button {
+    background-color: aliceblue;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+.add_image_button:hover {
+    background-color: #dbeafe;
     cursor: pointer;
 }
 
@@ -67,6 +81,12 @@
     height: 26rem;
     object-fit: cover;
     border-radius: var(--border-radius);
+}
+
+.image_input_container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .input {

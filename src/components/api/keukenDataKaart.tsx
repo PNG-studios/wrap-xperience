@@ -36,27 +36,9 @@ export default function KeukenKaart({
         onClick={() => setIsOpen(true)}
       >
         <div className={Styles.image_container}>
-          {/* Render all 'before' images */}
-          {imageUrlBefore.map((src, i) => (
-            <img
-              key={`before-${i}`}
-              src={src}
-              alt={imageAltBefore[i] || `Before image ${i + 1}`}
-              width={400}
-              height={400}
-            />
-          ))}
-
-          {/* Render all 'after' images */}
-          {imageUrlAfter.map((src, i) => (
-            <img
-              key={`after-${i}`}
-              src={src}
-              alt={imageAltAfter[i] || `After image ${i + 1}`}
-              width={400}
-              height={400}
-            />
-          ))}
+          {imageUrlAfter[0] && (
+            <img src={imageUrlAfter[0]} alt={imageAltAfter[0] || "After image"} />
+          )}
         </div>
 
         <div className={Styles.content}>

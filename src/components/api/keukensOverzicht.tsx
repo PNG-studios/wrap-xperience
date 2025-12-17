@@ -7,10 +7,10 @@ import styles from "./keukensOverzicht.module.css"
 type Keuken = {
   Id: number;
   Name: string;
-  PhotoAltBefore: string[];
-  PhotoUrlBefore: string[];
-  PhotoUrlAfter: string[];
-  PhotoAltAfter: string[];
+  FotoAltBefore: string[];
+  FotoUrlBefore: string[];
+  FotoUrlAfter: string[];
+  FotoAltAfter: string[];
   Date: string;
   Status?: number;
   Priority?: number;
@@ -84,10 +84,10 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
               id={keuken.Id}
               key={keuken.Id}
               title={keuken.Name}
-              imageUrlBefore={keuken.PhotoUrlBefore}
-              imageAltBefore={keuken.PhotoAltBefore}
-              imageUrlAfter={keuken.PhotoUrlAfter}
-              imageAltAfter={keuken.PhotoAltAfter}
+              imageUrlBefore={keuken.FotoUrlBefore}
+              imageAltBefore={keuken.FotoAltBefore}
+              imageUrlAfter={keuken.FotoUrlAfter}
+              imageAltAfter={keuken.FotoAltAfter}
               date={new Date(keuken.Date).toLocaleDateString()}
               priority={keuken.Priority}
               enabled={keuken.Status}

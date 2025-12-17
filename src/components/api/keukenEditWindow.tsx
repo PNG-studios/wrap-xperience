@@ -146,7 +146,9 @@ export default function KeukenEditWindow({
           onChange={(e) => setNewTitle(e.target.value)}
         />
 
-        {/* Before Images */}
+        <div className={styles.image_input_container}>
+          <div>
+          {/* Before Images */}
         <h3>Before Images</h3>
         {newImageUrlBefore.map((url, i) => (
           <div key={i} className={styles.image_input_group}>
@@ -175,7 +177,7 @@ export default function KeukenEditWindow({
             />
           </div>
         ))}
-        <button
+        <button className={styles.add_image_button}
           onClick={() => {
             setNewImageUrlBefore([...newImageUrlBefore, ""]);
             setNewImageAltBefore([...newImageAltBefore, ""]);
@@ -183,8 +185,10 @@ export default function KeukenEditWindow({
         >
           Voeg Before Image toe
         </button>
+        </div>
 
-        {/* After Images */}
+        <div>
+          {/* After Images */}
         <h3>After Images</h3>
         {newImageUrlAfter.map((url, i) => (
           <div key={i} className={styles.image_input_group}>
@@ -213,7 +217,7 @@ export default function KeukenEditWindow({
             />
           </div>
         ))}
-        <button
+        <button className={styles.add_image_button}
           onClick={() => {
             setNewImageUrlAfter([...newImageUrlAfter, ""]);
             setNewImageAltAfter([...newImageAltAfter, ""]);
@@ -221,6 +225,8 @@ export default function KeukenEditWindow({
         >
           Voeg After Image toe
         </button>
+        </div>
+        </div>
 
         {/* Status */}
         <div className={styles.flex}>
