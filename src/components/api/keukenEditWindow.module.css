@@ -1,5 +1,5 @@
 .container {
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-color: rgba(0.3, 0.3, 0.3, 0.7);
     display: flex;

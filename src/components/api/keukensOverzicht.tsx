@@ -6,12 +6,14 @@ import styles from "./keukensOverzicht.module.css"
 
 type Keuken = {
   Id: number;
-  Naam: string;
-  Beschrijving: string;
-  FotoUrl: string;
-  Datum: string;
+  Name: string;
+  PhotoAltBefore: string[];
+  PhotoUrlBefore: string[];
+  PhotoUrlAfter: string[];
+  PhotoAltAfter: string[];
+  Date: string;
   Status?: number;
-  Prioriteit?: number;
+  Priority?: number;
 };
 type Props = {
   filterStatus?: number;
@@ -43,11 +45,14 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        naam: 'Nieuwe Keuken',
-        beschrijving: 'Beschrijving van ',
-        fotoUrl: 'https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg',
-        prioriteit: 1,
-        status: 0,
+        Name: 'Nieuwe Keuken',
+        PhotoAltBefore: ['Beschrijving van '],
+        PhotoUrlBefore: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
+        PhotoUrlAfter: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
+        PhotoAltAfter: ['Beschrijving van '],
+        Date: new Date().toISOString(),
+        Priority: 1,
+        Status: 0,
       }),
       
     });
@@ -78,11 +83,13 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
             <KeukenKaart
               id={keuken.Id}
               key={keuken.Id}
-              title={keuken.Naam}
-              imageUrl={keuken.FotoUrl}
-              description={keuken.Beschrijving}
-              date={new Date(keuken.Datum).toLocaleDateString()}
-              priority={keuken.Prioriteit}
+              title={keuken.Name}
+              imageUrlBefore={keuken.PhotoUrlBefore}
+              imageAltBefore={keuken.PhotoAltBefore}
+              imageUrlAfter={keuken.PhotoUrlAfter}
+              imageAltAfter={keuken.PhotoAltAfter}
+              date={new Date(keuken.Date).toLocaleDateString()}
+              priority={keuken.Priority}
               enabled={keuken.Status}
             />
           ))

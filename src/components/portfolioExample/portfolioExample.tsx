@@ -3,10 +3,10 @@ import styles from "./portfolioExample.module.css";
 
 interface PortfolioExampleProps {
   title: string;
-  imageBeforeSrc: string | string[];
-  imageAfterSrc: string | string[];
-  imageBeforeAlt: string | string[];
-  imageAfterAlt: string | string[];
+  imageBeforeSrc: string[];
+  imageAfterSrc: string[];
+  imageBeforeAlt: string[];
+  imageAfterAlt: string[];
 }
 
 function toArray<T>(value: T | T[]): T[] {
@@ -30,7 +30,7 @@ export default function PortfolioExample({
         <div className={styles.kitchens}>
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.kitchen__items}>
-            {beforeImages.map((src, index) => (
+            {imageBeforeSrc.map((src, index) => (
               <ImageSlider
                 key={index}
                 beforeImageSrc={beforeImages[index]}

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    height: 30vh;
+    height: 60vh;
     width: 100%;
     height: auto;
 }
@@ -13,22 +13,26 @@
 
 .kitchen__items {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(2, 1fr);
-
+    height: 60vh;
     grid-auto-rows: min-content;
     gap: 2rem;
 }
 
 .kitchen__items > * {
     height: 40vh;
+    z-index: 90;
 }
 
 .kitchen__items >:nth-child(3n+1) {
     grid-column: span 2;
+    height: 80vh;
 }
 
 @media (max-width: 480px) {
     .kitchen__items > * {
         grid-column: span 2;
+        height: 40vh;
     }
 }

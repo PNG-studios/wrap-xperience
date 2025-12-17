@@ -1,118 +1,249 @@
 "use client";
-import { on } from "events";
 import { useState } from "react";
-import styles from "./keukenEditWindow.module.css"
-
+import styles from "./keukenEditWindow.module.css";
 
 type Keuken = {
   id?: number;
   title: string;
-  imageUrl: string;
-  description: string;
+  imageUrlBefore: string[];
+  imageUrlAfter: string[];
+  imageAltBefore: string[];
+  imageAltAfter: string[];
   date: string;
   priority?: number;
   enabled?: number;
   onClose: () => void;
-}
+};
 
-export default function KeukenEditWindow({ id, title, imageUrl, description, date, priority, enabled, onClose }: Keuken) {
+export default function KeukenEditWindow({
+  id,
+  title,
+  imageUrlBefore,
+  imageUrlAfter,
+  imageAltBefore,
+  imageAltAfter,
+  date,
+  priority,
+  enabled,
+  onClose,
+}: Keuken) {
   const [isOpen, setIsOpen] = useState(true);
-  const [newImageUrl, setNewImageUrl] = useState(imageUrl);
-  const [newTitle, setNewTitle] = useState(title);
-  const [newDescription, setNewDescription] = useState(description);
-  const [newState, setNewState] = useState(Number(enabled));
-  const [newPriority, setNewPriority] = useState(priority);
-  const color = "";
+  const [newTitle, setNewTitle] = useState(title ?? "");
+  const [newPriority, setNewPriority] = useState(priority ?? 0);
+  const [newState, setNewState] = useState(enabled ?? 0);
+
+  const [newImageUrlBefore, setNewImageUrlBefore] = useState<string[]>(
+    imageUrlBefore?.length ? [...imageUrlBefore] : [""]
+  );
+  const [newImageAltBefore, setNewImageAltBefore] = useState<string[]>(
+    imageAltBefore?.length ? [...imageAltBefore] : [""]
+  );
+  const [newImageUrlAfter, setNewImageUrlAfter] = useState<string[]>(
+    imageUrlAfter?.length ? [...imageUrlAfter] : [""]
+  );
+  const [newImageAltAfter, setNewImageAltAfter] = useState<string[]>(
+    imageAltAfter?.length ? [...imageAltAfter] : [""]
+  );
+
+  // Helper to update a single item in an array
+  const handleArrayChange = (
+    setter: React.Dispatch<React.SetStateAction<string[]>>,
+    index: number,
+    value: string
+  ) => {
+    setter((prev) => {
+      const updated = [...prev];
+      updated[index] = value;
+      return updated;
+    });
+  };
 
   const HandleSave = async () => {
-    if (newDescription != description || newTitle != title || newImageUrl != imageUrl || newPriority != priority || newState != enabled) {
-      const response = await fetch('/api/keukens', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+    const safeImageUrlBefore: string[] = newImageUrlBefore ?? [];
+    const safeImageUrlAfter: string[] = newImageUrlAfter ?? [];
+    const safeImageAltBefore: string[] = newImageAltBefore ?? [];
+    const safeImageAltAfter: string[] = newImageAltAfter ?? [];
+
+    const arraysEqual = (a: string[], b: string[]) =>
+      a.length === b.length && a.every((v, i) => v === b[i]);
+
+    const hasChanged =
+      newTitle !== title ||
+      newPriority !== priority ||
+      newState !== enabled ||
+      !arraysEqual(safeImageUrlBefore, imageUrlBefore ?? []) ||
+      !arraysEqual(safeImageAltBefore, imageAltBefore ?? []) ||
+      !arraysEqual(safeImageUrlAfter, imageUrlAfter ?? []) ||
+      !arraysEqual(safeImageAltAfter, imageAltAfter ?? []);
+
+    if (!hasChanged) {
+      setIsOpen(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/keukens", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          id: id,
+          id,
           naam: newTitle,
-          beschrijving: newDescription,
-          fotoUrl: newImageUrl,
           prioriteit: newPriority,
           status: newState,
+          fotoUrlBefore: safeImageUrlBefore, // array
+          fotoAltBefore: safeImageAltBefore, // array
+          fotoUrlAfter: safeImageUrlAfter,
+          fotoAltAfter: safeImageAltAfter,
         }),
       });
 
-      if (response.ok) {
+      const data: any = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        console.error("Fout bij updaten keuken", data);
         setIsOpen(false);
-        window.location.reload();
-      } else {
-        setIsOpen(false);
-        console.error('Fout bij updaten keuken');
+        return;
       }
-    }
-    else {
+
+      setIsOpen(false);
+      window.location.reload();
+    } catch (err) {
+      console.error("Er is een fout opgetreden:", err);
       setIsOpen(false);
     }
   };
 
   if (!isOpen) return null;
+
   return (
-    
-    isOpen && (
+    <div
+      className={styles.container}
+      onMouseDown={() => {
+        setIsOpen(false);
+        onClose();
+      }}
+    >
       <div
-        className={styles.container}
-        onMouseDown={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}
+        className={styles.edit_window}
+        onMouseDown={(e) => e.stopPropagation()}
       >
-        <div
-          className={styles.edit_window}
-          onMouseDown={(e) => e.stopPropagation()} // voorkomt dat klik op modal de overlay sluit
+        <h1 className={styles.contatiner_title}>Keuken Bewerken</h1>
+        <button
+          className={styles.close_button}
+          onClick={() => {
+            setIsOpen(false);
+            onClose();
+          }}
         >
-          <h1 className={styles.contatiner_title}>Keuken Bewerken</h1>
-          <button className={styles.close_button}
-            onClick={() => { setNewImageUrl(imageUrl); setNewTitle(title); setNewDescription(description); setNewPriority(priority); setNewState(Number(enabled)); onClose(); }}>
-            ✕
+          ✕
+        </button>
+
+        {/* Title */}
+        <input
+          className={styles.input}
+          value={newTitle}
+          placeholder="Titel"
+          onChange={(e) => setNewTitle(e.target.value)}
+        />
+
+        {/* Before Images */}
+        <h3>Before Images</h3>
+        {newImageUrlBefore.map((url, i) => (
+          <div key={i} className={styles.image_input_group}>
+            {url && (
+              <img
+                src={url}
+                alt={newImageAltBefore[i] ?? ""}
+                className={styles.image}
+              />
+            )}
+            <input
+              value={url ?? ""}
+              placeholder="URL"
+              onChange={(e) =>
+                handleArrayChange(setNewImageUrlBefore, i, e.target.value)
+              }
+              className={styles.input}
+            />
+            <input
+              value={newImageAltBefore[i] ?? ""}
+              placeholder="Alt Text"
+              onChange={(e) =>
+                handleArrayChange(setNewImageAltBefore, i, e.target.value)
+              }
+              className={styles.input}
+            />
+          </div>
+        ))}
+        <button
+          onClick={() => {
+            setNewImageUrlBefore([...newImageUrlBefore, ""]);
+            setNewImageAltBefore([...newImageAltBefore, ""]);
+          }}
+        >
+          Voeg Before Image toe
+        </button>
+
+        {/* After Images */}
+        <h3>After Images</h3>
+        {newImageUrlAfter.map((url, i) => (
+          <div key={i} className={styles.image_input_group}>
+            {url && (
+              <img
+                src={url}
+                alt={newImageAltAfter[i] ?? ""}
+                className={styles.image}
+              />
+            )}
+            <input
+              value={url ?? ""}
+              placeholder="URL"
+              onChange={(e) =>
+                handleArrayChange(setNewImageUrlAfter, i, e.target.value)
+              }
+              className={styles.input}
+            />
+            <input
+              value={newImageAltAfter[i] ?? ""}
+              placeholder="Alt Text"
+              onChange={(e) =>
+                handleArrayChange(setNewImageAltAfter, i, e.target.value)
+              }
+              className={styles.input}
+            />
+          </div>
+        ))}
+        <button
+          onClick={() => {
+            setNewImageUrlAfter([...newImageUrlAfter, ""]);
+            setNewImageAltAfter([...newImageAltAfter, ""]);
+          }}
+        >
+          Voeg After Image toe
+        </button>
+
+        {/* Status */}
+        <div className={styles.flex}>
+          <label className="font-semibold">
+            Status:
+            <select
+              value={newState}
+              onChange={(e) => setNewState(Number(e.target.value))}
+              className={newState === 1 ? styles.green : styles.red}
+            >
+              <option value={1}>Actief</option>
+              <option value={0}>Inactief</option>
+            </select>
+          </label>
+        </div>
+
+        <div className={styles.flex}>
+          <p className={styles.date}>Laatst bijgewerkt op: {date}</p>
+          <button className={styles.save_button} onClick={HandleSave}>
+            Opslaan
           </button>
-          {/*Url*/}
-          {imageUrl && <img src={newImageUrl} alt={title} className={styles.image} />}
-          <input className={`${styles.input} ${styles.url}`}
-            value={newImageUrl}
-            placeholder="Url"
-            onChange={(e) => setNewImageUrl(e.target.value)}
-          />
-          {/*Title*/}
-          <input className={`${styles.input} ${styles.title}`}
-            value={newTitle}
-            placeholder="Titel"
-            onChange={(e) => setNewTitle(e.target.value)} />
-          {/*Description*/}
-          <textarea
-            value={newDescription}
-            placeholder="Beschrijving"
-            onChange={(e) => setNewDescription(e.target.value)}
-            className={`${styles.input} ${styles.description}`}
-          />
-          {/*status*/}
-          <div className={styles.flex}>
-            <label className="font-semibold">
-              Status:
-              <select
-                onChange={(e) => setNewState(Number(e.target.value))}
-                className={`${styles.select} ${newState === 1 ? styles.green : styles.red}`}
-                value={newState}
-              >
-                <option className={styles.green} value={1}>Actief</option>
-                <option className={styles.red} value={0}>Inactief</option>
-              </select>
-            </label>
-          </div>
-          <div className={styles.flex}>
-            <p className={styles.date}>Laatst bijgewerkt op: {date}</p>
-            <button className={styles.save_button}
-              onClick={async () => { HandleSave(); }}>
-              Opslaan
-            </button>
-          </div>
         </div>
       </div>
-    )
-  )
-};
+    </div>
+  );
+}

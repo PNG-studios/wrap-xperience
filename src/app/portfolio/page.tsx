@@ -10,18 +10,30 @@ import PortfolioExample from "@/components/portfolioExample/portfolioExample";
 type Kitchen = {
   Id: number;
   Naam: string;
-  Beschrijving: string;
-  FotoUrl: string;
+  FotoUrlBefore: string[];
+  FotoUrlAfter: string[];
+  FotoAltBefore: string[];
+  FotoAltAfter: string[];
+  Datum: string;
 };
 
 export default function Portfolio() {
   const [keukens, setKeukens] = useState<Kitchen[]>([]);
 
   useEffect(() => {
-    fetch("/api/keukens")
-      .then((response) => response.json())
-      .then(setKeukens);
+    async function fetchKeukens() {
+      try {
+        const res = await fetch("/api/keukens");
+        if (!res.ok) throw new Error("Failed to fetch kitchens");
+        const data: Kitchen[] = await res.json();
+        setKeukens(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchKeukens();
   }, []);
+
   return (
     <main>
       <Header
@@ -29,38 +41,14 @@ export default function Portfolio() {
         backgroundImageSrc="/images/tarieven_hero.jpg"
       />
 
-      {keukens.map((keuken) => (
+      {keukens.map((kitchen) => (
         <PortfolioExample
-          key={keuken.Id}
-          title={keuken.Naam}
-          imageBeforeSrc={[
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-          ]}
-          imageBeforeAlt={[
-            "image 1",
-            "image 2",
-            "image 3",
-            "image 4",
-            "image 5",
-          ]}
-          imageAfterSrc={[
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-            "/images/keuken_1_after.webp",
-          ]}
-          imageAfterAlt={[
-            "image 1",
-            "image 2",
-            "image 3",
-            "image 4",
-            "image 5",
-          ]}
+          key={kitchen.Id}
+          title={kitchen.Naam}
+          imageBeforeSrc={kitchen.FotoUrlBefore}
+          imageBeforeAlt={kitchen.FotoAltBefore}
+          imageAfterSrc={kitchen.FotoUrlAfter}
+          imageAfterAlt={kitchen.FotoAltAfter}
         />
       ))}
 

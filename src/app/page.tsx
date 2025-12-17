@@ -19,8 +19,8 @@ const placeId = process.env.PLACE_ID ?? "";
 
 type Kitchen = {
   Id: number;
-  Beschrijving: string;
-  FotoUrl: string;
+  FotoUrlAfter: string[];
+  FotoAltAfter: string[];
 };
 
 export default function Home() {
@@ -44,8 +44,6 @@ export default function Home() {
       .then((response) => response.json())
       .then(setKeukens);
   }, []);
-
-  
 
   return (
     <main>
@@ -103,17 +101,21 @@ export default function Home() {
 
       <section className="container background-light">
         <h2>{translations.kitchens.title}</h2>
+
         <Carousel>
-          {keukens.map((keuken) => (
-            console.log(keuken),
-            <img key={keuken.Id} src={keuken.FotoUrl} alt={keuken.Beschrijving} />
-          ))}
+          {keukens.map((keuken) => {
+            const src = keuken.FotoUrlAfter?.[0];
+            const alt = keuken.FotoAltAfter?.[0] ?? "";
+
+            if (!src) return null;
+
+            return <img key={keuken.Id} src={src} alt={alt} />;
+          })}
+
+          {/* Static fallback images (optional) */}
           <img src="/images/keuken_1_after.webp" alt="Keuken voorbeeld 1" />
           <img src="/images/keuken_2_after.webp" alt="Keuken voorbeeld 2" />
           <img src="/images/keuken_3_after.webp" alt="Keuken voorbeeld 3" />
-          <img src="/images/keuken_4_after_3.webp" alt="Keuken voorbeeld 4" />
-          <img src="/images/keuken_5_after.webp" alt="Keuken voorbeeld 5" />
-          <img src="/images/keuken_6_after.webp" alt="Keuken voorbeeld 6" />
         </Carousel>
       </section>
 
@@ -134,7 +136,10 @@ export default function Home() {
               )}
             </div>
           </div>
-          <img src="/images/keuken_2_after.webp" alt="Voordelen van keuken wrappen" />
+          <img
+            src="/images/keuken_2_after.webp"
+            alt="Voordelen van keuken wrappen"
+          />
         </div>
       </section>
 
