@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    height: 30vh;
+    width: 100%;
+    height: auto;
 }
 
 .title {
@@ -11,8 +14,13 @@
 .kitchen__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     grid-auto-rows: min-content;
     gap: 2rem;
+}
+
+.kitchen__items > * {
+    height: 40vh;
 }
 
 .kitchen__items >:nth-child(3n+1) {

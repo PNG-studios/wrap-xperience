@@ -4,6 +4,7 @@
     position: relative;
     overflow: hidden;
     --position: 50%;
+    height: 100%;
 }
 
 .image__container {

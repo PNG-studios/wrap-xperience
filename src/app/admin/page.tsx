@@ -5,7 +5,7 @@ import KeukenOverzicht from "@/components/api/keukensOverzicht";
 const AdminPage: React.FC = () => {
   return (
     <>
-      <Header title="Admin page" backgroundImageSrc="/images/hero.png" />
+      <Header title="Admin page" backgroundImageSrc="/images/tarieven_hero.jpg" />
       <div className={Styles.container_categories}>
         <h1 className={Styles.title}>Keuken Overzicht</h1>
         <KeukenOverzicht filterStatus={1} /> {/* Alleen actieve keukens weergeven */}

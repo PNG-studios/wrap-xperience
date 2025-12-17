@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect } from "react";
+import { use, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 import translations from "../translations/nl.json";
@@ -17,6 +17,12 @@ import Footer from "@/components/footer/footer";
 
 const placeId = process.env.PLACE_ID ?? "";
 
+type Kitchen = {
+  Id: number;
+  Beschrijving: string;
+  FotoUrl: string;
+};
+
 export default function Home() {
   useEffect(() => {
     gsap.fromTo(
@@ -30,6 +36,16 @@ export default function Home() {
       { y: 0, opacity: 1, duration: 1, delay: 0.3 }
     );
   }, []);
+
+  const [keukens, setKeukens] = useState<Kitchen[]>([]);
+
+  useEffect(() => {
+    fetch("/api/keukens")
+      .then((response) => response.json())
+      .then(setKeukens);
+  }, []);
+
+  
 
   return (
     <main>
@@ -88,6 +104,10 @@ export default function Home() {
       <section className="container background-light">
         <h2>{translations.kitchens.title}</h2>
         <Carousel>
+          {keukens.map((keuken) => (
+            console.log(keuken),
+            <img key={keuken.Id} src={keuken.FotoUrl} alt={keuken.Beschrijving} />
+          ))}
           <img src="/images/keuken_1_after.webp" alt="Keuken voorbeeld 1" />
           <img src="/images/keuken_2_after.webp" alt="Keuken voorbeeld 2" />
           <img src="/images/keuken_3_after.webp" alt="Keuken voorbeeld 3" />
