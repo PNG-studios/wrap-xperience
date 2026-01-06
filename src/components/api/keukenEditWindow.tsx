@@ -235,7 +235,7 @@ export default function KeukenEditWindow({
             <select
               value={newState}
               onChange={(e) => setNewState(Number(e.target.value))}
-              className={newState === 1 ? styles.green : styles.red}
+              className={newState === 0 ? styles.red : styles.green}
             >
               <option value={1}>Actief</option>
               <option value={0}>Inactief</option>

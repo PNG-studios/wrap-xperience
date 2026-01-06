@@ -26,7 +26,7 @@ export default function PortfolioExample({
   const afterAlts = toArray(imageAfterAlt);
 
   return (
-    <section className="container">
+    <section className={styles.container}>
         <div className={styles.kitchens}>
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.kitchen__items}>

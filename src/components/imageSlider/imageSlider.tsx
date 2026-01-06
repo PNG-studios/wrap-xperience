@@ -21,25 +21,27 @@ export default function ImageSlider({
   useEffect(() => {
     if (!containerRef.current || !sliderRef.current) return;
 
-    containerRef.current.style.setProperty("--position", "50%");
-
     const onInput = (e: Event) => {
       const value = (e.target as HTMLInputElement).value;
       containerRef.current!.style.setProperty("--position", `${value}%`);
     };
 
     sliderRef.current.addEventListener("input", onInput);
-
-    // Cleanup when the component unmounts
     return () => sliderRef.current?.removeEventListener("input", onInput);
   }, []);
 
   return (
     <div ref={containerRef} className={styles.container}>
-      <div>
-        <img src={beforeImageSrc} alt={beforeImageAlt} className={styles.image__before} />
-        <img src={afterImageSrc} alt={afterImageAlt} className={styles.image__after} />
+      <div className={styles.image__container}>
+        <div className={styles.before}>
+          <img src={beforeImageSrc} alt={beforeImageAlt} />
+        </div>
+
+        <div className={styles.after}>
+          <img src={afterImageSrc} alt={afterImageAlt} />
+        </div>
       </div>
+
       <input
         ref={sliderRef}
         type="range"
@@ -48,6 +50,7 @@ export default function ImageSlider({
         defaultValue="50"
         className={styles.input}
       />
+
       <div className={styles.slider}></div>
       <div className={styles.slider__icon}>
         <svg
@@ -57,7 +60,8 @@ export default function ImageSlider({
           fill="#currentColor"
           viewBox="0 0 256 256"
         >
-          <path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path>
+          {" "}
+          <path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path>{" "}
         </svg>
       </div>
     </div>
