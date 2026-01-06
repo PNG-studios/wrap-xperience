@@ -97,7 +97,7 @@ export default function KeukenEditWindow({
         }),
       });
 
-      const data: any = await response.json().catch(() => null);
+      const data: unknown = await response.json().catch(() => null);
 
       if (!response.ok) {
         console.error("Fout bij updaten keuken", data);

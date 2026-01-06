@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
     <nav ref={navRef} className={styles.navbar}>
       <div className={styles.navbar__container}>
-        <a className={styles.navbar__item} href="/">WRAP-XPERIENCE</a>
+        <Link className={styles.navbar__item} href="/">WRAP-XPERIENCE</Link>
         <div>
           {!isMobile ? (
             <ul className={styles.navbar__desktop}>
@@ -83,21 +83,21 @@ export default function Navbar() {
           {isMobile && menuOpen && (
             <div className={styles.navbar__mobile__container}>
               <ul className={styles.navbar__mobile__menu}>
-                <a
+                <Link
                   className={styles.navbar__mobile__item}
-                  href=""
+                  href="/"
                 >
                   HOME
-                </a>
+                </Link>
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <a
+                    <Link
                       href={item.href}
                       className={styles.navbar__mobile__item}
                       onClick={() => setMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
                 <a

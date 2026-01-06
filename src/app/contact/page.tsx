@@ -37,7 +37,7 @@ export default function Contact() {
           }
           formRef.current?.reset();
         },
-        (error: any) => {
+        (error: unknown) => {
           if (buttonRef.current) {
             buttonRef.current.classList.remove(styles.form__button_sending);
             buttonRef.current.innerHTML =

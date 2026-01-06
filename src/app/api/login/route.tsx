@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import crypto from "crypto";
-import { getAdminUser } from "../adminUser/route";
+import { getAdminUser } from "@/lib/admin/getAdminUser";
 
 function hashPassword(password: string, salt: string) {
   return crypto
