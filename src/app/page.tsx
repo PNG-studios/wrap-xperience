@@ -15,8 +15,6 @@ import Carousel from "@/components/carousel/carousel";
 import GoogleReviews from "@/components/googleReviews/googleReviews";
 import Footer from "@/components/footer/footer";
 
-const placeId = process.env.PLACE_ID ?? "";
-
 type Kitchen = {
   Id: number;
   FotoUrlAfter: string[];
@@ -25,7 +23,7 @@ type Kitchen = {
 };
 
 export default function Home() {
-  useEffect(() => {
+  useEffect(() => { 
     gsap.fromTo(
       ".h1",
       { y: 50, opacity: 0 },
@@ -147,7 +145,7 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <GoogleReviews className="" maxReviews={3} placeId={placeId} />
+        <GoogleReviews className="" maxReviews={3} placeId={"ChIJ6U7J6fcO4oQRAa1-KcV5OsA"} />
       </section>
 
       <Footer />
