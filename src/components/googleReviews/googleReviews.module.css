@@ -14,12 +14,22 @@
 
 .stars__container {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .stars {
     display: flex;
     width: 50%;
     margin-top: 1rem;
+}
+
+.review__info__container {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .rating__text {
@@ -113,6 +123,11 @@
 
 @media (max-width: 480px) {
     .reviews__container {
+        flex-direction: column;
+    }
+
+    .review__info__container {
+        width: auto;
         flex-direction: column;
     }
 }
