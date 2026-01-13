@@ -13,17 +13,17 @@ export default function Footer() {
                 <div>
                     <h3>Contact</h3>
                     <div className={styles.contact__logos}>
-                        <a className={styles.logo} href="">
+                        <a target="_blank" className={styles.logo} href="https://wa.me/31657027311">
                             <Icons name="whatsapp" />
                         </a>
-                        <a className={styles.logo} href="">
+                        <a target="_blank" className={styles.logo} href="mailto:info@wrap-xperience.nl">
                             <Icons name="mail" />
                         </a>
                         <a className={styles.logo} href="">
                             <Icons name="facebook" />
                         </a>
                     </div>
-                    <a className={styles.footerCta} href="">Maak afspraak</a>
+                    <a className={styles.footerCta} href="/contact">Maak afspraak</a>
                 </div>
             </div>
         </footer>

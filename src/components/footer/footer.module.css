@@ -23,8 +23,11 @@
 }
 
 .contact__logos > * {
-  width: calc(var(--scale) * 2.2);
+  width: auto;
   height: calc(var(--scale) * 2.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerCta {
