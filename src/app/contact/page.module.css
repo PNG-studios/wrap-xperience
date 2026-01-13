@@ -2,12 +2,13 @@
   display: flex;
   gap: 1rem;
   height: 3rem;
+  margin: 1rem 0;
   align-items: center;
 }
 
 .contact p {
   font-size: calc(1.1 * var(--scale));
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .grid {
@@ -33,6 +34,7 @@
   padding: 1rem;
   background-color: var(--light);
   border-radius: var(--border-radius);
+  font-size: calc(0.8 * var(--scale));
 }
 
 .form__item:focus {
