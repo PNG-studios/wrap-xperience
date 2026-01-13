@@ -13,15 +13,11 @@ export async function getAdminUser(): Promise<AdminUser | null> {
   const result = await pool.request().query(
     "SELECT TOP 1 * FROM AdminUser ORDER BY Id ASC"
   );
+  // console.log("Admin user query result:", result);
 
   if (result.recordset.length === 0) return null;
 
   const user = result.recordset[0];
 
-  return {
-    id: user.Id,
-    username: user.Username,
-    passwordHash: user.PasswordHash,
-    salt: user.Salt,
-  };
+  return user;
 }

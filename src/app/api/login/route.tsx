@@ -10,12 +10,12 @@ function hashPassword(password: string, salt: string) {
 
 export async function POST(req: Request) {
   const { username, password } = await req.json();
-  console.log(`Login attempt for user: ${username}`);
-  console.log(`Password provided: ${password}`);
+  // console.log(`Login attempt for user: ${username}`);
+  // console.log(`Password provided: ${password}`);
 
   const user = await getAdminUser();
-  console.log("Retrieved admin user:", user);
-  console.log(`Comparing with username: ${user?.username}`);
+  // console.log("Retrieved admin user:", user);
+  // console.log(`Comparing with username: ${user?.username}`);
   if (!user || username !== user.username) {
     return NextResponse.json({ success: false }, { status: 401 });
   }
