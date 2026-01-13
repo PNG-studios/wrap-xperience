@@ -131,43 +131,43 @@
     "tarievenlijst": {
       "tarief1": {
         "title": "Kleine keuken",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken-klein-1.webp",
+        "imageAlt": "Kleine keuken",
         "description": "vanaf 9 fronten en/of lades",
         "price": "Vanaf € 699,-"
       },
       "tarief2": {
         "title": "Middelgrote keuken",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken_2_after.webp",
+        "imageAlt": "Middelgrote keuken",
         "description": "vanaf 10 fronten en/of lades",
         "price": "Vanaf € 999,-"
       },
       "tarief3": {
         "title": "Grote keuken",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken_4_after_3.webp",
+        "imageAlt": "Grote keuken",
         "description": "vanaf 20 fronten en/of lades",
         "price": "Vanaf € 1.599,-"
       },
       "tarief4": {
         "title": "Custom made",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken_3_after.webp",
+        "imageAlt": "Custom made keuken",
         "description": "Een eigen ontwerp met extra's op basis van een bestaande keuken",
         "price": "Vanaf € 1599,-"
       },
       "tarief5": {
         "title": "Keukenblad",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken_6_after.webp",
+        "imageAlt": "Keukenblad",
         "description": "Keukenblad inclusief nieuwe kitranden, keuze uit dikkere folie met hogere krasbestendigheid.",
         "price": "Vanaf € 325,-"
       },
       "tarief6": {
         "title": "Keuken met veel profiel",
-        "imageSrc": "/images/hero.png",
-        "imageAlt": "Sample Image",
+        "imageSrc": "/images/keuken_1_after.webp",
+        "imageAlt": "keuken met veel profiel",
         "description": "Deze keuken wordt gecoat in plaats van gewrapt omdat deurtjes te veel profiel hebben",
         "price": "Vanaf € 1749,-"
       }
