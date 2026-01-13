@@ -11,9 +11,9 @@ type Keuken = {
   FotoUrlBefore: string[];
   FotoUrlAfter: string[];
   FotoAltAfter: string[];
-  Date: string;
+  Datum: string;
   Status?: number;
-  Priority?: number;
+  Prioriteit?: number;
 };
 type Props = {
   filterStatus?: number;
@@ -66,6 +66,7 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
   };
 
   return (
+    console.log(keukens),
     <div className={styles.container}>
       <div className={styles.item}>
         <h1 className={`${styles.title} ${filterStatus === 1 ? styles.title_active : styles.title_inactive}`}>{filterStatus === 1 ? "Actief" : "Inactief"}</h1>
@@ -88,8 +89,8 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
               imageAltBefore={keuken.FotoAltBefore}
               imageUrlAfter={keuken.FotoUrlAfter}
               imageAltAfter={keuken.FotoAltAfter}
-              date={new Date(keuken.Date).toLocaleDateString()}
-              priority={keuken.Priority}
+              date={new Date(keuken.Datum).toLocaleDateString()}
+              priority={keuken.Prioriteit}
               enabled={keuken.Status}
             />
           ))
