@@ -105,16 +105,14 @@ export default function Informatie() {
             position="right"
         />
 
-        <ContentCard
+        <ContentCardSimple
             id="kleuren"
             imageSrc="/images/keuken-klein-1.webp"
             imageAlt="Kleuren en patronen voor keuken wrappen"
             title={translations.informatie.kleuren.title}
             description={translations.informatie.kleuren.description}
-            buttonText={translations.informatie.kleuren.cta}
-            buttonHref="#"
-            position="left"
             backgroundColor="var(--light)"
+            position="left"
         />
 
         <ContentCardSimple
