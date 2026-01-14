@@ -34,11 +34,11 @@ export default function ImageSlider({
     <div ref={containerRef} className={styles.container}>
       <div className={styles.image__container}>
         <div className={styles.before}>
-          <img src={beforeImageSrc ?? ""} alt={beforeImageAlt ?? ""} />
+          <img src={beforeImageSrc || undefined} alt={beforeImageAlt || ""} />
         </div>
 
         <div className={styles.after}>
-          <img src={afterImageSrc ?? ""} alt={afterImageAlt ?? ""} />
+          <img src={afterImageSrc || undefined} alt={afterImageAlt || ""} />
         </div>
       </div>
 
