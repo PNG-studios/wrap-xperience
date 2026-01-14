@@ -7,10 +7,11 @@
     height: 100vh;
     overflow: auto;
     align-items: center;
-    z-index: 50;
+    z-index: 500;
 }
 
 .edit_window {
+    top: 400px;
     background-color: white;
     border-radius: var(--border-radius);
     opacity: 1;
