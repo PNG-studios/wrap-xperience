@@ -45,14 +45,14 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        Name: 'Nieuwe Keuken',
-        PhotoAltBefore: ['Beschrijving van '],
-        PhotoUrlBefore: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
-        PhotoUrlAfter: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
-        PhotoAltAfter: ['Beschrijving van '],
-        Date: new Date().toISOString(),
-        Priority: 1,
-        Status: 0,
+        naam: 'Nieuwe Keuken',
+        fotoUrlBefore: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
+        fotoUrlAfter: ['https://webtalis.nl/wp-content/uploads/2023/04/wat-is-url.jpg'],
+        fotoAltBefore: ['Beschrijving van '],
+        fotoAltAfter: ['Beschrijving van '],
+        Datum: new Date().toISOString(),
+        prioriteit: 1,
+        status: 0,
       }),
       
     });
