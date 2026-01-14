@@ -12,8 +12,8 @@ type Keuken = {
   imageAltBefore: string[];
   imageAltAfter: string[];
   date: string;
-  priority?: number;
-  enabled?: number;
+  prioriteit?: number;
+  status?: number;
 };
 
 export default function KeukenKaart({
@@ -24,8 +24,8 @@ export default function KeukenKaart({
   imageAltBefore = [],
   imageAltAfter = [],
   date,
-  priority,
-  enabled,
+  prioriteit,
+  status,
 }: Keuken) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -57,8 +57,8 @@ export default function KeukenKaart({
           imageAltBefore={imageAltBefore}
           imageAltAfter={imageAltAfter}
           date={date}
-          priority={priority}
-          enabled={enabled}
+          priority={prioriteit}
+          enabled={status}
           onClose={() => setIsOpen(false)}
         />
       )}

@@ -90,8 +90,8 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
               imageUrlAfter={keuken.FotoUrlAfter}
               imageAltAfter={keuken.FotoAltAfter}
               date={new Date(keuken.Datum).toLocaleDateString()}
-              priority={keuken.Prioriteit}
-              enabled={keuken.Status}
+              prioriteit={keuken.Prioriteit}
+              status={keuken.Status}
             />
           ))
         ) : (

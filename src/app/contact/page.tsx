@@ -108,13 +108,16 @@ export default function Contact() {
             />
             <label className={styles.form__label}>E-mail *</label>
             </div>
+            <div className={styles.form__field}>
             <textarea
               className={styles.form__item}
               id="message"
               name="message"
               required
-              placeholder="Bericht *"
+              // placeholder="Bericht *"
             ></textarea>
+            <label className={styles.form__label}>Bericht *</label>
+            </div>
             <button
               ref={buttonRef}
               className={styles.form__button}

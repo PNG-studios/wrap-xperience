@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./keukenEditWindow.module.css";
+import { stat } from "fs";
 
 type Keuken = {
   id?: number;
@@ -30,7 +31,8 @@ export default function KeukenEditWindow({
   const [isOpen, setIsOpen] = useState(true);
   const [newTitle, setNewTitle] = useState(title ?? "");
   const [newPriority, setNewPriority] = useState(priority ?? 0);
-  const [newState, setNewState] = useState(enabled ?? 0);
+  const [newState, setNewState] = useState(enabled ? 1 : 0);
+  console.log("Enabled status:", enabled);
 
   const [newImageUrlBefore, setNewImageUrlBefore] = useState<string[]>(
     imageUrlBefore?.length ? [...imageUrlBefore] : [""]
