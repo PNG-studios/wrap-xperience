@@ -94,6 +94,7 @@ export async function PUT(request: Request) {
       .input("fotoUrlAfter", JSON.stringify(fotoUrlAfter))
       .input("fotoAltBefore", JSON.stringify(fotoAltBefore)) // store array as JSON
       .input("fotoAltAfter", JSON.stringify(fotoAltAfter))
+      .input("Datum", new Date().toISOString())
       .input("prioriteit", prioriteit)
       .input("status", status).query(`
         UPDATE Keukens
@@ -103,6 +104,7 @@ SET Naam = @naam,
     FotoUrlAfter = @fotoUrlAfter,
     FotoAltAfter = @fotoAltAfter,
     Prioriteit = @prioriteit,
+    Datum = @Datum,
     Status = @status
 WHERE Id = @id
       `);
