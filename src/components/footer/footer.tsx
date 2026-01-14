@@ -26,6 +26,12 @@ export default function Footer() {
                     <a className={styles.footerCta} href="/contact">Maak afspraak</a>
                 </div>
             </div>
+            <div className={styles.footer__legals}>
+                <p>Copyright © 2026 Wrap-Xperience</p>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/algemene-voorwaarde">Algemene voorwaarde</a>
+                <p>KVK nummer: 96086394</p>
+            </div>
         </footer>
     )
 }
