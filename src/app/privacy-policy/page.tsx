@@ -7,7 +7,7 @@ export default function AlgemeneVoorwaarde() {
   return (
     <main>
       <Header
-        title="Algemene Voorwaarde"
+        title="Privacy policy"
         backgroundImageSrc="/images/tarieven_hero.jpg"
       />
 
