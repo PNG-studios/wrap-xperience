@@ -6,7 +6,7 @@ import styles from "./keukensOverzicht.module.css"
 
 type Keuken = {
   Id: number;
-  Name: string;
+  Naam: string;
   FotoAltBefore: string[];
   FotoUrlBefore: string[];
   FotoUrlAfter: string[];
@@ -29,6 +29,7 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
         const res = await fetch("/api/keukens");
         const data = await res.json();
         setKeukens(data);
+        console.log(keukens);
       } catch (err) {
         console.error("Fout bij ophalen keukens:", err);
       } finally {
@@ -84,7 +85,7 @@ export default function KeukenOverzicht({ filterStatus }: Props) {
             <KeukenKaart
               id={keuken.Id}
               key={keuken.Id}
-              title={keuken.Name}
+              title={keuken.Naam}
               imageUrlBefore={keuken.FotoUrlBefore}
               imageAltBefore={keuken.FotoAltBefore}
               imageUrlAfter={keuken.FotoUrlAfter}

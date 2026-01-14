@@ -43,7 +43,7 @@ export default function KeukenKaart({
 
         <div className={Styles.content}>
           <h2 className={Styles.title}>{title}</h2>
-          <p className={Styles.description}>{imageAltBefore.join(", ")}</p>
+          <p className={Styles.description}>{imageAltAfter.join(", ")}</p>
           <p className={Styles.date}>Bijgewerkt op: {date}</p>
         </div>
       </div>
