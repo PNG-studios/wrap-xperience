@@ -95,6 +95,12 @@
     transform: translateY(-100%);
 }
 
+@media (max-width: 1024px) {
+    .navbar__container {
+        font-size: calc(0.8 * var(--scale));;
+    }
+}
+
 @media (max-width: 480px) {
     .navbar {
         opacity: 1;
