@@ -121,6 +121,17 @@
     color: var(--secondary);
 }
 
+@media (max-width: 768px) {
+    .reviews__container {
+        flex-direction: column;
+    }
+
+    .review__info__container {
+        width: auto;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 480px) {
     .reviews__container {
         flex-direction: column;

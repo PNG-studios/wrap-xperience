@@ -56,9 +56,31 @@
   font-size: calc(var(--scale) * 0.6);
 }
 
+@media (max-width: 1024px) {
+  .footer__container {
+    gap: 5rem;
+    padding: 0 4rem;
+  }
+
+  .footer__legals {
+    padding: 0 4rem;
+  }
+}
+
 @media (max-width: 768px) {
   .footer__container {
+    flex-direction: column;
     padding: 0;
+  }
+
+  .footer__legals {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .footer__legals * {
+    align-self: baseline;
   }
 }
 
